@@ -10,6 +10,7 @@ self.addEventListener('install', function(event) {
           'assets/images/icon-16x16.png',
           'assets/images/icon-192x192.png',
           'assets/images/icon-512x512.png',
+          'assets/js/vue.js',
           'assets/js/app.js',
         ]);
       })

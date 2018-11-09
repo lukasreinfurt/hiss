@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import App from './App.vue'
-import store from './store.js'
+import Vue   from 'vue'
+import App   from './components/App'
+import store from './store/store'
 
 onload = function() {
 

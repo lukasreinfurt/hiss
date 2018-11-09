@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Counter from './Counter.vue'
-import Increment from './Increment.vue'
+import Counter   from './Counter'
+import Increment from './Increment'
 
 export default {
   name: 'app',

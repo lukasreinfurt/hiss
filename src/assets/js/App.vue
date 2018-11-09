@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
+    <Counter></Counter>
+    <Increment></Increment>
   </div>
 </template>
 
 <script>
+import Counter from './Counter.vue'
+import Increment from './Increment.vue'
+
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Hello World!'
-    }
+  components: {
+    Counter,
+    Increment
   }
 }
 </script>

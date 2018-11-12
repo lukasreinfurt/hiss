@@ -2,18 +2,21 @@
   <div id="app">
     <Counter></Counter>
     <Increment></Increment>
+    <EventList></EventList>
   </div>
 </template>
 
 <script>
 import Counter   from './Counter'
 import Increment from './Increment'
+import EventList from './EventList'
 
 export default {
   name: 'app',
   components: {
     Counter,
-    Increment
+    Increment,
+    EventList,
   }
 }
 </script>

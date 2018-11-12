@@ -2,14 +2,12 @@
     <div class="container">
         <h1>Events ({{ count }})</h1>
         <ul>
-            <li>
-                <EventListItem
-                    v-for        = "event in events"
-                    v-bind:key   = "event.id"
-                    v-bind:event = "event"
-                >
-                </EventListItem>
-            </li>
+            <EventListItem
+                v-for        = "event in events"
+                v-bind:key   = "event.id"
+                v-bind:event = "event"
+            >
+            </EventListItem>
         </ul>
         <button v-on:click="addEvent({ id: Date.now(), type:'test', duration: 60 })">+</button>
     </div>

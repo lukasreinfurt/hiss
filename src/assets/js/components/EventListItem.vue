@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <li>
         <h2>{{ event.type }}</h2>
         Duration: {{ event.duration }}
         <button v-on:click="removeEvent(event)">x</button>
-    </div>
+    </li>
 </template>
 
 <script>

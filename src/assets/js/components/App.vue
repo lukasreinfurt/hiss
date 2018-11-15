@@ -8,6 +8,9 @@
         <li>
           <router-link to="/workouts">Workouts</router-link>
         </li>
+        <li>
+          <router-link to="/exercises">Exercises</router-link>
+        </li>
       </ul>
     </nav>
     <router-view></router-view>

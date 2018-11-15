@@ -1,6 +1,7 @@
 import Vue  from 'vue'
 import Vuex from 'vuex'
 
+import exercises from './modules/exercises/'
 import events    from './modules/events/'
 import workouts  from './modules/workouts/'
 import state     from './state'
@@ -12,6 +13,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules: {
+        exercises,
         events,
         workouts,
     },

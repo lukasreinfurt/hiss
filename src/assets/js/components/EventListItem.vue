@@ -3,7 +3,7 @@
         <div
             class="card"
             v-if="event.type === 'exercise'">
-            <h2>{{ event.exerciseType }}</h2>
+            <h2>{{ exercise.name }}</h2>
             Repetitions: {{ event.repetitions }}
             Weight: {{ event.weight }}
             Duration: {{ event.duration }}
@@ -21,15 +21,19 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
-
-const { mapActions } = createNamespacedHelpers('events')
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'eventListItem',
     props: ['event'],
+    computed: {
+        ...mapGetters('exercises', ['getExerciseById']),
+        exercise () {
+            return this.getExerciseById(this.event.exerciseType)
+        }
+    },
     methods: {
-        ...mapActions(['removeEvent'])
+        ...mapActions('events', ['removeEvent']),
     },
 }
 </script>

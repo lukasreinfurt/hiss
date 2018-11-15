@@ -40,7 +40,8 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-    color: red;
+    color: white;
+    background-color: #111;
 }
 
 .card {

@@ -1,14 +1,15 @@
-import Vue   from 'vue'
-import App   from './components/App'
-import store from './store/'
+import Vue    from 'vue'
+import App    from './components/App'
+import router from './router/'
+import store  from './store/'
 
 onload = function() {
 
-  var app = new Vue({
-    el: '#app',
+  const app = new Vue({
+    router,
     store,
-    render: h => h(App)
-  })
+    render: createEle => createEle(App)
+  }).$mount('#app-container')
 
 }
   

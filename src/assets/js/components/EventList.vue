@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="flex-container">
         <h1>Events ({{ count }})</h1>
         <ul>
             <EventListItem

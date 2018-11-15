@@ -1,28 +1,21 @@
 <template>
   <div id="app">
-    <Counter></Counter>
-    <Increment></Increment>
-    <EventList></EventList>
+    <nav>
+      <ul class="flex-container horizontal">
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/workouts">Workouts</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Counter   from './Counter'
-import Increment from './Increment'
-import EventList from './EventList'
-
 export default {
-  name: 'app',
-  components: {
-    Counter,
-    Increment,
-    EventList,
-  }
+  name: 'app'
 }
 </script>
-
-<style lang="css">
-  #app {
-    text-align: center;
-  }
-</style>

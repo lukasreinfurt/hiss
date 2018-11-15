@@ -2,6 +2,7 @@ import Vue  from 'vue'
 import Vuex from 'vuex'
 
 import events    from './modules/events/'
+import workouts  from './modules/workouts/'
 import state     from './state'
 import getters   from './getters'
 import mutations from './mutations'
@@ -12,6 +13,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     modules: {
         events,
+        workouts,
     },
     state,
     getters,

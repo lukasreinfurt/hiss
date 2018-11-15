@@ -9,6 +9,16 @@
 
 body {
     color: #111;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+a:visited {
+    color: #111;
 }
 
 #app {

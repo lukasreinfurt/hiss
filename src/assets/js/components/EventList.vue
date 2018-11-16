@@ -1,14 +1,14 @@
 <template>
     <div class="flex-container">
-        <h1>Events ({{ count }})</h1>
-        <ul>
+        <h1>Events</h1>
+        <div class="flex-container">
             <EventListItem
                 v-for        = "event in events"
                 v-bind:key   = "event.id"
                 v-bind:event = "event"
             >
             </EventListItem>
-        </ul>
+        </div>
         <button v-on:click="addEvent({ id: Date.now(), type:'test', duration: 60 })">+</button>
     </div>
 </template>
@@ -24,9 +24,12 @@ export default {
     components: {
         EventListItem,
     },
+    props: ['events'],
     computed: {
-        ...mapState(['events']),
-        ...mapGetters(['count'])
+        ...mapState({defaultEvents: 'events'}),
+        selectedEvents() {
+            return this.events ? this.events : this.defaultEvents
+        }
     },
     methods: {
         ...mapActions(['addEvent'])

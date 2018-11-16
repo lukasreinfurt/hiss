@@ -2,14 +2,14 @@
     <div>
         <h2>Workout {{ id }}</h2>
         {{ prettyDate(workout.date) }}
-        <WorkoutEventList
+        <EventList
             v-bind:events = events>
-        </WorkoutEventList>
+        </EventList>
     </div>
 </template>
 
 <script>
-import WorkoutEventList from './WorkoutEventList'
+import EventList from './EventList'
 import { prettyDate }   from '../mixins/prettyDate'
 import { mapGetters }   from 'vuex'
 
@@ -18,7 +18,7 @@ export default {
     props: ['id'],
     mixins: [prettyDate],
     components: {
-        WorkoutEventList,
+        EventList,
     },
     computed: {
         ...mapGetters('workouts', ['getWorkoutById']),

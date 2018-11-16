@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <h1>Exercises ({{ count }})</h1>
+        <h1>Exercises</h1>
         <div class="flex-container">
             <ExerciseListItem
-                v-for           = "exercise in exercises"
+                v-for           = "exercise in selectedExercises"
                 v-bind:key      = "exercise.id"
                 v-bind:exercise = "exercise"
             >
@@ -16,16 +16,19 @@
 import ExerciseListItem            from './ExerciseListItem'
 import { createNamespacedHelpers } from 'vuex'
 
-const { mapState, mapGetters } = createNamespacedHelpers('exercises')
+const { mapState } = createNamespacedHelpers('exercises')
 
 export default {
     name: 'exerciseList',
     components: {
         ExerciseListItem,
     },
+    props: ['exercises'],
     computed: {
-        ...mapState(['exercises']),
-        ...mapGetters(['count'])
+        ...mapState({defaultExercises: 'exercises'}),
+        selectedExercises() {
+            return this.exercises ? this.exercises : this.defaultExercises
+        }
     },
 }
 </script>

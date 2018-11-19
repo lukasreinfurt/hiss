@@ -1,8 +1,8 @@
 <template>
-    <router-link :to="'/workouts/' + workout.id">
+    <router-link :to="'/log/' + workoutLog.id">
         <div class="card">
             <h2>Workout</h2>
-            {{ prettyDate(workout.date) }}
+            {{ prettyDate(workoutLog.date) }}
         </div>
     </router-link>
 </template>
@@ -11,8 +11,7 @@
 import { prettyDate } from '../mixins/prettyDate'
 
 export default {
-    name: 'workoutListItem',
-    props: ['workout'],
+    props: ['workoutLog'],
     mixins: [prettyDate]
 }
 </script>

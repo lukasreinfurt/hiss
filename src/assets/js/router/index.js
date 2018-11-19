@@ -1,10 +1,10 @@
-import Vue          from 'vue'
-import Router       from 'vue-router'
-import ExerciseList from '../components/ExerciseList'
-import TemplateList from '../components/TemplateList'
-import Template     from '../components/Template'
-import WorkoutList  from '../components/WorkoutList'
-import Workout      from '../components/Workout'
+import Vue            from 'vue'
+import Router         from 'vue-router'
+import ExerciseList   from '../components/ExerciseList'
+import TemplateList   from '../components/TemplateList'
+import Template       from '../components/Template'
+import WorkoutLogList from '../components/WorkoutLogList'
+import WorkoutLog     from '../components/WorkoutLog'
 
 Vue.use(Router)
 
@@ -12,15 +12,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: WorkoutList
+      component: WorkoutLogList
     },
     {
-      path: '/workouts',
-      component: WorkoutList
+      path: '/log',
+      component: WorkoutLogList
     },
     {
-      path: '/workouts/:id',
-      component: Workout,
+      path: '/log/:id',
+      component: WorkoutLog,
       props: true
     },
     {

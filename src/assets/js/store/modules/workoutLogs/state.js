@@ -1,5 +1,5 @@
 export default {
-    workouts: [
+    workoutLogs: [
         {
             id: '1',
             date: '2018-11-14T12:24:08',

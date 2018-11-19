@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>{{ template.name }}</h2>
+        <h2>{{ workout.name }}</h2>
         <ExerciseList
             v-bind:exercises = exercises>
         </ExerciseList>
@@ -12,20 +12,19 @@ import ExerciseList   from './ExerciseList'
 import { mapGetters } from 'vuex'
 
 export default {
-    name: 'template',
     props: ['id'],
     components: {
         ExerciseList,
     },
     computed: {
-        ...mapGetters('templates', ['getTemplateById']),
+        ...mapGetters('workouts', ['getWorkoutById']),
         ...mapGetters('exercises', ['getExerciseById']),
-        template () {
-            return this.getTemplateById(this.id)
+        workout () {
+            return this.getWorkoutById(this.id)
         },
         exercises () {
             var results = []
-            this.template.exercises.forEach(function(exercise) {
+            this.workout.exercises.forEach(function(exercise) {
                 results.push(this.getExerciseById(exercise))
             }, this)
             return results

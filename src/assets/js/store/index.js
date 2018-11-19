@@ -2,8 +2,8 @@ import Vue  from 'vue'
 import Vuex from 'vuex'
 
 import exercises    from './modules/exercises/'
-import templates    from './modules/templates/'
 import exerciseLogs from './modules/exerciseLogs/'
+import workouts     from './modules/workouts/'
 import workoutLogs  from './modules/workoutLogs/'
 import state        from './state'
 import getters      from './getters'
@@ -15,8 +15,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     modules: {
         exercises,
-        templates,
         exerciseLogs,
+        workouts,
         workoutLogs,
     },
     state,

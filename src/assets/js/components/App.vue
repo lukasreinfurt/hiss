@@ -9,7 +9,7 @@
           <router-link to="/exercises">Exercises</router-link>
         </li>
         <li>
-          <router-link to="/templates">Templates</router-link>
+          <router-link to="/workouts">Workouts</router-link>
         </li>
       </ul>
     </nav>

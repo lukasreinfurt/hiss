@@ -1,5 +1,5 @@
 export default {
-    events: [
+    exerciseLogs: [
         { id: '1', workout: '1', type: 'exercise',   duration: 134, exerciseType: '1', weight: 0,   repetitions: 4 },
         { id: '2', workout: '1', type: 'transition', duration: 15, },
         { id: '3', workout: '1', type: 'exercise',   duration: 120, exerciseType: '2', weight: 1.5, repetitions: 3 },

@@ -2,31 +2,31 @@
     <div>
         <h2>Workout {{ id }}</h2>
         {{ prettyDate(workoutLog.date) }}
-        <EventList
-            v-bind:events = events>
-        </EventList>
+        <ExerciseLogList
+            v-bind:exercise-logs = exerciseLogs>
+        </ExerciseLogList>
     </div>
 </template>
 
 <script>
-import EventList      from './EventList'
-import { prettyDate } from '../mixins/prettyDate'
-import { mapGetters } from 'vuex'
+import ExerciseLogList from './ExerciseLogList'
+import { prettyDate }  from '../mixins/prettyDate'
+import { mapGetters }  from 'vuex'
 
 export default {
     props: ['id'],
     mixins: [prettyDate],
     components: {
-        EventList,
+        ExerciseLogList,
     },
     computed: {
         ...mapGetters('workoutLogs', ['getWorkoutLogById']),
-        ...mapGetters('events', ['getEventsByWorkoutId']),
+        ...mapGetters('exerciseLogs', ['getExerciseLogsByWorkoutId']),
         workoutLog () {
             return this.getWorkoutLogById(this.id)
         },
-        events () {
-            return this.getEventsByWorkoutId(this.id)
+        exerciseLogs () {
+            return this.getExerciseLogsByWorkoutId(this.id)
         }
     },
 }

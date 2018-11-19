@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Template {{ id }}</h2>
+        <h2>{{ template.name }}</h2>
         <ExerciseList
             v-bind:exercises = exercises>
         </ExerciseList>

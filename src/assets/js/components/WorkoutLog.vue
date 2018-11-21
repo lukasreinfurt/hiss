@@ -22,7 +22,7 @@ export default {
     computed: {
         ...mapGetters('workouts', ['getWorkoutById']),
         ...mapGetters('workoutLogs', ['getWorkoutLogById']),
-        ...mapGetters('exerciseLogs', ['getExerciseLogsByWorkoutId']),
+        ...mapGetters('exerciseLogs', ['getExerciseLogsByWorkoutLogId']),
         workout () {
             return this.getWorkoutById(this.workoutLog.workoutType)
         },
@@ -30,7 +30,7 @@ export default {
             return this.getWorkoutLogById(this.id)
         },
         exerciseLogs () {
-            return this.getExerciseLogsByWorkoutId(this.id)
+            return this.getExerciseLogsByWorkoutLogId(this.id)
         }
     },
 }

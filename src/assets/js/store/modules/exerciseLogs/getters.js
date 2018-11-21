@@ -4,8 +4,8 @@ export default {
         return state.exerciseLogs.length
     },
 
-    getExerciseLogsByWorkoutId: (state) => (workoutId) => {
-        return state.exerciseLogs.filter(exerciseLog => exerciseLog.workout === workoutId)
+    getExerciseLogsByWorkoutLogId: (state) => (workoutLogId) => {
+        return state.exerciseLogs.filter(exerciseLog => exerciseLog.workoutLog === workoutLogId)
     }
     
 }

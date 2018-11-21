@@ -1,13 +1,28 @@
 <template>
     <div class="container">
         <h1>Exercises</h1>
-        <div class="flex-container">
+        <div
+            v-if = "exercises"
+            class="flex-container">
             <ExerciseListItem
-                v-for           = "exercise in selectedExercises"
+                v-for           = "exercise in exercises"
                 v-bind:key      = "exercise.id"
                 v-bind:exercise = "exercise"
             >
             </ExerciseListItem>
+        </div>
+        <div v-else>
+            <div
+                class="flex-container"
+                v-for = "(exercises, equipment) in exercisesByEquipment">
+                <h3>{{ equipment }}</h3>
+                <ExerciseListItem
+                    v-for           = "exercise in exercises"
+                    v-bind:key      = "exercise.id"
+                    v-bind:exercise = "exercise"
+                >
+                </ExerciseListItem>
+            </div>
         </div>
     </div>
 </template>
@@ -26,9 +41,16 @@ export default {
     props: ['exercises'],
     computed: {
         ...mapState({defaultExercises: 'exercises'}),
-        selectedExercises() {
-            return this.exercises ? this.exercises : this.defaultExercises
-        }
+        exercisesByEquipment() {
+            let result = {}
+            this.defaultExercises.forEach(function(exercise) {
+                if (!result[exercise.equipment]) {
+                    result[exercise.equipment] = []
+                }
+                result[exercise.equipment].push(exercise)
+            })
+            return result
+        },
     },
 }
 </script>

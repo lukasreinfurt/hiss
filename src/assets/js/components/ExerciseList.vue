@@ -13,8 +13,10 @@
         </div>
         <div v-else>
             <div
-                class="flex-container"
-                v-for = "(exercises, equipment) in exercisesByEquipment">
+                class      ="flex-container"
+                v-for      = "(exercises, equipment) in exercisesByEquipment"
+                v-bind:key = "equipment"
+            >
                 <h3>{{ equipment }}</h3>
                 <ExerciseListItem
                     v-for           = "exercise in exercises"

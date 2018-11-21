@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h2>{{ workout.name }}</h2>
+        <h2>
+            <input v-model="workout.name" placeholder="Workout Name">
+        </h2>
         <ExerciseList
             v-bind:exercises = exercises>
         </ExerciseList>
@@ -28,7 +30,7 @@ export default {
                 results.push(this.getExerciseById(exercise))
             }, this)
             return results
-        }
+        },
     },
 }
 </script>

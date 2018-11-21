@@ -1,13 +1,13 @@
 export default {
 
     addWorkout (state, payload) {
-        state.workoutss.push(payload)
+        state.workouts.push(payload)
     },
 
     removeWorkout (state, payload) {
-        var index = state.workoutss.indexOf(payload)
+        var index = state.workouts.indexOf(payload)
         if (index > -1) {
-            state.workoutss.splice(index, 1)
+            state.workouts.splice(index, 1)
         }
     }
 

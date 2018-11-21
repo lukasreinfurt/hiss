@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Workout {{ id }}</h2>
+        <h2>{{ workout.name }}</h2>
         {{ prettyDate(workoutLog.date) }}
         <ExerciseLogList
             v-bind:exercise-logs = exerciseLogs>
@@ -20,8 +20,12 @@ export default {
         ExerciseLogList,
     },
     computed: {
+        ...mapGetters('workouts', ['getWorkoutById']),
         ...mapGetters('workoutLogs', ['getWorkoutLogById']),
         ...mapGetters('exerciseLogs', ['getExerciseLogsByWorkoutId']),
+        workout () {
+            return this.getWorkoutById(this.workoutLog.workoutType)
+        },
         workoutLog () {
             return this.getWorkoutLogById(this.id)
         },

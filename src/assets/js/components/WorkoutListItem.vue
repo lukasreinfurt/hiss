@@ -1,13 +1,19 @@
 <template>
-    <router-link :to="'/workouts/' + workout.id">
-        <div class="card">
+    <div class="card">
+        <router-link :to="'/workouts/' + workout.id">
             <h2>{{ workout.name }}</h2>
-        </div>
-    </router-link>
+        </router-link>
+        <button v-on:click="removeWorkout(workout)">x</button>
+    </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-    props: ['workout']
+    props: ['workout'],
+    methods: {
+        ...mapActions('workouts', ['removeWorkout']),
+    },
 }
 </script>

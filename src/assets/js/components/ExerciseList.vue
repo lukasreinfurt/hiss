@@ -13,7 +13,7 @@
         </div>
         <div v-else>
             <div
-                class      ="flex-container"
+                class      = "flex-container"
                 v-for      = "(exercises, equipment) in exercisesByEquipment"
                 v-bind:key = "equipment"
             >

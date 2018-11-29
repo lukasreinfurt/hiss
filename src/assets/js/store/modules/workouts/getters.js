@@ -1,10 +1,10 @@
 export default {
 
     count (state) {
-        return state.workouts.length
+        return state.workoutList.length
     },
     
     getWorkoutById: (state) => (id) => {
-        return state.workouts.find(workout => workout.id === id)
+        return state.workouts[id]
     }
 }

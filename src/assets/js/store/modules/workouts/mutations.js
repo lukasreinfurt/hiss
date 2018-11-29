@@ -1,13 +1,17 @@
+import Vue from 'vue'
+
 export default {
 
     addWorkout (state, payload) {
-        state.workouts.push(payload)
+        Vue.set(state.workouts, payload.id, payload)
+        state.workoutList.push(payload.id)
     },
 
     removeWorkout (state, payload) {
-        var index = state.workouts.indexOf(payload)
+        Vue.delete(state.workouts, payload.id)
+        var index = state.workoutList.indexOf(payload.id)
         if (index > -1) {
-            state.workouts.splice(index, 1)
+            state.workoutList.splice(index, 1)
         }
     }
 

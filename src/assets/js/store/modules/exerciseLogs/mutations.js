@@ -1,13 +1,15 @@
 export default {
 
     addExerciseLog (state, payload) {
-        state.exerciseLogs.push(payload)
+        Vue.set(state.exercises, payload.id, payload)
+        state.exerciseLogList.push(payload.id)
     },
 
     removeExerciseLog (state, payload) {
-        var index = state.exerciseLogs.indexOf(payload)
+        Vue.delete(state.exercises, payload.id)
+        var index = state.exerciseLogList.indexOf(payload.id)
         if (index > -1) {
-            state.exerciseLogs.splice(index, 1)
+            state.exerciseLogList.splice(index, 1)
         }
     }
 

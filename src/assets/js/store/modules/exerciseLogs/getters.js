@@ -1,11 +1,11 @@
 export default {
 
     count (state) {
-        return state.exerciseLogs.length
+        return state.exerciseLogList.length
     },
 
     getExerciseLogsByWorkoutLogId: (state) => (workoutLogId) => {
-        return state.exerciseLogs.filter(exerciseLog => exerciseLog.workoutLog === workoutLogId)
+        return Object.values(state.exerciseLogs).filter(exerciseLog => exerciseLog.workoutLog === workoutLogId)
     }
     
 }

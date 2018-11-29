@@ -1,14 +1,14 @@
 export default {
 
     count (state) {
-        return state.exercises.length
+        return state.exerciseList.length
     },
     
     getExerciseById: (state) => (id) => {
-        return state.exercises.find(exercise => exercise.id === id)
+        return state.exercises[id]
     },
 
     getExercisesByEquipment: (state) => (equipment) => {
-        return state.exercises.find(exercise => exercise.equipment === equipment)
+        return Object.values(state.exercises).find(exercise => exercise.equipment === equipment)
     },
 }

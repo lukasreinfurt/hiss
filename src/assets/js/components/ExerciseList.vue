@@ -45,7 +45,7 @@ export default {
         ...mapState({defaultExercises: 'exercises'}),
         exercisesByEquipment() {
             let result = {}
-            this.defaultExercises.forEach(function(exercise) {
+            Object.entries(this.defaultExercises).forEach(function([id, exercise]) {
                 if (!result[exercise.equipment]) {
                     result[exercise.equipment] = []
                 }

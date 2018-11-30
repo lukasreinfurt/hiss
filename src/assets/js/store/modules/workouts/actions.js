@@ -1,13 +1,17 @@
 export default {
+  handler() {},
 
-    handler () {},
+  addWorkout(context, payload) {
+    let newWorkout = payload || {
+      id: "test",
+      name: "New Workout",
+      exercises: []
+    };
+    context.commit("addWorkout", newWorkout);
+    return newWorkout.id;
+  },
 
-    addWorkout (context, payload) {
-        context.commit('addWorkout', payload)
-    },
-
-    removeWorkout(context, payload) {
-        context.commit('removeWorkout', payload)
-    }
-    
-}
+  removeWorkout(context, payload) {
+    context.commit("removeWorkout", payload);
+  }
+};

@@ -10,14 +10,30 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.3.0",
-    "parcel-bundler": "1.10.3",
-    "parcel-plugin-sw-precache": "1.0.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "husky": "^1.2.0",
+    "parcel-bundler": "^1.10.3",
+    "parcel-plugin-sw-precache": "^1.0.2",
+    "prettier": "^1.15.3",
     "vue-hot-reload-api": "^2.3.1",
     "vue-template-compiler": "^2.5.17"
   },
   "scripts": {
-    "serve": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --out-dir ./public --public-url ./",
-    "update": "yarn upgrade-interactive"
+    "serve":      "parcel ./src/index.html",
+    "build":      "parcel build ./src/index.html --out-dir ./public --public-url ./",
+    "update":     "yarn upgrade-interactive",
+    "lint":       "eslint --ext .js,.vue src",
+    "lint-fix":   "eslint --ext .js,.vue src --fix",
+    "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "precommit":  "yarn lint-check && yarn lint"
   }
 }

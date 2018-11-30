@@ -1,11 +1,9 @@
 export default {
+  count(state) {
+    return state.workoutLogList.length;
+  },
 
-    count (state) {
-        return state.workoutLogList.length
-    },
-
-    getWorkoutLogById: (state) => (id) => {
-        return state.workoutLogs[id]
-    }
-    
-}
+  getWorkoutLogById: state => id => {
+    return state.workoutLogs[id];
+  }
+};

@@ -1,13 +1,11 @@
 export default {
+  handler() {},
 
-    handler () {},
+  addExercise(context, payload) {
+    context.commit("addExercise", payload);
+  },
 
-    addExercise (context, payload) {
-        context.commit('addExercise', payload)
-    },
-
-    removeExercise(context, payload) {
-        context.commit('removeExercise', payload)
-    }
-    
-}
+  removeExercise(context, payload) {
+    context.commit("removeExercise", payload);
+  }
+};

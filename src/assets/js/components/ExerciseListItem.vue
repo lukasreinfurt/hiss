@@ -1,12 +1,19 @@
 <template>
-    <div class="card">
-        <h2>{{ exercise.name }}</h2>
-    </div>
+  <div class="card">
+    <h2>{{ exercise.name }}</h2>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'exerciseListItem',
-    props: ['exercise']
-}
+  name: "ExerciseListItem",
+  props: {
+    exercise: {
+      type: Object,
+      default: function() {
+        return {};
+      }
+    }
+  }
+};
 </script>

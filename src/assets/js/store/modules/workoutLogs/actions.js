@@ -1,13 +1,11 @@
 export default {
+  handler() {},
 
-    handler () {},
+  addWorkoutLog(context, payload) {
+    context.commit("addWorkoutLog", payload);
+  },
 
-    addWorkoutLog (context, payload) {
-        context.commit('addWorkoutLog', payload)
-    },
-
-    removeWorkoutLog(context, payload) {
-        context.commit('removeWorkoutLog', payload)
-    }
-    
-}
+  removeWorkoutLog(context, payload) {
+    context.commit("removeWorkoutLog", payload);
+  }
+};

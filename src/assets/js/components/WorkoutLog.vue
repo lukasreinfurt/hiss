@@ -18,9 +18,9 @@ export default {
   mixins: [prettyDate],
   props: {
     id: {
-      type: Object,
+      type: String,
       default: function() {
-        return {};
+        return "";
       }
     }
   },

@@ -26,9 +26,9 @@ export default {
   },
   props: {
     exerciseLogs: {
-      type: Object,
+      type: Array,
       default: function() {
-        return {};
+        return [];
       }
     }
   },

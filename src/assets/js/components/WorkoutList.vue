@@ -21,6 +21,7 @@ const { mapState, mapGetters, mapActions } = createNamespacedHelpers(
 );
 
 export default {
+  name: "WorkoutList",
   components: {
     WorkoutListItem
   },

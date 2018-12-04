@@ -12,6 +12,7 @@ import { prettyDate } from "../mixins/prettyDate";
 import { mapGetters } from "vuex";
 
 export default {
+  name: "WorkoutLog",
   components: {
     ExerciseLogList
   },

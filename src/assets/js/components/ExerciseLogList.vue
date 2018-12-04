@@ -21,6 +21,7 @@ import { createNamespacedHelpers } from "vuex";
 const { mapState, mapActions } = createNamespacedHelpers("exerciseLogs");
 
 export default {
+  name: "ExerciseLogList",
   components: {
     ExerciseLogListItem
   },

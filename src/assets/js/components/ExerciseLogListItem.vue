@@ -17,6 +17,7 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  name: "ExerciseLogListItem",
   props: {
     exerciseLog: {
       type: Object,

@@ -14,6 +14,7 @@ import { createNamespacedHelpers } from "vuex";
 const { mapGetters } = createNamespacedHelpers("workouts");
 
 export default {
+  name: "WorkoutLogListItem",
   mixins: [prettyDate],
   props: {
     workoutLog: {

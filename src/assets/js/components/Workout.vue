@@ -10,6 +10,7 @@ import ExerciseList from "./ExerciseList";
 import { mapGetters } from "vuex";
 
 export default {
+  name: "Workout",
   components: {
     ExerciseList
   },

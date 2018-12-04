@@ -11,6 +11,7 @@
 import { mapActions } from "vuex";
 
 export default {
+  name: "WorkoutListItem",
   props: {
     workout: {
       type: Object,

@@ -33,7 +33,11 @@
     "update":     "yarn upgrade-interactive",
     "lint":       "eslint --ext .js,.vue src",
     "lint-fix":   "eslint --ext .js,.vue src --fix",
-    "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "precommit":  "yarn lint-check && yarn lint"
+    "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-check && yarn lint"
+    }
   }
 }

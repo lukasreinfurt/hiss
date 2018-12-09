@@ -5,6 +5,7 @@ import WorkoutList from "../components/WorkoutList";
 import Workout from "../components/Workout";
 import WorkoutLogList from "../components/WorkoutLogList";
 import WorkoutLog from "../components/WorkoutLog";
+import Version from "../components/Version";
 
 Vue.use(Router);
 
@@ -35,6 +36,10 @@ export default new Router({
       path: "/workouts/:id",
       component: Workout,
       props: true
+    },
+    {
+      path: "/version",
+      component: Version
     }
   ]
 });

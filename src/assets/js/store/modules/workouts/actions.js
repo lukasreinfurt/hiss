@@ -3,7 +3,7 @@ export default {
 
   addWorkout(context, payload) {
     let newWorkout = payload || {
-      id: "test",
+      id: this.generateId(),
       name: "New Workout",
       exercises: []
     };

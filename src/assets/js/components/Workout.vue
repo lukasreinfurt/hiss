@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2><input v-model="workout.name" placeholder="Workout Name" /></h2>
+    <h2><input v-model="name" placeholder="Workout Name" /></h2>
     <ExerciseList :exercises="exercises" />
   </div>
 </template>
@@ -27,6 +27,17 @@ export default {
     ...mapGetters("exercises", ["getExerciseById"]),
     workout() {
       return this.getWorkoutById(this.id);
+    },
+    name: {
+      get() {
+        return this.$store.state.workouts.workouts[this.id].name;
+      },
+      set(value) {
+        this.$store.commit("workouts/updateName", {
+          id: this.id,
+          value: value
+        });
+      }
     },
     exercises() {
       var results = [];

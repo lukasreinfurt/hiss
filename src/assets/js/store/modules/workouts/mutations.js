@@ -12,5 +12,9 @@ export default {
     if (index > -1) {
       state.workoutList.splice(index, 1);
     }
+  },
+
+  updateName(state, payload) {
+    state.workouts[payload.id].name = payload.value;
   }
 };

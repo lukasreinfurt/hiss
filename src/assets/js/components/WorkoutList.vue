@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Workouts ({{ count }})</h1>
-    <button @click="addWorkout()">+</button>
+    <button @click="addNewWorkout()">+</button>
     <div class="flex-container">
       <WorkoutListItem
         v-for="workout in workouts"

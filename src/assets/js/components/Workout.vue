@@ -7,7 +7,6 @@
 
 <script>
 import ExerciseList from "./ExerciseList";
-import { mapGetters } from "vuex";
 
 export default {
   name: "Workout",
@@ -23,10 +22,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("workouts", ["getWorkoutById"]),
-    ...mapGetters("exercises", ["getExerciseById"]),
     workout() {
-      return this.getWorkoutById(this.id);
+      return this.$store.state.workouts.workouts[this.id];
     },
     name: {
       get() {
@@ -42,7 +39,7 @@ export default {
     exercises() {
       var results = [];
       this.workout.exercises.forEach(function(exercise) {
-        results.push(this.getExerciseById(exercise));
+        results.push(this.$store.state.exercises.exercises[exercise]);
       }, this);
       return results;
     }

@@ -9,9 +9,6 @@
 
 <script>
 import { prettyDate } from "../mixins/prettyDate";
-import { createNamespacedHelpers } from "vuex";
-
-const { mapGetters } = createNamespacedHelpers("workouts");
 
 export default {
   name: "WorkoutLogListItem",
@@ -25,9 +22,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["getWorkoutById"]),
     workout() {
-      return this.getWorkoutById(this.workoutLog.workoutType);
+      return this.$store.state.workouts.workouts[this.workoutLog.workoutType];
     }
   }
 };

@@ -26,14 +26,12 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("workouts", ["getWorkoutById"]),
-    ...mapGetters("workoutLogs", ["getWorkoutLogById"]),
     ...mapGetters("exerciseLogs", ["getExerciseLogsByWorkoutLogId"]),
     workout() {
-      return this.getWorkoutById(this.workoutLog.workoutType);
+      return this.$store.state.workouts.workouts[this.workoutLog.workoutType];
     },
     workoutLog() {
-      return this.getWorkoutLogById(this.id);
+      return this.$store.state.workoutLogs.workoutLogs[this.id];
     },
     exerciseLogs() {
       return this.getExerciseLogsByWorkoutLogId(this.id);

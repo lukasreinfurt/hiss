@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "ExerciseLogListItem",
@@ -27,9 +27,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("exercises", ["getExerciseById"]),
     exercise() {
-      return this.getExerciseById(this.exerciseLog.exerciseType);
+      return this.$store.state.exercises.exercises[
+        this.exerciseLog.exerciseType
+      ];
     }
   },
   methods: {

@@ -1,18 +1,20 @@
 <template>
   <div>
-    <h2>Version</h2>
     Currently running {{ version }}
+    <div v-html="changelog" />
   </div>
 </template>
 
 <script>
 import { version } from "../../../../package.json";
+import changelog from "../../../../CHANGELOG.md";
 
 export default {
   name: "Version",
   data: function() {
     return {
-      version: version
+      version: version,
+      changelog: changelog
     };
   }
 };

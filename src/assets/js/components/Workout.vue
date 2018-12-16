@@ -1,17 +1,17 @@
 <template>
   <div>
     <h2><input v-model="name" placeholder="Workout Name" /></h2>
-    <ExerciseList :exercises="exercises" />
+    <WorkoutExerciseList :exercises="exercises" />
   </div>
 </template>
 
 <script>
-import ExerciseList from "./ExerciseList";
+import WorkoutExerciseList from "./WorkoutExerciseList";
 
 export default {
   name: "Workout",
   components: {
-    ExerciseList
+    WorkoutExerciseList
   },
   props: {
     id: {

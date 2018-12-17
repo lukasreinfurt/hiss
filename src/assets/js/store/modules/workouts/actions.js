@@ -13,5 +13,9 @@ export default {
 
   removeWorkout(context, payload) {
     context.commit("removeWorkout", payload);
+  },
+
+  addExercise(context, payload) {
+    context.commit("addExercise", payload);
   }
 };

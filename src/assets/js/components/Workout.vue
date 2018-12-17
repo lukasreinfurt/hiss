@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2><input v-model="name" placeholder="Workout Name" /></h2>
-    <WorkoutExerciseList :exercises="exercises" />
+    <WorkoutExerciseList :exercises="exercises" :id="id" />
   </div>
 </template>
 

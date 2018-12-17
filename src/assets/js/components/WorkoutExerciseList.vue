@@ -13,9 +13,11 @@
     <button @click="addNewExercise()">+</button>
     <div class="flex-container">
       <WorkoutExerciseListItem
-        v-for="exercise in exercises"
-        :key="exercise.id"
+        v-for="(exercise, index) in exercises"
+        :key="index"
+        :index="index"
         :exercise="exercise"
+        :workout-id="id"
       />
     </div>
   </div>

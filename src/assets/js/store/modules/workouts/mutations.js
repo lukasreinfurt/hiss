@@ -20,5 +20,9 @@ export default {
 
   addExercise(state, payload) {
     state.workouts[payload.id].exercises.push(payload.exercise);
+  },
+
+  removeExercise(state, payload) {
+    state.workouts[payload.workoutId].exercises.splice(payload.index, 1);
   }
 };

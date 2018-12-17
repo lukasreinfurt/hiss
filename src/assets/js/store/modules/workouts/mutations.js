@@ -14,6 +14,10 @@ export default {
     }
   },
 
+  updateName(state, payload) {
+    state.workouts[payload.id].name = payload.value;
+  },
+
   addExercise(state, payload) {
     state.workouts[payload.id].exercises.push(payload.exercise);
   }

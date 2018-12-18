@@ -34,7 +34,6 @@ export default {
     addNewWorkout: function() {
       var router = this.$router;
       this.addWorkout().then(function(id) {
-        console.log(id);
         router.push({ path: "/workouts/" + id });
       });
     }

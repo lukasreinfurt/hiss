@@ -12,5 +12,13 @@ export default {
     if (index > -1) {
       state.exerciseList.splice(index, 1);
     }
+  },
+
+  updateName(state, payload) {
+    state.exercises[payload.id].name = payload.value;
+  },
+
+  updateEquipment(state, payload) {
+    state.exercises[payload.id].equipment = payload.value;
   }
 };

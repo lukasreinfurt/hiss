@@ -9,6 +9,7 @@
         :workout="workout"
       />
     </div>
+    <div v-show="Object.keys(workouts).length === 0">No Workouts yet!</div>
   </div>
 </template>
 

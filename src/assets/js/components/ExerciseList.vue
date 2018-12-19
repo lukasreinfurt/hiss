@@ -15,6 +15,9 @@
         :exercise="exercise"
       />
     </div>
+    <div v-show="Object.keys(exercisesByEquipment).length === 0">
+      No Exercises yet!
+    </div>
   </div>
 </template>
 

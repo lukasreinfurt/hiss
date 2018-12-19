@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Workouts ({{ count }})</h1>
+    <h1>Workouts</h1>
     <button @click="addNewWorkout()">+</button>
     <div class="flex-container">
       <WorkoutListItem

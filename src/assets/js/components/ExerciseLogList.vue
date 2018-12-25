@@ -6,11 +6,10 @@
         v-for="exerciseLog in exerciseLogs"
         :key="exerciseLog.id"
         :exercise-log="exerciseLog"
+        @remove="removeExerciseLogHandler"
       />
     </div>
-    <button @click="addEvent({ id: Date.now(), type: 'test', duration: 60 })">
-      +
-    </button>
+    <button @click="addNewExerciseLog()">+</button>
   </div>
 </template>
 
@@ -18,7 +17,7 @@
 import ExerciseLogListItem from "./ExerciseLogListItem";
 import { createNamespacedHelpers } from "vuex";
 
-const { mapState, mapActions } = createNamespacedHelpers("exerciseLogs");
+const { mapActions } = createNamespacedHelpers("exerciseLogs");
 
 export default {
   name: "ExerciseLogList",
@@ -31,16 +30,44 @@ export default {
       default: function() {
         return [];
       }
-    }
-  },
-  computed: {
-    ...mapState({ defaultExerciseLogs: "exerciseLogs" }),
-    selectedExerciseLogs() {
-      return this.exerciseLogs ? this.exerciseLogs : this.defaultExerciseLogs;
+    },
+    workoutLog: {
+      type: Object,
+      default: function() {
+        return {};
+      }
     }
   },
   methods: {
-    ...mapActions(["addExerciseLog"])
+    ...mapActions(["addExerciseLog", "removeExerciseLog"]),
+    addNewExerciseLog: function() {
+      if (this.exerciseLogs.length > 0) {
+        this.addExerciseLog({
+          type: "transition",
+          workoutLog: this.workoutLog.id
+        });
+      }
+      this.addExerciseLog({
+        type: "exercise",
+        workoutLog: this.workoutLog.id
+      });
+    },
+    removeExerciseLogHandler: function(exerciseLog) {
+      var index = this.exerciseLogs.indexOf(exerciseLog);
+      if (index > -1) {
+        this.removeExerciseLog(exerciseLog);
+        var next = this.exerciseLogs[index + 1];
+        if (next && next.type === "transition") {
+          this.removeExerciseLog(next);
+        }
+        if (index === this.exerciseLogs.length - 1) {
+          var previous = this.exerciseLogs[index - 1];
+          if (previous && previous.type === "transition") {
+            this.removeExerciseLog(previous);
+          }
+        }
+      }
+    }
   }
 };
 </script>

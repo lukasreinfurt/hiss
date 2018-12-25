@@ -1,10 +1,21 @@
 <template>
   <div>
     <div v-if="exerciseLog.type === 'exercise'" class="card">
-      <h2>{{ exercise.name }}</h2>
-      Repetitions: {{ exerciseLog.repetitions }} Weight:
-      {{ exerciseLog.weight }} Duration: {{ exerciseLog.duration }}
-      <button @click="removeExerciseLog(exerciseLog)">x</button>
+      <h2>
+        <select v-model="type">
+          <option
+            v-for="availableExercise in availableExercises"
+            :key="availableExercise.id"
+            :value="availableExercise.id"
+          >
+            {{ availableExercise.name }}
+          </option>
+        </select>
+      </h2>
+      Repetitions:<input v-model.number="repetitions" type="number" /><br />
+      Weight:<input v-model.number="weight" type="number" step="0.5" /><br />
+      Duration:<input v-model.number="duration" type="number" /><br />
+      <button @click="$emit('remove', exerciseLog)">x</button>
     </div>
     <div v-else-if="exerciseLog.type === 'transition'" class="card transition">
       Transition for {{ exerciseLog.duration }} seconds.
@@ -14,7 +25,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapState } from "vuex";
 
 export default {
   name: "ExerciseLogListItem",
@@ -31,10 +42,52 @@ export default {
       return this.$store.state.exercises.exercises[
         this.exerciseLog.exerciseType
       ];
+    },
+    ...mapState("exercises", { availableExercises: "exercises" }),
+    type: {
+      get() {
+        return this.exerciseLog.exerciseType;
+      },
+      set(value) {
+        this.$store.commit("exerciseLogs/updateType", {
+          id: this.exerciseLog.id,
+          value: value
+        });
+      }
+    },
+    repetitions: {
+      get() {
+        return this.exerciseLog.repetitions;
+      },
+      set(value) {
+        this.$store.commit("exerciseLogs/updateRepetitions", {
+          id: this.exerciseLog.id,
+          value: value
+        });
+      }
+    },
+    weight: {
+      get() {
+        return this.exerciseLog.weight;
+      },
+      set(value) {
+        this.$store.commit("exerciseLogs/updateWeight", {
+          id: this.exerciseLog.id,
+          value: value
+        });
+      }
+    },
+    duration: {
+      get() {
+        return this.exerciseLog.duration;
+      },
+      set(value) {
+        this.$store.commit("exerciseLogs/updateDuration", {
+          id: this.exerciseLog.id,
+          value: value
+        });
+      }
     }
-  },
-  methods: {
-    ...mapActions("exerciseLogs", ["removeExerciseLog"])
   }
 };
 </script>

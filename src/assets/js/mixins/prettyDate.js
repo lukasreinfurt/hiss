@@ -8,7 +8,7 @@ export const prettyDate = {
       var dayDiff = Math.floor(diff / 86400);
 
       if (isNaN(dayDiff) || dayDiff < 0 || dayDiff >= 31) {
-        return;
+        return "Timestamp Error";
       }
 
       return (

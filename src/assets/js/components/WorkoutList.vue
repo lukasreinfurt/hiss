@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>Workouts ({{ count }})</h1>
-    <button @click="addWorkout()">+</button>
+    <h1>Workouts</h1>
+    <button @click="addNewWorkout()">+</button>
     <div class="flex-container">
       <WorkoutListItem
         v-for="workout in workouts"
@@ -9,6 +9,7 @@
         :workout="workout"
       />
     </div>
+    <div v-if="Object.keys(workouts).length === 0">No Workouts yet!</div>
   </div>
 </template>
 
@@ -34,7 +35,6 @@ export default {
     addNewWorkout: function() {
       var router = this.$router;
       this.addWorkout().then(function(id) {
-        console.log(id);
         router.push({ path: "/workouts/" + id });
       });
     }

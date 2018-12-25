@@ -1,18 +1,17 @@
 <template>
   <div>
-    <h2><input v-model="workout.name" placeholder="Workout Name" /></h2>
-    <ExerciseList :exercises="exercises" />
+    <h2><input v-model="name" placeholder="Workout Name" /></h2>
+    <WorkoutExerciseList :exercises="exercises" :id="id" />
   </div>
 </template>
 
 <script>
-import ExerciseList from "./ExerciseList";
-import { mapGetters } from "vuex";
+import WorkoutExerciseList from "./WorkoutExerciseList";
 
 export default {
   name: "Workout",
   components: {
-    ExerciseList
+    WorkoutExerciseList
   },
   props: {
     id: {
@@ -23,15 +22,24 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("workouts", ["getWorkoutById"]),
-    ...mapGetters("exercises", ["getExerciseById"]),
     workout() {
-      return this.getWorkoutById(this.id);
+      return this.$store.state.workouts.workouts[this.id];
+    },
+    name: {
+      get() {
+        return this.$store.state.workouts.workouts[this.id].name;
+      },
+      set(value) {
+        this.$store.commit("workouts/updateName", {
+          id: this.id,
+          value: value
+        });
+      }
     },
     exercises() {
       var results = [];
       this.workout.exercises.forEach(function(exercise) {
-        results.push(this.getExerciseById(exercise));
+        results.push(this.$store.state.exercises.exercises[exercise]);
       }, this);
       return results;
     }

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1>Log</h1>
+    <button @click="addNewWorkoutLog()">+</button>
     <div class="flex-container">
       <WorkoutLogListItem
         v-for="workoutLog in workoutLogs"
@@ -8,6 +9,7 @@
         :workout-log="workoutLog"
       />
     </div>
+    <div v-if="Object.keys(workoutLogs).length === 0">No Log entries yet!</div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@
 import WorkoutLogListItem from "./WorkoutLogListItem";
 import { createNamespacedHelpers } from "vuex";
 
-const { mapState } = createNamespacedHelpers("workoutLogs");
+const { mapState, mapActions } = createNamespacedHelpers("workoutLogs");
 
 export default {
   name: "WorkoutLogList",
@@ -24,6 +26,15 @@ export default {
   },
   computed: {
     ...mapState(["workoutLogs"])
+  },
+  methods: {
+    ...mapActions(["addWorkoutLog"]),
+    addNewWorkoutLog: function() {
+      var router = this.$router;
+      this.addWorkoutLog().then(function(id) {
+        router.push({ path: "/log/" + id });
+      });
+    }
   }
 };
 </script>

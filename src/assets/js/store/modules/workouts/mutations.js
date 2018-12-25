@@ -12,5 +12,17 @@ export default {
     if (index > -1) {
       state.workoutList.splice(index, 1);
     }
+  },
+
+  updateName(state, payload) {
+    state.workouts[payload.id].name = payload.value;
+  },
+
+  addExercise(state, payload) {
+    state.workouts[payload.id].exercises.push(payload.exercise);
+  },
+
+  removeExercise(state, payload) {
+    state.workouts[payload.workoutId].exercises.splice(payload.index, 1);
   }
 };

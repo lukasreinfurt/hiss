@@ -1,26 +1,22 @@
 <template>
   <div class="container">
     <h1>Exercises</h1>
-    <div v-if="exercises.length > 0" class="flex-container">
+    <button @click="addNewExercise()">+</button>
+    <div
+      v-for="(exercises, equipment) in exercisesByEquipment"
+      :key="equipment"
+      class="flex-container"
+    >
+      <h3 v-if="equipment">{{ equipment }}</h3>
+      <h3 v-else>Uncategorized</h3>
       <ExerciseListItem
         v-for="exercise in exercises"
         :key="exercise.id"
         :exercise="exercise"
       />
     </div>
-    <div v-else>
-      <div
-        v-for="(exercises, equipment) in exercisesByEquipment"
-        :key="equipment"
-        class="flex-container"
-      >
-        <h3>{{ equipment }}</h3>
-        <ExerciseListItem
-          v-for="exercise in exercises"
-          :key="exercise.id"
-          :exercise="exercise"
-        />
-      </div>
+    <div v-if="Object.keys(exercisesByEquipment).length === 0">
+      No Exercises yet!
     </div>
   </div>
 </template>
@@ -29,20 +25,12 @@
 import ExerciseListItem from "./ExerciseListItem";
 import { createNamespacedHelpers } from "vuex";
 
-const { mapState } = createNamespacedHelpers("exercises");
+const { mapState, mapActions } = createNamespacedHelpers("exercises");
 
 export default {
   name: "ExerciseList",
   components: {
     ExerciseListItem
-  },
-  props: {
-    exercises: {
-      type: Array,
-      default: function() {
-        return [];
-      }
-    }
   },
   computed: {
     ...mapState({ defaultExercises: "exercises" }),
@@ -55,6 +43,15 @@ export default {
         result[exercise.equipment].push(exercise);
       });
       return result;
+    }
+  },
+  methods: {
+    ...mapActions(["addExercise"]),
+    addNewExercise: function() {
+      var router = this.$router;
+      this.addExercise().then(function(id) {
+        router.push({ path: "/exercises/" + id });
+      });
     }
   }
 };

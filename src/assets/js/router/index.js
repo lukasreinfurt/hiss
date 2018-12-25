@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
+import Exercise from "../components/Exercise";
 import ExerciseList from "../components/ExerciseList";
 import WorkoutList from "../components/WorkoutList";
 import Workout from "../components/Workout";
@@ -27,6 +28,11 @@ export default new Router({
     {
       path: "/exercises",
       component: ExerciseList
+    },
+    {
+      path: "/exercises/:id",
+      component: Exercise,
+      props: true
     },
     {
       path: "/workouts",

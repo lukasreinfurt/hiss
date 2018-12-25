@@ -3,7 +3,7 @@ export default {
 
   addWorkout(context, payload) {
     let newWorkout = payload || {
-      id: "test",
+      id: this.generateId(),
       name: "New Workout",
       exercises: []
     };
@@ -13,5 +13,13 @@ export default {
 
   removeWorkout(context, payload) {
     context.commit("removeWorkout", payload);
+  },
+
+  addExercise(context, payload) {
+    context.commit("addExercise", payload);
+  },
+
+  removeExercise(context, payload) {
+    context.commit("removeExercise", payload);
   }
 };

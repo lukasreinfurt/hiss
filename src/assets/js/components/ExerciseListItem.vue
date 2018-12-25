@@ -1,10 +1,15 @@
 <template>
   <div class="card">
-    <h2>{{ exercise.name }}</h2>
+    <router-link :to="'/exercises/' + exercise.id">
+      <h2>{{ exercise.name }}</h2>
+    </router-link>
+    <button @click="removeExercise(exercise)">x</button>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "ExerciseListItem",
   props: {
@@ -14,6 +19,9 @@ export default {
         return {};
       }
     }
+  },
+  methods: {
+    ...mapActions("exercises", ["removeExercise"])
   }
 };
 </script>

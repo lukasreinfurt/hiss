@@ -18,7 +18,7 @@
       <button @click="$emit('remove', exerciseLog)">x</button>
     </div>
     <div v-else-if="exerciseLog.type === 'transition'" class="card transition">
-      Transition for {{ exerciseLog.duration }} seconds.
+      Transition for <input v-model.number="duration" type="number" /> seconds.
     </div>
     <div v-else>Something went wrong {{ exerciseLog.type === "exercise" }}</div>
   </div>

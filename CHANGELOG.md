@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Top navigation moved to side bar that responsively turns into hamburger menu on small screens
+- Text size automatically adjusts to screen size
 
 ## [0.2.1] - 2018-12-26
 

@@ -1,6 +1,13 @@
 :root {
+    --max-text-width: 60ch;
+    --line-height: 1.8rem;
+    --min-font-size: 12;
+    --max-font-size: 18;
+    --delta-font-size: calc(var(--max-font-size) - var(--min-font-size));
     --min-width: 280;
-    --max-width: 1800;
+    --max-width: 1200;
+    --delta-width: calc(var(--max-width) - var(--min-width));
+    --padding: 5%;
   }
 
 *,
@@ -14,18 +21,64 @@
 
 html {
     box-sizing: border-box;
-    min-width: var(--min-width);
+    min-width: calc(var(--min-width) * 1px);
+    height: 100%;
+    width: 100%;
+    font-size: calc(var(--min-font-size) * 1px);
+    line-height: var(--line-height);
+    overflow: hidden;
+    color: #111;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-body {
-    color: #111;
-    font-family: 'Rubik', sans-serif;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+/*******************************************************************************
+* HEADERS                                                                      *
+*******************************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.441em;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.953em;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.563em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 400;
 }
 
 a {
@@ -108,8 +161,8 @@ a:visited {
 #content {
     width: 100%;
     height: 100%;
-    padding: 0 1em;
-    max-width: 600px;
+    max-width: calc(var(--max-width) * 1px);
+    padding: 0 var(--padding);
 }
 
 nav ul {
@@ -139,7 +192,15 @@ nav a.router-link-exact-active {
     padding: 2em;
 }
 
-@media screen and (min-width: 500px) {
+@media all and (min-width: 280px) { /* Fix: Once env variables are supported, use them here */
+
+    html {
+      font-size: calc(calc(var(--min-font-size) * 1px) + var(--delta-font-size) * ((100vw - calc(var(--min-width) * 1px)) / var(--delta-width)));
+    }
+
+}
+
+@media all and (min-width: 500px) {
 
     #main-nav {
         position: relative;
@@ -154,6 +215,14 @@ nav a.router-link-exact-active {
 
     #hamburger-menu {
         display: none;
+    }
+
+  }
+
+  @media all and (min-width: 1200px) { /* Fix: Once env variables are supported, use them here */
+
+    html {
+      font-size: calc(var(--max-font-size) * 1px);
     }
 
   }

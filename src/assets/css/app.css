@@ -1,3 +1,8 @@
+:root {
+    --min-width: 280;
+    --max-width: 1800;
+  }
+
 *,
 *::before,
 *::after {
@@ -7,22 +12,37 @@
   min-height: 0;
 }
 
+html {
+    box-sizing: border-box;
+    min-width: var(--min-width);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 body {
     color: #111;
     font-family: 'Rubik', sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 a {
     text-decoration: none;
-    color: #111;
+    color: inherit;
 }
 
 a:visited {
-    color: #111;
+    color: inherit;
 }
 
 #app {
-    padding: 0 1em;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .flex-container {
@@ -33,6 +53,63 @@ a:visited {
 
 .flex-container.horizontal {
     flex-direction: row;
+}
+
+#main-nav {
+    position: absolute;
+    transform: translatex(-100%);
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    transition: transform 0.2s ease-out;
+}
+
+#main-nav.active {
+    transform: translatex(0);
+}
+
+#main-nav ul {
+    height: 100%;
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+#mainWrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#secondary-nav {
+    width: 100%;
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+    height: auto;
+}
+
+#secondary-nav ul {
+    justify-content: left;
+}
+
+#hamburger-menu:hover {
+    cursor: pointer;
+}
+
+#contentWrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    padding: 0 1em;
+    max-width: 600px;
 }
 
 nav ul {
@@ -61,3 +138,22 @@ nav a.router-link-exact-active {
     margin-bottom: 1em;
     padding: 2em;
 }
+
+@media screen and (min-width: 500px) {
+
+    #main-nav {
+        position: relative;
+        transform: translatex(0);
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    #main-nav ul {
+        width: 100%;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+  }

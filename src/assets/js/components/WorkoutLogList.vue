@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1>Log</h1>
     <button @click="addNewWorkoutLog()">+</button>
     <div class="flex-container">
       <WorkoutLogListItem

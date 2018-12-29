@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1>Exercises</h1>
     <button @click="addNewExercise()">+</button>
     <div
       v-for="(exercises, equipment) in exercisesByEquipment"

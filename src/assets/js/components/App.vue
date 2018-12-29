@@ -25,12 +25,9 @@
       </ul>
     </nav>
     <div id="mainWrapper" class="flex-container">
-      <nav id="secondary-nav">
-        <!-- <ul class="flex-container horizontal">
-          <li id="hamburger-menu" @click="toggleMenu">☰</li>
-        </ul> -->
+      <div id="navBarWrapper" class="flex-container">
         <router-view name="navBar" @toggle-menu="toggleMenu()" />
-      </nav>
+      </div>
       <div id="contentWrapper" class="flex-container">
         <div id="content"><router-view name="content" /></div>
       </div>

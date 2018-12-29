@@ -19,6 +19,10 @@ export default new Router({
       components: {
         content: WorkoutLogList,
         navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Log" }
       }
     },
     {
@@ -26,6 +30,10 @@ export default new Router({
       components: {
         content: WorkoutLogList,
         navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Log" }
       }
     },
     {
@@ -36,7 +44,7 @@ export default new Router({
       },
       props: {
         content: true,
-        navBar: false
+        navBar: { title: "Log" }
       }
     },
     {
@@ -44,6 +52,10 @@ export default new Router({
       components: {
         content: ExerciseList,
         navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Exercises" }
       }
     },
     {
@@ -54,7 +66,7 @@ export default new Router({
       },
       props: {
         content: true,
-        navBar: false
+        navBar: { title: "Exercise" }
       }
     },
     {
@@ -62,6 +74,10 @@ export default new Router({
       components: {
         content: WorkoutList,
         navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Workouts" }
       }
     },
     {
@@ -72,7 +88,7 @@ export default new Router({
       },
       props: {
         content: true,
-        navBar: false
+        navBar: { title: "Workout" }
       }
     },
     {
@@ -80,6 +96,10 @@ export default new Router({
       components: {
         content: Version,
         navBar: NavBarHamburger
+      },
+      props: {
+        content: true,
+        navBar: { title: "Version" }
       }
     }
   ]

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Back button to navigate back from detail views
+- Title is shown in navigation bar
+
 ### Changed
 
 - Top navigation moved to side bar that responsively turns into hamburger menu on small screens

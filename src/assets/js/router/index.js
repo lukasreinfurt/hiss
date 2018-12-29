@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Exercise from "../components/Exercise";
 import ExerciseList from "../components/ExerciseList";
+import NavBarBack from "../components/NavBarBack";
+import NavBarHamburger from "../components/NavBarHamburger";
 import WorkoutList from "../components/WorkoutList";
 import Workout from "../components/Workout";
 import WorkoutLogList from "../components/WorkoutLogList";
@@ -14,38 +16,91 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: WorkoutLogList
+      components: {
+        content: WorkoutLogList,
+        navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Log" }
+      }
     },
     {
       path: "/log",
-      component: WorkoutLogList
+      components: {
+        content: WorkoutLogList,
+        navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Log" }
+      }
     },
     {
       path: "/log/:id",
-      component: WorkoutLog,
-      props: true
+      components: {
+        content: WorkoutLog,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: { title: "Log" }
+      }
     },
     {
       path: "/exercises",
-      component: ExerciseList
+      components: {
+        content: ExerciseList,
+        navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Exercises" }
+      }
     },
     {
       path: "/exercises/:id",
-      component: Exercise,
-      props: true
+      components: {
+        content: Exercise,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: { title: "Exercise" }
+      }
     },
     {
       path: "/workouts",
-      component: WorkoutList
+      components: {
+        content: WorkoutList,
+        navBar: NavBarHamburger
+      },
+      props: {
+        content: false,
+        navBar: { title: "Workouts" }
+      }
     },
     {
       path: "/workouts/:id",
-      component: Workout,
-      props: true
+      components: {
+        content: Workout,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: { title: "Workout" }
+      }
     },
     {
       path: "/version",
-      component: Version
+      components: {
+        content: Version,
+        navBar: NavBarHamburger
+      },
+      props: {
+        content: true,
+        navBar: { title: "Version" }
+      }
     }
   ]
 });

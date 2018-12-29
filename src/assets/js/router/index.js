@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Exercise from "../components/Exercise";
 import ExerciseList from "../components/ExerciseList";
+import NavBarBack from "../components/NavBarBack";
+import NavBarHamburger from "../components/NavBarHamburger";
 import WorkoutList from "../components/WorkoutList";
 import Workout from "../components/Workout";
 import WorkoutLogList from "../components/WorkoutLogList";
@@ -14,38 +16,71 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: WorkoutLogList
+      components: {
+        content: WorkoutLogList,
+        navBar: NavBarHamburger
+      }
     },
     {
       path: "/log",
-      component: WorkoutLogList
+      components: {
+        content: WorkoutLogList,
+        navBar: NavBarHamburger
+      }
     },
     {
       path: "/log/:id",
-      component: WorkoutLog,
-      props: true
+      components: {
+        content: WorkoutLog,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: false
+      }
     },
     {
       path: "/exercises",
-      component: ExerciseList
+      components: {
+        content: ExerciseList,
+        navBar: NavBarHamburger
+      }
     },
     {
       path: "/exercises/:id",
-      component: Exercise,
-      props: true
+      components: {
+        content: Exercise,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: false
+      }
     },
     {
       path: "/workouts",
-      component: WorkoutList
+      components: {
+        content: WorkoutList,
+        navBar: NavBarHamburger
+      }
     },
     {
       path: "/workouts/:id",
-      component: Workout,
-      props: true
+      components: {
+        content: Workout,
+        navBar: NavBarBack
+      },
+      props: {
+        content: true,
+        navBar: false
+      }
     },
     {
       path: "/version",
-      component: Version
+      components: {
+        content: Version,
+        navBar: NavBarHamburger
+      }
     }
   ]
 });

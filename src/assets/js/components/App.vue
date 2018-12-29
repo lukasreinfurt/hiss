@@ -26,12 +26,13 @@
     </nav>
     <div id="mainWrapper" class="flex-container">
       <nav id="secondary-nav">
-        <ul class="flex-container horizontal">
+        <!-- <ul class="flex-container horizontal">
           <li id="hamburger-menu" @click="toggleMenu">☰</li>
-        </ul>
+        </ul> -->
+        <router-view name="navBar" @toggle-menu="toggleMenu()" />
       </nav>
       <div id="contentWrapper" class="flex-container">
-        <div id="content"><router-view /></div>
+        <div id="content"><router-view name="content" /></div>
       </div>
     </div>
   </div>

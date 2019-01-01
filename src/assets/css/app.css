@@ -122,7 +122,7 @@ button:hover {
     flex-direction: row;
 }
 
-#main-nav {
+aside {
     position: absolute;
     transform: translatex(-100%);
     width: 100vw;
@@ -132,15 +132,19 @@ button:hover {
     z-index: 1;
 }
 
-#main-nav.active {
+aside.active {
     transform: translatex(0);
 }
 
-#main-nav ul {
+#main-nav {
     height: 100%;
-    background-color: hsl(0, 0%, 25%);
-    color: white;
     width: 62%;
+    background-color: hsl(0, 0%, 25%);
+}
+
+#main-nav ul {
+    border-top: 2px solid hsl(0, 0%, 20%);
+    color: white;
     justify-content: flex-start;
 }
 
@@ -229,14 +233,14 @@ nav a.router-link-exact-active {
 
 @media all and (min-width: 500px) {
 
-    #main-nav {
+    aside {
         position: relative;
         transform: translatex(0);
         width: 200px;
         flex-shrink: 0;
     }
 
-    #main-nav ul {
+    #main-nav {
         width: 100%;
     }
 

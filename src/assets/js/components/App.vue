@@ -1,11 +1,17 @@
 <template>
   <div id="app" class="flex-container horizontal">
-    <aside class="flex-container">
-      <nav id="main-nav" :class="{ active: menuActive }" @click="toggleMenu">
+    <aside
+      class="flex-container"
+      :class="{ active: menuActive }"
+      @click="toggleMenu"
+    >
+      <nav id="main-nav">
         <ul class="flex-container">
           <router-link to="/log"><li>Log</li></router-link>
           <router-link to="/exercises"><li>Exercises</li></router-link>
           <router-link to="/workouts"><li>Workouts</li></router-link>
+        </ul>
+        <ul class="flex-container">
           <router-link to="/about"><li>About</li></router-link>
         </ul>
       </nav>

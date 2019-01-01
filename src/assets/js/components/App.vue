@@ -6,7 +6,7 @@
           <router-link to="/log"><li>Log</li></router-link>
           <router-link to="/exercises"><li>Exercises</li></router-link>
           <router-link to="/workouts"><li>Workouts</li></router-link>
-          <router-link to="/version"><li>Version</li></router-link>
+          <router-link to="/about"><li>About</li></router-link>
         </ul>
       </nav>
     </aside>

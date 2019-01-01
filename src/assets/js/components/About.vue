@@ -16,13 +16,13 @@ import { version } from "../../../../package.json";
 import changelog from "../../../../CHANGELOG.md";
 
 export default {
-  name: "Version",
+  name: "About",
   components: {
     NavBar
   },
   data: function() {
     return {
-      title: "Version",
+      title: "About",
       version: version,
       changelog: changelog
     };

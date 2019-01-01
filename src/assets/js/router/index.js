@@ -6,7 +6,7 @@ import WorkoutList from "../components/WorkoutList";
 import Workout from "../components/Workout";
 import WorkoutLogList from "../components/WorkoutLogList";
 import WorkoutLog from "../components/WorkoutLog";
-import Version from "../components/Version";
+import About from "../components/About";
 
 Vue.use(Router);
 
@@ -76,9 +76,9 @@ export default new Router({
       }
     },
     {
-      path: "/version",
+      path: "/about",
       components: {
-        content: Version
+        content: About
       },
       props: {
         content: true

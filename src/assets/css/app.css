@@ -46,7 +46,6 @@ h4,
 h5,
 h6 {
   line-height: normal;
-  width: 100%;
 }
 
 h1 {
@@ -88,6 +87,7 @@ a:visited {
     color: inherit;
 }
 
+input,
 select {
     overflow: hidden;
     width: 100%;

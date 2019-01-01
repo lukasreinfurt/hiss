@@ -156,6 +156,7 @@ button:hover {
 #secondary-nav section {
     width: 33%;
     align-items: center;
+    min-height: 48px;
 }
 
 #secondary-nav section:first-child {

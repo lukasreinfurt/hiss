@@ -1,22 +1,31 @@
 <template>
-  <div>
-    <h2>
-      <select v-model="workoutType" @change="workoutChange">
-        <option
-          v-for="availableWorkout in availableWorkouts"
-          :key="availableWorkout.id"
-          :value="availableWorkout.id"
-        >
-          {{ availableWorkout.name }}
-        </option>
-      </select>
-    </h2>
-    {{ prettyDate(workoutLog.date) }}
-    <ExerciseLogList :exercise-logs="exerciseLogs" :workout-log="workoutLog" />
+  <div id="contentWrapper" class="flex-container">
+    <header><NavBar :title="title"></NavBar></header>
+    <div id="mainWrapper" class="flex-container">
+      <main class="flex-container">
+        <h2>
+          <select v-model="workoutType" @change="workoutChange">
+            <option
+              v-for="availableWorkout in availableWorkouts"
+              :key="availableWorkout.id"
+              :value="availableWorkout.id"
+            >
+              {{ availableWorkout.name }}
+            </option>
+          </select>
+        </h2>
+        {{ prettyDate(workoutLog.date) }}
+        <ExerciseLogList
+          :exercise-logs="exerciseLogs"
+          :workout-log="workoutLog"
+        ></ExerciseLogList>
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from "./NavBar";
 import ExerciseLogList from "./ExerciseLogList";
 import { prettyDate } from "../mixins/prettyDate";
 import { mapGetters, mapState } from "vuex";
@@ -24,7 +33,8 @@ import { mapGetters, mapState } from "vuex";
 export default {
   name: "WorkoutLog",
   components: {
-    ExerciseLogList
+    ExerciseLogList,
+    NavBar
   },
   mixins: [prettyDate],
   props: {
@@ -34,6 +44,11 @@ export default {
         return "";
       }
     }
+  },
+  data: function() {
+    return {
+      title: "Log"
+    };
   },
   computed: {
     workoutType: {

@@ -1,17 +1,27 @@
 <template>
-  <div>
-    <h2><input v-model="name" placeholder="Workout Name" /></h2>
-    <WorkoutExerciseList :exercises="exercises" :id="id" />
+  <div id="contentWrapper" class="flex-container">
+    <header><NavBar :title="title"></NavBar></header>
+    <div id="mainWrapper" class="flex-container">
+      <main class="flex-container">
+        <h2><input v-model="name" placeholder="Workout Name" /></h2>
+        <WorkoutExerciseList
+          :exercises="exercises"
+          :id="id"
+        ></WorkoutExerciseList>
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from "./NavBar";
 import WorkoutExerciseList from "./WorkoutExerciseList";
 
 export default {
   name: "Workout",
   components: {
-    WorkoutExerciseList
+    WorkoutExerciseList,
+    NavBar
   },
   props: {
     id: {
@@ -20,6 +30,11 @@ export default {
         return "";
       }
     }
+  },
+  data: function() {
+    return {
+      title: "Workout"
+    };
   },
   computed: {
     workout() {

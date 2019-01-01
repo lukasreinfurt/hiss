@@ -1,17 +1,27 @@
 <template>
-  <div>
-    <h2><input v-model="name" placeholder="Exercise Name" /></h2>
-    <select v-model="equipment">
-      <option>machine</option>
-      <option>free-weight</option>
-      <option>bodyweight</option>
-    </select>
+  <div id="contentWrapper" class="flex-container">
+    <header><NavBar :title="title"></NavBar></header>
+    <div id="mainWrapper" class="flex-container">
+      <main class="flex-container">
+        <h2><input v-model="name" placeholder="Exercise Name" /></h2>
+        <select v-model="equipment">
+          <option>machine</option>
+          <option>free-weight</option>
+          <option>bodyweight</option>
+        </select>
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from "./NavBar";
+
 export default {
   name: "Exercise",
+  components: {
+    NavBar
+  },
   props: {
     id: {
       type: String,
@@ -19,6 +29,11 @@ export default {
         return "";
       }
     }
+  },
+  data: function() {
+    return {
+      title: "Exercise"
+    };
   },
   computed: {
     exercise() {

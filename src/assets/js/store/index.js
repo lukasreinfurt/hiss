@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import generateId from "./plugins/generateId";
+import settings from "./modules/settings/";
 import exercises from "./modules/exercises/";
 import exerciseLogs from "./modules/exerciseLogs/";
 import workouts from "./modules/workouts/";
@@ -16,6 +17,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   plugins: [generateId],
   modules: {
+    settings,
     exercises,
     exerciseLogs,
     workouts,

@@ -1,18 +1,27 @@
 <template>
-  <div class="container">
-    <button @click="addNewWorkout()">+</button>
-    <div class="flex-container">
-      <WorkoutListItem
-        v-for="workout in workouts"
-        :key="workout.id"
-        :workout="workout"
-      />
+  <div id="contentWrapper" class="flex-container">
+    <header>
+      <NavBar :title="title" hamburger>
+        <template slot="right">
+          <button @click="addNewWorkout()">+</button>
+        </template>
+      </NavBar>
+    </header>
+    <div id="mainWrapper" class="flex-container">
+      <main class="flex-container">
+        <WorkoutListItem
+          v-for="workout in workouts"
+          :key="workout.id"
+          :workout="workout"
+        ></WorkoutListItem>
+        <div v-if="Object.keys(workouts).length === 0">No Workouts yet!</div>
+      </main>
     </div>
-    <div v-if="Object.keys(workouts).length === 0">No Workouts yet!</div>
   </div>
 </template>
 
 <script>
+import NavBar from "./NavBar";
 import WorkoutListItem from "./WorkoutListItem";
 import { createNamespacedHelpers } from "vuex";
 
@@ -23,7 +32,13 @@ const { mapState, mapGetters, mapActions } = createNamespacedHelpers(
 export default {
   name: "WorkoutList",
   components: {
-    WorkoutListItem
+    WorkoutListItem,
+    NavBar
+  },
+  data: function() {
+    return {
+      title: "Workouts"
+    };
   },
   computed: {
     ...mapState(["workouts"]),

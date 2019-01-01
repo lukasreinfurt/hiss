@@ -18,7 +18,7 @@
         :index="index"
         :exercise="exercise"
         :workout-id="id"
-      />
+      ></WorkoutExerciseListItem>
     </div>
   </div>
 </template>

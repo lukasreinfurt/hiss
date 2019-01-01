@@ -7,7 +7,7 @@
         :key="exerciseLog.id"
         :exercise-log="exerciseLog"
         @remove="removeExerciseLogHandler"
-      />
+      ></ExerciseLogListItem>
     </div>
     <button @click="addNewExerciseLog()">+</button>
   </div>

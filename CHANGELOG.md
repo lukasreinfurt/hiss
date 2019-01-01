@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Back button to navigate back from detail views
 - Title is shown in navigation bar
+- Icons in side bar
 
 ### Changed
 

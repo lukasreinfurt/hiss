@@ -1,21 +1,21 @@
 <template>
   <nav id="secondary-nav" class="flex-container horizontal">
-    <ul class="flex-container horizontal">
+    <section class="flex-container horizontal">
       <slot name="left">
-        <li v-if="hamburger" id="hamburger-menu" @click="toggleMenuActive()">
+        <button
+          v-if="hamburger"
+          id="hamburger-menu"
+          @click="toggleMenuActive()"
+        >
           ☰
-        </li>
-        <li v-else @click="$router.go(-1)">＜</li>
+        </button>
+        <button v-else @click="$router.go(-1)">＜</button>
       </slot>
-    </ul>
-    <ul class="flex-container horizontal">
-      <slot name="center">
-        <li>{{ title }}</li>
-      </slot>
-    </ul>
-    <ul class="flex-container horizontal">
-      <slot name="right" />
-    </ul>
+    </section>
+    <section class="flex-container horizontal">
+      <slot name="center"> {{ title }} </slot>
+    </section>
+    <section class="flex-container horizontal"><slot name="right" /></section>
   </nav>
 </template>
 

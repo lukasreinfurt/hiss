@@ -7,12 +7,34 @@
     >
       <nav id="main-nav">
         <ul class="flex-container">
-          <router-link to="/log"><li>Log</li></router-link>
-          <router-link to="/exercises"><li>Exercises</li></router-link>
-          <router-link to="/workouts"><li>Workouts</li></router-link>
+          <router-link to="/log"
+            ><li>
+              <img class="icon" src="/assets/images/icons/log.svg" />Log
+            </li></router-link
+          >
+          <router-link to="/exercises"
+            ><li>
+              <img
+                class="icon"
+                src="/assets/images/icons/exercises.svg"
+              />Exercises
+            </li></router-link
+          >
+          <router-link to="/workouts"
+            ><li>
+              <img
+                class="icon"
+                src="/assets/images/icons/workouts.svg"
+              />Workouts
+            </li></router-link
+          >
         </ul>
         <ul class="flex-container">
-          <router-link to="/about"><li>About</li></router-link>
+          <router-link to="/about"
+            ><li>
+              <img class="icon" src="/assets/images/icons/about.svg" />About
+            </li></router-link
+          >
         </ul>
       </nav>
     </aside>

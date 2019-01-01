@@ -148,6 +148,19 @@ aside.active {
     justify-content: flex-start;
 }
 
+#main-nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+#main-nav ul li .icon {
+    margin-right: 8px;
+}
+
+.icon {
+    width: 32px;
+}
+
 #navBarWrapper {
     width: 100%;
 }

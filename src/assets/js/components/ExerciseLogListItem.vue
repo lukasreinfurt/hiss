@@ -15,7 +15,7 @@
       Repetitions:<input v-model.number="repetitions" type="number" /><br />
       Weight:<input v-model.number="weight" type="number" step="0.5" /><br />
       Duration:<input v-model.number="duration" type="number" /><br />
-      <button @click="$emit('remove', exerciseLog)">x</button>
+      <button @click="$emit('remove', exerciseLog)">✕</button>
     </div>
     <div v-else-if="exerciseLog.type === 'transition'" class="card transition">
       Transition for <input v-model.number="duration" type="number" /> seconds.

@@ -3,7 +3,7 @@
     <header>
       <NavBar :title="title" hamburger>
         <template slot="right">
-          <button @click="addNewWorkoutLog()">+</button>
+          <button @click="addNewWorkoutLog()">＋</button>
         </template>
       </NavBar>
     </header>

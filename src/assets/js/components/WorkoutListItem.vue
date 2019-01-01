@@ -3,7 +3,7 @@
     <router-link :to="'/workouts/' + workout.id">
       <h2>{{ workout.name }}</h2>
     </router-link>
-    <button @click="removeWorkout(workout)">x</button>
+    <button @click="removeWorkout(workout)">✕</button>
   </div>
 </template>
 

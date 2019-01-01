@@ -9,7 +9,7 @@
         @remove="removeExerciseLogHandler"
       ></ExerciseLogListItem>
     </div>
-    <button @click="addNewExerciseLog()">+</button>
+    <button @click="addNewExerciseLog()">＋</button>
   </div>
 </template>
 

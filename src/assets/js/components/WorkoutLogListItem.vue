@@ -4,7 +4,7 @@
       <h2>{{ workout.name }}</h2>
     </router-link>
     {{ prettyDate(workoutLog.date) }}
-    <button @click="removeWorkoutLogHandler(workoutLog)">x</button>
+    <button @click="removeWorkoutLogHandler(workoutLog)">✕</button>
   </div>
 </template>
 

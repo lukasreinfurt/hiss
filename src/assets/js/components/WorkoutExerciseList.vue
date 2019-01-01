@@ -10,7 +10,7 @@
         {{ availableExercise.name }}
       </option>
     </select>
-    <button @click="addNewExercise()">+</button>
+    <button @click="addNewExercise()">＋</button>
     <div class="flex-container">
       <WorkoutExerciseListItem
         v-for="(exercise, index) in exercises"

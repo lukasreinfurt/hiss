@@ -2,7 +2,7 @@
   <div class="card">
     {{ exercise.name }}
     <button @click="removeExercise({ workoutId: workoutId, index: index })">
-      x
+      ✕
     </button>
   </div>
 </template>

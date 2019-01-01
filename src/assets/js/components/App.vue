@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="flex-container horizontal">
     <aside
-      class="flex-container"
       :class="{ active: menuActive }"
+      class="flex-container"
       @click="toggleMenu"
     >
       <nav id="main-nav">

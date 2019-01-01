@@ -88,6 +88,11 @@ a:visited {
     color: inherit;
 }
 
+select {
+    overflow: hidden;
+    width: 100%;
+}
+
 #app {
     align-items: stretch;
     justify-content: flex-start;

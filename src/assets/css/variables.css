@@ -1,0 +1,11 @@
+:root {
+  --max-text-width: 60ch;
+  --line-height: 1.8rem;
+  --min-font-size: 16;
+  --max-font-size: 18;
+  --delta-font-size: calc(var(--max-font-size) - var(--min-font-size));
+  --min-width: 280;
+  --max-width: 1200;
+  --delta-width: calc(var(--max-width) - var(--min-width));
+  --padding: 5%;
+}

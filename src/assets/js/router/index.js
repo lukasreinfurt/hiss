@@ -7,6 +7,7 @@ import Workout from "../components/Workout";
 import WorkoutLogList from "../components/WorkoutLogList";
 import WorkoutLog from "../components/WorkoutLog";
 import About from "../components/About";
+import ReleaseNotes from "../components/ReleaseNotes";
 
 Vue.use(Router);
 
@@ -82,6 +83,15 @@ export default new Router({
       },
       props: {
         content: true
+      }
+    },
+    {
+      path: "/about/releasenotes",
+      components: {
+        content: ReleaseNotes
+      },
+      props: {
+        content: false
       }
     }
   ]

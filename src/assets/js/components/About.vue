@@ -3,8 +3,12 @@
     <header><NavBar :title="title" hamburger></NavBar></header>
     <div id="mainWrapper" class="flex-container">
       <main class="flex-container">
-        Currently running {{ version }}
-        <div v-html="changelog" />
+        <h1>HISS</h1>
+        <section>
+          Currently running {{ version }} (see
+          <router-link to="/about/releasenotes">release notes</router-link>)
+        </section>
+        <section>Made with ❤️ in 🇩🇪</section>
       </main>
     </div>
   </div>
@@ -13,7 +17,6 @@
 <script>
 import NavBar from "./NavBar";
 import { version } from "../../../../package.json";
-import changelog from "../../../../CHANGELOG.md";
 
 export default {
   name: "About",
@@ -23,8 +26,7 @@ export default {
   data: function() {
     return {
       title: "About",
-      version: version,
-      changelog: changelog
+      version: version
     };
   }
 };

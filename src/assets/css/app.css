@@ -209,6 +209,14 @@ main {
     padding: var(--padding);
 }
 
+main a {
+    color: blue;
+}
+
+main a:visited {
+    color: blue;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;

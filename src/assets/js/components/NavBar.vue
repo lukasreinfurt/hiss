@@ -15,7 +15,9 @@
     <section class="flex-container horizontal">
       <slot name="center"> {{ title }} </slot>
     </section>
-    <section class="flex-container horizontal"><slot name="right" /></section>
+    <section class="flex-container horizontal">
+      <slot name="right"></slot>
+    </section>
   </nav>
 </template>
 

@@ -2,7 +2,7 @@
   <div id="contentWrapper" class="flex-container">
     <header><NavBar :title="title"></NavBar></header>
     <div id="mainWrapper" class="flex-container">
-      <main class="flex-container"><div v-html="changelog" /></main>
+      <main class="flex-container"><div v-html="changelog"></div></main>
     </div>
   </div>
 </template>

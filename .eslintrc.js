@@ -24,6 +24,7 @@ module.exports = {
             "error", {
                 "html": {
                     "void": "any",
+                    "normal": "never",
                     "component": "never"
                 }
             }

@@ -84,6 +84,7 @@ a:visited {
 p {
     margin-top: var(--margin);
     margin-bottom: var(--margin);
+    max-width: var(--max-text-width);
 }
 
 ul,

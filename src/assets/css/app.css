@@ -38,6 +38,8 @@ h4,
 h5,
 h6 {
   line-height: normal;
+  margin-top: var(--size-4);
+  margin-bottom: var(--margin);
 }
 
 h1 {
@@ -77,6 +79,18 @@ a {
 
 a:visited {
     color: inherit;
+}
+
+p {
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
+
+ul,
+ol {
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+    padding-left: var(--size-4);
 }
 
 input,

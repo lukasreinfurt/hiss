@@ -138,14 +138,26 @@ label {
 }
 
 button {
-    border: none;
+    color: var(--primary-5);
     background-color: transparent;
     min-width: 48px;
     min-height: 48px;
+    border: 0;
+    border-radius: var(--border-radius);
+    width:auto;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+button.primary {
+    background-color: var(--primary-5);
+    color: var(--primary-9);
+}
+
+button.secondary {
+    border: 1px solid var(--primary-5);
 }
 
 #app {
@@ -294,6 +306,7 @@ nav a.router-link-exact-active {
     border-radius: var(--border-radius);
     margin-bottom: 1em;
     padding: 2em;
+    width: 100%;
 }
 
 @media all and (min-width: 280px) { /* Fix: Once env variables are supported, use them here */

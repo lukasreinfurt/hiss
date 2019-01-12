@@ -19,7 +19,7 @@ html {
     font-size: calc(var(--min-font-size) * 1px);
     line-height: var(--line-height);
     color: var(--neutral-1);
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--main-font);
 }
 
 body {

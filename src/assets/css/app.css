@@ -150,7 +150,7 @@ label {
     font-size: 0.8em;
     text-transform: uppercase;
     color: var(--neutral-5);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.05em;
     margin: var(--margin);
 }
 

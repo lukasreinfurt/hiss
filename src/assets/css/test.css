@@ -8,12 +8,29 @@
     margin: 10px;
 }
 
-button {
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  height: 40px;
-  padding: 10px;
+button.primary {
+    background-color: var(--primary-5);
+    color: var(--primary-9);
+}
+
+button.neutral {
+    background-color: var(--neutral-5);
+    color: var(--neutral-9);
+}
+
+button.accent-red {
+    background-color: var(--accent-red-5);
+    color: var(--accent-red-9);
+}
+
+button.accent-yellow {
+    background-color: var(--accent-yellow-5);
+    color: var(--accent-yellow-9);
+}
+
+button.accent-green {
+    background-color: var(--accent-green-5);
+    color: var(--accent-green-9);
 }
 
 .info {

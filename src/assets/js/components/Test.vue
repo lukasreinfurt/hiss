@@ -14,7 +14,7 @@
           <div class="color primary-7"></div>
           <div class="color primary-8"></div>
           <div class="color primary-9"></div>
-          <button class="primary-5">GET STARTED</button>
+          <button class="primary">GET STARTED</button>
           <div class="info primary">This is a test info component</div>
         </section>
         <section class="flex-container horizontal wrap">
@@ -27,7 +27,7 @@
           <div class="color neutral-7"></div>
           <div class="color neutral-8"></div>
           <div class="color neutral-9"></div>
-          <button class="neutral-5">GET STARTED</button>
+          <button class="neutral">GET STARTED</button>
           <div class="info neutral">This is a test info component</div>
         </section>
         <section class="flex-container horizontal wrap">
@@ -40,7 +40,7 @@
           <div class="color accent-red-7"></div>
           <div class="color accent-red-8"></div>
           <div class="color accent-red-9"></div>
-          <button class="accent-red-5">GET STARTED</button>
+          <button class="accent-red">GET STARTED</button>
           <div class="info accent-red">This is a test info component</div>
         </section>
         <section class="flex-container horizontal wrap">
@@ -53,7 +53,7 @@
           <div class="color accent-yellow-7"></div>
           <div class="color accent-yellow-8"></div>
           <div class="color accent-yellow-9"></div>
-          <button class="accent-yellow-5">GET STARTED</button>
+          <button class="accent-yellow">GET STARTED</button>
           <div class="info accent-yellow">This is a test info component</div>
         </section>
         <section class="flex-container horizontal wrap">
@@ -66,7 +66,7 @@
           <div class="color accent-green-7"></div>
           <div class="color accent-green-8"></div>
           <div class="color accent-green-9"></div>
-          <button class="accent-green-5">GET STARTED</button>
+          <button class="accent-green">GET STARTED</button>
           <div class="info accent-green">This is a test info component</div>
         </section>
       </main>

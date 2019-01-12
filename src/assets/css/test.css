@@ -8,6 +8,32 @@
     margin: 10px;
 }
 
+.shadow {
+    width: 64px;
+    height: 64px;
+    margin: var(--margin);
+}
+
+.shadow.elevation1 {
+    box-shadow: var(--box-shadow-1);
+}
+
+.shadow.elevation2 {
+    box-shadow: var(--box-shadow-2);
+}
+
+.shadow.elevation3 {
+    box-shadow: var(--box-shadow-3);
+}
+
+.shadow.elevation4 {
+    box-shadow: var(--box-shadow-4);
+}
+
+.shadow.elevation5 {
+    box-shadow: var(--box-shadow-5);
+}
+
 button.primary {
     background-color: var(--primary-5);
     color: var(--primary-9);

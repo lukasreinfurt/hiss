@@ -8,6 +8,13 @@
           <button>Default</button> <button class="secondary">Default</button>
           <button class="primary">Default</button>
           <section class="flex-container horizontal wrap">
+            <div class="shadow elevation1"></div>
+            <div class="shadow elevation2"></div>
+            <div class="shadow elevation3"></div>
+            <div class="shadow elevation4"></div>
+            <div class="shadow elevation5"></div>
+          </section>
+          <section class="flex-container horizontal wrap">
             <div class="color primary-1"></div>
             <div class="color primary-2"></div>
             <div class="color primary-3"></div>

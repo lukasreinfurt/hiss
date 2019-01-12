@@ -18,7 +18,7 @@ html {
     width: 100vw;
     font-size: calc(var(--min-font-size) * 1px);
     line-height: var(--line-height);
-    color: #111;
+    color: var(--neutral-1);
     font-family: 'Rubik', sans-serif;
 }
 
@@ -131,12 +131,12 @@ aside.active {
 #main-nav {
     height: 100%;
     width: 62%;
-    background-color: hsl(0, 0%, 25%);
+    background-color: var(--neutral-2);
 }
 
 #main-nav ul {
-    border-top: 2px solid hsl(0, 0%, 20%);
-    color: white;
+    border-top: 2px solid var(--neutral-1);
+    color: var(--neutral-9);
     justify-content: flex-start;
 }
 
@@ -202,11 +202,11 @@ main {
 }
 
 main a {
-    color: blue;
+    color: var(--primary-5);
 }
 
 main a:visited {
-    color: blue;
+    color:var(--primary-5);
 }
 
 nav ul {
@@ -224,13 +224,13 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-    color: white;
-    background-color: #111;
+    color: var(--neutral-9);
+    background-color: var(--neutral-1);
 }
 
 .card {
-    background-color: rgb(250, 250, 250);
-    border: 1px solid rgb(202, 202, 202);
+    background-color: var(--neutral-9);
+    border: 1px solid var(--neutral-8);
     border-radius: 5px;
     margin-bottom: 1em;
     padding: 2em;

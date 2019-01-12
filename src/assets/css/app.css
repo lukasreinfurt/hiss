@@ -83,6 +83,8 @@ input,
 select {
     overflow: hidden;
     width: 100%;
+    border: 1px solid var(--neutral-8);
+    border-radius: var(--border-radius-small);
 }
 
 button {
@@ -231,7 +233,7 @@ nav a.router-link-exact-active {
 .card {
     background-color: var(--neutral-9);
     border: 1px solid var(--neutral-8);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     margin-bottom: 1em;
     padding: 2em;
 }

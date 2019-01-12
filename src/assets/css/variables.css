@@ -37,8 +37,6 @@
   /* Color
   ===========================================================================*/
 
-  --dark-hue-shift: 20;
-  --light-hue-shift: 20;
   --light-saturation: 50%;
   --dark-saturation: 50%;
   --dark-lightness: 25%;
@@ -49,22 +47,24 @@
   --factor-4: 1.0;
 
   --primary-hue: 220;
+  --primary-dark-hue-shift: 20; /* closest to 0, 120, or 240 */
+  --primary-light-hue-shift: -20; /* closest to 60, 180, or 300 */
   --primary-saturation: 40%;
   --primary-lightness: 50%;
   --primary-1: hsl(
-     calc(var(--primary-hue) - var(--dark-hue-shift) * var(--factor-4)),
+     calc(var(--primary-hue) + var(--primary-dark-hue-shift) * var(--factor-4)),
      calc(var(--primary-saturation) + ((var(--dark-saturation) - var(--primary-saturation)) * var(--factor-4))),
      calc(var(--primary-lightness) - ((var(--primary-lightness) - var(--dark-lightness)) * var(--factor-4))));
   --primary-2: hsl(
-     calc(var(--primary-hue) - var(--dark-hue-shift) * var(--factor-3)),
+     calc(var(--primary-hue) + var(--primary-dark-hue-shift) * var(--factor-3)),
      calc(var(--primary-saturation) + ((var(--dark-saturation) - var(--primary-saturation)) * var(--factor-3))),
      calc(var(--primary-lightness) - ((var(--primary-lightness) - var(--dark-lightness)) * var(--factor-3))));
   --primary-3: hsl(
-     calc(var(--primary-hue) - var(--dark-hue-shift) * var(--factor-2)),
+     calc(var(--primary-hue) + var(--primary-dark-hue-shift) * var(--factor-2)),
      calc(var(--primary-saturation) + ((var(--dark-saturation) - var(--primary-saturation)) * var(--factor-2))),
      calc(var(--primary-lightness) - ((var(--primary-lightness) - var(--dark-lightness)) * var(--factor-2))));
   --primary-4: hsl(
-     calc(var(--primary-hue) - var(--dark-hue-shift) * var(--factor-1)),
+     calc(var(--primary-hue) + var(--primary-dark-hue-shift) * var(--factor-1)),
      calc(var(--primary-saturation) + ((var(--dark-saturation) - var(--primary-saturation)) * var(--factor-1))),
      calc(var(--primary-lightness) - ((var(--primary-lightness) - var(--dark-lightness)) * var(--factor-1))));
   --primary-5: hsl(
@@ -72,41 +72,43 @@
      var(--primary-saturation),
      var(--primary-lightness));
   --primary-6: hsl(
-     calc(var(--primary-hue) + var(--light-hue-shift) * var(--factor-1)),
+     calc(var(--primary-hue) + var(--primary-light-hue-shift) * var(--factor-1)),
      calc(var(--primary-saturation) - ((var(--primary-saturation) - var(--light-saturation)) * var(--factor-1))),
      calc(var(--primary-lightness) + ((var(--light-lightness) - var(--primary-lightness)) * var(--factor-1))));
   --primary-7: hsl(
-     calc(var(--primary-hue) + var(--light-hue-shift) * var(--factor-2)),
+     calc(var(--primary-hue) + var(--primary-light-hue-shift) * var(--factor-2)),
      calc(var(--primary-saturation) - ((var(--primary-saturation) - var(--light-saturation)) * var(--factor-2))),
      calc(var(--primary-lightness) + ((var(--light-lightness) - var(--primary-lightness)) * var(--factor-2))));
   --primary-8: hsl(
-     calc(var(--primary-hue) + var(--light-hue-shift) * var(--factor-3)),
+     calc(var(--primary-hue) + var(--primary-light-hue-shift) * var(--factor-3)),
      calc(var(--primary-saturation) - ((var(--primary-saturation) - var(--light-saturation)) * var(--factor-3))),
      calc(var(--primary-lightness) + ((var(--light-lightness) - var(--primary-lightness)) * var(--factor-3))));
   --primary-9: hsl(
-     calc(var(--primary-hue) + var(--light-hue-shift) * var(--factor-4)),
+     calc(var(--primary-hue) + var(--primary-light-hue-shift) * var(--factor-4)),
      calc(var(--primary-saturation) - ((var(--primary-saturation) - var(--light-saturation)) * var(--factor-4))),
      calc(var(--primary-lightness) + ((var(--light-lightness) - var(--primary-lightness)) * var(--factor-4))));
 
    --neutral-hue: 220;
+   --neutral-dark-hue-shift: 20; /* closest to 0, 120, or 240 */
+   --neutral-light-hue-shift: -20; /* closest to 60, 180, or 300 */
    --neutral-saturation: 5%;
    --neutral-lightness: 50%;
    --neutral-light-saturation: 10%;
    --neutral-dark-saturation: 10%;
    --neutral-1: hsl(
-      calc(var(--neutral-hue) - var(--dark-hue-shift) * var(--factor-4)),
+      calc(var(--neutral-hue) + var(--neutral-dark-hue-shift) * var(--factor-4)),
       calc(var(--neutral-saturation) + ((var(--neutral-dark-saturation) - var(--neutral-saturation)) * var(--factor-4))),
       calc(var(--neutral-lightness) - ((var(--neutral-lightness) - var(--dark-lightness)) * var(--factor-4))));
    --neutral-2: hsl(
-      calc(var(--neutral-hue) - var(--dark-hue-shift) * var(--factor-3)),
+      calc(var(--neutral-hue) + var(--neutral-dark-hue-shift) * var(--factor-3)),
       calc(var(--neutral-saturation) + ((var(--neutral-dark-saturation) - var(--neutral-saturation)) * var(--factor-3))),
       calc(var(--neutral-lightness) - ((var(--neutral-lightness) - var(--dark-lightness)) * var(--factor-3))));
    --neutral-3: hsl(
-      calc(var(--neutral-hue) - var(--dark-hue-shift) * var(--factor-2)),
+      calc(var(--neutral-hue) + var(--neutral-dark-hue-shift) * var(--factor-2)),
       calc(var(--neutral-saturation) + ((var(--neutral-dark-saturation) - var(--neutral-saturation)) * var(--factor-2))),
       calc(var(--neutral-lightness) - ((var(--neutral-lightness) - var(--dark-lightness)) * var(--factor-2))));
    --neutral-4: hsl(
-      calc(var(--neutral-hue) - var(--dark-hue-shift) * var(--factor-1)),
+      calc(var(--neutral-hue) + var(--neutral-dark-hue-shift) * var(--factor-1)),
       calc(var(--neutral-saturation) + ((var(--neutral-dark-saturation) - var(--neutral-saturation)) * var(--factor-1))),
       calc(var(--neutral-lightness) - ((var(--neutral-lightness) - var(--dark-lightness)) * var(--factor-1))));
    --neutral-5: hsl(
@@ -114,39 +116,41 @@
       var(--neutral-saturation),
       var(--neutral-lightness));
    --neutral-6: hsl(
-      calc(var(--neutral-hue) + var(--light-hue-shift) * var(--factor-1)),
+      calc(var(--neutral-hue) + var(--neutral-light-hue-shift) * var(--factor-1)),
       calc(var(--neutral-saturation) - ((var(--neutral-saturation) - var(--neutral-light-saturation)) * var(--factor-1))),
       calc(var(--neutral-lightness) + ((var(--light-lightness) - var(--neutral-lightness)) * var(--factor-1))));
    --neutral-7: hsl(
-      calc(var(--neutral-hue) + var(--light-hue-shift) * var(--factor-2)),
+      calc(var(--neutral-hue) + var(--neutral-light-hue-shift) * var(--factor-2)),
       calc(var(--neutral-saturation) - ((var(--neutral-saturation) - var(--neutral-light-saturation)) * var(--factor-2))),
       calc(var(--neutral-lightness) + ((var(--light-lightness) - var(--neutral-lightness)) * var(--factor-2))));
    --neutral-8: hsl(
-      calc(var(--neutral-hue) + var(--light-hue-shift) * var(--factor-3)),
+      calc(var(--neutral-hue) + var(--neutral-light-hue-shift) * var(--factor-3)),
       calc(var(--neutral-saturation) - ((var(--neutral-saturation) - var(--neutral-light-saturation)) * var(--factor-3))),
       calc(var(--neutral-lightness) + ((var(--light-lightness) - var(--neutral-lightness)) * var(--factor-3))));
    --neutral-9: hsl(
-      calc(var(--neutral-hue) + var(--light-hue-shift) * var(--factor-4)),
+      calc(var(--neutral-hue) + var(--neutral-light-hue-shift) * var(--factor-4)),
       calc(var(--neutral-saturation) - ((var(--neutral-saturation) - var(--neutral-light-saturation)) * var(--factor-4))),
       calc(var(--neutral-lightness) + ((var(--light-lightness) - var(--neutral-lightness)) * var(--factor-4))));
 
    --accent-red-hue: 0;
+   --accent-red-dark-hue-shift: -20; /* closest to 0, 120, or 240 */
+   --accent-red-light-hue-shift: +20; /* closest to 60, 180, or 300 */
    --accent-red-saturation: 40%;
    --accent-red-lightness: 50%;
    --accent-red-1: hsl(
-      calc(var(--accent-red-hue) - var(--dark-hue-shift) * var(--factor-4)),
+      calc(var(--accent-red-hue) + var(--accent-red-dark-hue-shift) * var(--factor-4)),
       calc(var(--accent-red-saturation) + ((var(--dark-saturation) - var(--accent-red-saturation)) * var(--factor-4))),
       calc(var(--accent-red-lightness) - ((var(--accent-red-lightness) - var(--dark-lightness)) * var(--factor-4))));
    --accent-red-2: hsl(
-      calc(var(--accent-red-hue) - var(--dark-hue-shift) * var(--factor-3)),
+      calc(var(--accent-red-hue) + var(--accent-red-dark-hue-shift) * var(--factor-3)),
       calc(var(--accent-red-saturation) + ((var(--dark-saturation) - var(--accent-red-saturation)) * var(--factor-3))),
       calc(var(--accent-red-lightness) - ((var(--accent-red-lightness) - var(--dark-lightness)) * var(--factor-3))));
    --accent-red-3: hsl(
-      calc(var(--accent-red-hue) - var(--dark-hue-shift) * var(--factor-2)),
+      calc(var(--accent-red-hue) + var(--accent-red-dark-hue-shift) * var(--factor-2)),
       calc(var(--accent-red-saturation) + ((var(--dark-saturation) - var(--accent-red-saturation)) * var(--factor-2))),
       calc(var(--accent-red-lightness) - ((var(--accent-red-lightness) - var(--dark-lightness)) * var(--factor-2))));
    --accent-red-4: hsl(
-      calc(var(--accent-red-hue) - var(--dark-hue-shift) * var(--factor-1)),
+      calc(var(--accent-red-hue) + var(--accent-red-dark-hue-shift) * var(--factor-1)),
       calc(var(--accent-red-saturation) + ((var(--dark-saturation) - var(--accent-red-saturation)) * var(--factor-1))),
       calc(var(--accent-red-lightness) - ((var(--accent-red-lightness) - var(--dark-lightness)) * var(--factor-1))));
    --accent-red-5: hsl(
@@ -154,39 +158,41 @@
       var(--accent-red-saturation),
       var(--accent-red-lightness));
    --accent-red-6: hsl(
-      calc(var(--accent-red-hue) + var(--light-hue-shift) * var(--factor-1)),
+      calc(var(--accent-red-hue) + var(--accent-red-light-hue-shift) * var(--factor-1)),
       calc(var(--accent-red-saturation) - ((var(--accent-red-saturation) - var(--light-saturation)) * var(--factor-1))),
       calc(var(--accent-red-lightness) + ((var(--light-lightness) - var(--accent-red-lightness)) * var(--factor-1))));
    --accent-red-7: hsl(
-      calc(var(--accent-red-hue) + var(--light-hue-shift) * var(--factor-2)),
+      calc(var(--accent-red-hue) + var(--accent-red-light-hue-shift) * var(--factor-2)),
       calc(var(--accent-red-saturation) - ((var(--accent-red-saturation) - var(--light-saturation)) * var(--factor-2))),
       calc(var(--accent-red-lightness) + ((var(--light-lightness) - var(--accent-red-lightness)) * var(--factor-2))));
    --accent-red-8: hsl(
-      calc(var(--accent-red-hue) + var(--light-hue-shift) * var(--factor-3)),
+      calc(var(--accent-red-hue) + var(--accent-red-light-hue-shift) * var(--factor-3)),
       calc(var(--accent-red-saturation) - ((var(--accent-red-saturation) - var(--light-saturation)) * var(--factor-3))),
       calc(var(--accent-red-lightness) + ((var(--light-lightness) - var(--accent-red-lightness)) * var(--factor-3))));
    --accent-red-9: hsl(
-      calc(var(--accent-red-hue) + var(--light-hue-shift) * var(--factor-4)),
+      calc(var(--accent-red-hue) + var(--accent-red-light-hue-shift) * var(--factor-4)),
       calc(var(--accent-red-saturation) - ((var(--accent-red-saturation) - var(--light-saturation)) * var(--factor-4))),
       calc(var(--accent-red-lightness) + ((var(--light-lightness) - var(--accent-red-lightness)) * var(--factor-4))));
 
    --accent-yellow-hue: 50;
+   --accent-yellow-dark-hue-shift: -20; /* closest to 0, 120, or 240 */
+   --accent-yellow-light-hue-shift: +20; /* closest to 60, 180, or 300 */
    --accent-yellow-saturation: 60%;
    --accent-yellow-lightness: 60%;
    --accent-yellow-1: hsl(
-      calc(var(--accent-yellow-hue) - var(--dark-hue-shift) * var(--factor-4)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-dark-hue-shift) * var(--factor-4)),
       calc(var(--accent-yellow-saturation) + ((var(--dark-saturation) - var(--accent-yellow-saturation)) * var(--factor-4))),
       calc(var(--accent-yellow-lightness) - ((var(--accent-yellow-lightness) - var(--dark-lightness)) * var(--factor-4))));
    --accent-yellow-2: hsl(
-      calc(var(--accent-yellow-hue) - var(--dark-hue-shift) * var(--factor-3)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-dark-hue-shift) * var(--factor-3)),
       calc(var(--accent-yellow-saturation) + ((var(--dark-saturation) - var(--accent-yellow-saturation)) * var(--factor-3))),
       calc(var(--accent-yellow-lightness) - ((var(--accent-yellow-lightness) - var(--dark-lightness)) * var(--factor-3))));
    --accent-yellow-3: hsl(
-      calc(var(--accent-yellow-hue) - var(--dark-hue-shift) * var(--factor-2)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-dark-hue-shift) * var(--factor-2)),
       calc(var(--accent-yellow-saturation) + ((var(--dark-saturation) - var(--accent-yellow-saturation)) * var(--factor-2))),
       calc(var(--accent-yellow-lightness) - ((var(--accent-yellow-lightness) - var(--dark-lightness)) * var(--factor-2))));
    --accent-yellow-4: hsl(
-      calc(var(--accent-yellow-hue) - var(--dark-hue-shift) * var(--factor-1)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-dark-hue-shift) * var(--factor-1)),
       calc(var(--accent-yellow-saturation) + ((var(--dark-saturation) - var(--accent-yellow-saturation)) * var(--factor-1))),
       calc(var(--accent-yellow-lightness) - ((var(--accent-yellow-lightness) - var(--dark-lightness)) * var(--factor-1))));
    --accent-yellow-5: hsl(
@@ -194,39 +200,41 @@
       var(--accent-yellow-saturation),
       var(--accent-yellow-lightness));
    --accent-yellow-6: hsl(
-      calc(var(--accent-yellow-hue) + var(--light-hue-shift) * var(--factor-1)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-light-hue-shift) * var(--factor-1)),
       calc(var(--accent-yellow-saturation) - ((var(--accent-yellow-saturation) - var(--light-saturation)) * var(--factor-1))),
       calc(var(--accent-yellow-lightness) + ((var(--light-lightness) - var(--accent-yellow-lightness)) * var(--factor-1))));
    --accent-yellow-7: hsl(
-      calc(var(--accent-yellow-hue) + var(--light-hue-shift) * var(--factor-2)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-light-hue-shift) * var(--factor-2)),
       calc(var(--accent-yellow-saturation) - ((var(--accent-yellow-saturation) - var(--light-saturation)) * var(--factor-2))),
       calc(var(--accent-yellow-lightness) + ((var(--light-lightness) - var(--accent-yellow-lightness)) * var(--factor-2))));
    --accent-yellow-8: hsl(
-      calc(var(--accent-yellow-hue) + var(--light-hue-shift) * var(--factor-3)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-light-hue-shift) * var(--factor-3)),
       calc(var(--accent-yellow-saturation) - ((var(--accent-yellow-saturation) - var(--light-saturation)) * var(--factor-3))),
       calc(var(--accent-yellow-lightness) + ((var(--light-lightness) - var(--accent-yellow-lightness)) * var(--factor-3))));
    --accent-yellow-9: hsl(
-      calc(var(--accent-yellow-hue) + var(--light-hue-shift) * var(--factor-4)),
+      calc(var(--accent-yellow-hue) + var(--accent-yellow-light-hue-shift) * var(--factor-4)),
       calc(var(--accent-yellow-saturation) - ((var(--accent-yellow-saturation) - var(--light-saturation)) * var(--factor-4))),
       calc(var(--accent-yellow-lightness) + ((var(--light-lightness) - var(--accent-yellow-lightness)) * var(--factor-4))));
 
    --accent-green-hue: 100;
+   --accent-green-dark-hue-shift: 20; /* closest to 0, 120, or 240 */
+   --accent-green-light-hue-shift: -20; /* closest to 60, 180, or 300 */
    --accent-green-saturation: 40%;
    --accent-green-lightness: 50%;
    --accent-green-1: hsl(
-      calc(var(--accent-green-hue) - var(--dark-hue-shift) * var(--factor-4)),
+      calc(var(--accent-green-hue) + var(--accent-green-dark-hue-shift) * var(--factor-4)),
       calc(var(--accent-green-saturation) + ((var(--dark-saturation) - var(--accent-green-saturation)) * var(--factor-4))),
       calc(var(--accent-green-lightness) - ((var(--accent-green-lightness) - var(--dark-lightness)) * var(--factor-4))));
    --accent-green-2: hsl(
-      calc(var(--accent-green-hue) - var(--dark-hue-shift) * var(--factor-3)),
+      calc(var(--accent-green-hue) + var(--accent-green-dark-hue-shift) * var(--factor-3)),
       calc(var(--accent-green-saturation) + ((var(--dark-saturation) - var(--accent-green-saturation)) * var(--factor-3))),
       calc(var(--accent-green-lightness) - ((var(--accent-green-lightness) - var(--dark-lightness)) * var(--factor-3))));
    --accent-green-3: hsl(
-      calc(var(--accent-green-hue) - var(--dark-hue-shift) * var(--factor-2)),
+      calc(var(--accent-green-hue) + var(--accent-green-dark-hue-shift) * var(--factor-2)),
       calc(var(--accent-green-saturation) + ((var(--dark-saturation) - var(--accent-green-saturation)) * var(--factor-2))),
       calc(var(--accent-green-lightness) - ((var(--accent-green-lightness) - var(--dark-lightness)) * var(--factor-2))));
    --accent-green-4: hsl(
-      calc(var(--accent-green-hue) - var(--dark-hue-shift) * var(--factor-1)),
+      calc(var(--accent-green-hue) + var(--accent-green-dark-hue-shift) * var(--factor-1)),
       calc(var(--accent-green-saturation) + ((var(--dark-saturation) - var(--accent-green-saturation)) * var(--factor-1))),
       calc(var(--accent-green-lightness) - ((var(--accent-green-lightness) - var(--dark-lightness)) * var(--factor-1))));
    --accent-green-5: hsl(
@@ -234,19 +242,19 @@
       var(--accent-green-saturation),
       var(--accent-green-lightness));
    --accent-green-6: hsl(
-      calc(var(--accent-green-hue) + var(--light-hue-shift) * var(--factor-1)),
+      calc(var(--accent-green-hue) + var(--accent-green-light-hue-shift) * var(--factor-1)),
       calc(var(--accent-green-saturation) - ((var(--accent-green-saturation) - var(--light-saturation)) * var(--factor-1))),
       calc(var(--accent-green-lightness) + ((var(--light-lightness) - var(--accent-green-lightness)) * var(--factor-1))));
    --accent-green-7: hsl(
-      calc(var(--accent-green-hue) + var(--light-hue-shift) * var(--factor-2)),
+      calc(var(--accent-green-hue) + var(--accent-green-light-hue-shift) * var(--factor-2)),
       calc(var(--accent-green-saturation) - ((var(--accent-green-saturation) - var(--light-saturation)) * var(--factor-2))),
       calc(var(--accent-green-lightness) + ((var(--light-lightness) - var(--accent-green-lightness)) * var(--factor-2))));
    --accent-green-8: hsl(
-      calc(var(--accent-green-hue) + var(--light-hue-shift) * var(--factor-3)),
+      calc(var(--accent-green-hue) + var(--accent-green-light-hue-shift) * var(--factor-3)),
       calc(var(--accent-green-saturation) - ((var(--accent-green-saturation) - var(--light-saturation)) * var(--factor-3))),
       calc(var(--accent-green-lightness) + ((var(--light-lightness) - var(--accent-green-lightness)) * var(--factor-3))));
    --accent-green-9: hsl(
-      calc(var(--accent-green-hue) + var(--light-hue-shift) * var(--factor-4)),
+      calc(var(--accent-green-hue) + var(--accent-green-light-hue-shift) * var(--factor-4)),
       calc(var(--accent-green-saturation) - ((var(--accent-green-saturation) - var(--light-saturation)) * var(--factor-4))),
       calc(var(--accent-green-lightness) + ((var(--light-lightness) - var(--accent-green-lightness)) * var(--factor-4))));
 

@@ -22,8 +22,8 @@
   /* Font Size
   ===========================================================================*/
 
-  --min-font-size: 16;
-  --max-font-size: 18;
+  --min-font-size: 14;
+  --max-font-size: 20;
   --delta-font-size: calc(var(--max-font-size) - var(--min-font-size));
 
   /* Font Weight

@@ -88,6 +88,8 @@ select {
     color: inherit;
     font-weight: 600;
     width: 100%;
+    margin: var(--margin);
+    padding: var(--padding);
 }
 
 input:hover,
@@ -103,6 +105,7 @@ select:focus {
 input[type=number] {
     width: 2em;
     text-align: right;
+    padding: 0;
 }
 
 input[type='number'] {
@@ -129,6 +132,7 @@ label {
     text-transform: uppercase;
     color: var(--neutral-5);
     letter-spacing: 0.15em;
+    margin: var(--margin);
 }
 
 .unit {
@@ -218,7 +222,7 @@ aside.active {
 }
 
 #main-nav ul li .icon {
-    margin-right: 8px;
+    margin-right: var(--margin);
 }
 
 .icon {
@@ -270,7 +274,7 @@ header {
 main {
     width: 100%;
     max-width: calc(var(--max-width) * 1px);
-    padding: var(--padding);
+    padding: var(--size-4);
 }
 
 main a {
@@ -288,7 +292,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 1em;
+    padding: var(--padding);
 }
 
 nav a {
@@ -304,8 +308,8 @@ nav a.router-link-exact-active {
     background-color: var(--neutral-9);
     border: 1px solid var(--neutral-8);
     border-radius: var(--border-radius);
-    margin-bottom: 1em;
-    padding: 2em;
+    margin-bottom: var(--margin);
+    padding: var(--padding);
     width: 100%;
 }
 

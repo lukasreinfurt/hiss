@@ -301,11 +301,16 @@ main {
 }
 
 main a {
-    color: var(--primary-5);
+    color: var(--primary-6);
+    font-weight: 600;
+}
+
+main a:hover {
+    border-bottom: 2px solid var(--primary-6);
 }
 
 main a:visited {
-    color:var(--primary-5);
+    color:var(--primary-6);
 }
 
 nav ul {

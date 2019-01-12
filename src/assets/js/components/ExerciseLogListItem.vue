@@ -12,9 +12,47 @@
           </option>
         </select>
       </h2>
-      Repetitions:<input v-model.number="repetitions" type="number" /><br />
-      Weight:<input v-model.number="weight" type="number" step="0.5" /><br />
-      Duration:<input v-model.number="duration" type="number" /><br />
+      <div id="inputs" class="flex-container horizontal wrap">
+        <div class="flex-container">
+          <label>Repetitions</label>
+          <div class="inputWrapper">
+            <input
+              v-model.number="repetitions"
+              type="number"
+              min="0"
+              max="99"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="flex-container">
+          <label>Weight</label>
+          <div class="inputWrapper">
+            <input
+              v-model.number="weight"
+              type="number"
+              step="0.5"
+              min="0"
+              max="999"
+              placeholder="0"
+            />
+            <span class="unit">kg</span>
+          </div>
+        </div>
+        <div class="flex-container">
+          <label>Duration</label>
+          <div class="inputWrapper">
+            <input
+              v-model.number="duration"
+              type="number"
+              min="0"
+              max="999"
+              placeholder="0"
+            />
+            <span class="unit">s</span>
+          </div>
+        </div>
+      </div>
       <button @click="$emit('remove', exerciseLog)">✕</button>
     </div>
     <div v-else-if="exerciseLog.type === 'transition'" class="card transition">

@@ -82,9 +82,59 @@ a:visited {
 input,
 select {
     overflow: hidden;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--neutral-8);
+    color: inherit;
+    font-weight: 600;
     width: 100%;
-    border: 1px solid var(--neutral-8);
-    border-radius: var(--border-radius-small);
+}
+
+input:hover,
+select:hover {
+    border-color: var(--neutral-6);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--neutral-6);
+}
+
+input[type=number] {
+    width: 2em;
+    text-align: right;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#inputs {
+    justify-content: space-around;
+}
+
+.inputWrapper {
+    vertical-align: baseline;
+    font-size: 2em;
+}
+
+label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: var(--neutral-5);
+    letter-spacing: 0.15em;
+}
+
+.unit {
+    font-weight: 600;
+    font-size: 0.5em;
+    text-transform: uppercase;
 }
 
 button {
@@ -114,6 +164,10 @@ button:hover {
 
 .flex-container.horizontal {
     flex-direction: row;
+}
+
+.flex-container.wrap {
+    flex-wrap: wrap;
 }
 
 aside {

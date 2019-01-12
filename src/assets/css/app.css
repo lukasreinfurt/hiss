@@ -138,13 +138,17 @@ aside.active {
 
 #main-nav ul {
     border-top: 2px solid var(--neutral-1);
-    color: var(--neutral-9);
+    color: var(--neutral-6);
     justify-content: flex-start;
 }
 
 #main-nav ul li {
     display: flex;
     align-items: center;
+}
+
+#main-nav ul li:hover {
+    color: var(--neutral-9);
 }
 
 #main-nav ul li .icon {

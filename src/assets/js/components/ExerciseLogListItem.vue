@@ -1,17 +1,15 @@
 <template>
   <div>
     <div v-if="exerciseLog.type === 'exercise'" class="card">
-      <h2>
-        <select v-model="type">
-          <option
-            v-for="availableExercise in availableExercises"
-            :key="availableExercise.id"
-            :value="availableExercise.id"
-          >
-            {{ availableExercise.name }}
-          </option>
-        </select>
-      </h2>
+      <select v-model="type">
+        <option
+          v-for="availableExercise in availableExercises"
+          :key="availableExercise.id"
+          :value="availableExercise.id"
+        >
+          {{ availableExercise.name }}
+        </option>
+      </select>
       <div id="inputs" class="flex-container horizontal wrap">
         <div class="flex-container">
           <label>Repetitions</label>

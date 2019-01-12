@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <router-link :to="'/log/' + workoutLog.id">
-      <h2>{{ workout.name }}</h2>
+      {{ workout.name }}
     </router-link>
     {{ prettyDate(workoutLog.date) }}
     <button @click="removeWorkoutLogHandler(workoutLog)">✕</button>

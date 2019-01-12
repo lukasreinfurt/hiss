@@ -3,7 +3,7 @@
     <header><NavBar :title="title"></NavBar></header>
     <div id="mainWrapper" class="flex-container">
       <main class="flex-container">
-        <h2><input v-model="name" placeholder="Exercise Name" /></h2>
+        <input v-model="name" placeholder="Exercise Name" />
         <select v-model="equipment">
           <option>machine</option>
           <option>free-weight</option>

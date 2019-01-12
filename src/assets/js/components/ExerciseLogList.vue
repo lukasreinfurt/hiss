@@ -1,6 +1,6 @@
 <template>
   <div class="flex-container">
-    <h1>Exercises</h1>
+    Exercises
     <div class="flex-container">
       <ExerciseLogListItem
         v-for="exerciseLog in exerciseLogs"

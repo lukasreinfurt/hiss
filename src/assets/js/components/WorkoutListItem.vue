@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <router-link :to="'/workouts/' + workout.id">
-      <h2>{{ workout.name }}</h2>
+      {{ workout.name }}
     </router-link>
     <button @click="removeWorkout(workout)">✕</button>
   </div>

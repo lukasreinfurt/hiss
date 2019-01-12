@@ -3,17 +3,15 @@
     <header><NavBar :title="title"></NavBar></header>
     <div id="mainWrapper" class="flex-container">
       <main class="flex-container">
-        <h2>
-          <select v-model="workoutType" @change="workoutChange">
-            <option
-              v-for="availableWorkout in availableWorkouts"
-              :key="availableWorkout.id"
-              :value="availableWorkout.id"
-            >
-              {{ availableWorkout.name }}
-            </option>
-          </select>
-        </h2>
+        <select v-model="workoutType" @change="workoutChange">
+          <option
+            v-for="availableWorkout in availableWorkouts"
+            :key="availableWorkout.id"
+            :value="availableWorkout.id"
+          >
+            {{ availableWorkout.name }}
+          </option>
+        </select>
         {{ prettyDate(workoutLog.date) }}
         <ExerciseLogList
           :exercise-logs="exerciseLogs"

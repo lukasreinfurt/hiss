@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Exercises</h1>
+    Exercises
     <select v-model="selected">
       <option
         v-for="availableExercise in availableExercises"

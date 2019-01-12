@@ -14,8 +14,8 @@
           :key="equipment"
           class="flex-container"
         >
-          <h3 v-if="equipment">{{ equipment }}</h3>
-          <h3 v-else>Uncategorized</h3>
+          <span v-if="equipment">{{ equipment }}</span>
+          <span v-else>Uncategorized</span>
           <ExerciseListItem
             v-for="exercise in exercises"
             :key="exercise.id"

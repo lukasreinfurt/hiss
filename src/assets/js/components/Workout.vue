@@ -3,7 +3,7 @@
     <header><NavBar :title="title"></NavBar></header>
     <div id="mainWrapper" class="flex-container">
       <main class="flex-container">
-        <h2><input v-model="name" placeholder="Workout Name" /></h2>
+        <input v-model="name" placeholder="Workout Name" />
         <WorkoutExerciseList
           :exercises="exercises"
           :id="id"

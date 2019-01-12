@@ -91,10 +91,10 @@
    --neutral-hue: 220;
    --neutral-dark-hue-shift: 20; /* closest to 0, 120, or 240 */
    --neutral-light-hue-shift: -20; /* closest to 60, 180, or 300 */
-   --neutral-saturation: 5%;
+   --neutral-saturation: 10%;
    --neutral-lightness: 50%;
-   --neutral-light-saturation: 10%;
-   --neutral-dark-saturation: 10%;
+   --neutral-light-saturation: 15%;
+   --neutral-dark-saturation: 15%;
    --neutral-1: hsl(
       calc(var(--neutral-hue) + var(--neutral-dark-hue-shift) * var(--factor-4)),
       calc(var(--neutral-saturation) + ((var(--neutral-dark-saturation) - var(--neutral-saturation)) * var(--factor-4))),

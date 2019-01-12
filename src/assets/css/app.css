@@ -292,6 +292,7 @@ header {
     justify-content: flex-start;
     overflow: auto;
     flex-grow: 1;
+    background-color: var(--neutral-9);
 }
 
 main {
@@ -333,13 +334,18 @@ nav a.router-link-exact-active {
 }
 
 .card {
-    background-color: var(--neutral-9);
-    border: 1px solid var(--neutral-8);
+    background-color: white;
+    border-bottom: 2px solid var(--neutral-7);
     border-radius: var(--border-radius);
     margin-bottom: var(--margin);
     padding: var(--padding);
     width: 100%;
 }
+
+.card.transition {
+    background-color: transparent;
+    border: 2px dashed var(--neutral-7);
+  }
 
 @media all and (min-width: 280px) { /* Fix: Once env variables are supported, use them here */
 

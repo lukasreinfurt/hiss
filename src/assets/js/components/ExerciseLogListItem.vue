@@ -128,10 +128,4 @@ export default {
 };
 </script>
 
-<style>
-.card.transition {
-  color: gray;
-  background-color: white;
-  border-style: dashed;
-}
-</style>
+<style></style>

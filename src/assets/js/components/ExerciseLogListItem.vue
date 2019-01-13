@@ -6,9 +6,8 @@
           v-for="availableExercise in availableExercises"
           :key="availableExercise.id"
           :value="availableExercise.id"
+          >{{ availableExercise.name }}</option
         >
-          {{ availableExercise.name }}
-        </option>
       </select>
       <div id="inputs" class="flex-container horizontal wrap">
         <div class="flex-container">
@@ -127,5 +126,3 @@ export default {
   }
 };
 </script>
-
-<style></style>

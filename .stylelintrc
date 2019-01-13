@@ -1,8 +1,9 @@
 {
   "extends": "stylelint-config-recommended",
   "plugins": [
-    "stylelint-order",
-		"stylelint-high-performance-animation"
+		"stylelint-high-performance-animation",
+		"stylelint-no-unsupported-browser-features",
+    "stylelint-order"
   ],
   "rules": {
 		"order/order": [
@@ -10,6 +11,9 @@
 			"declarations"
 		],
 		"order/properties-alphabetical-order": true,
-		"plugin/no-low-performance-animation-properties": true
+		"plugin/no-low-performance-animation-properties": true,
+		"plugin/no-unsupported-browser-features": [true, {
+			"severity": "warning"
+		}]
 	}
 }

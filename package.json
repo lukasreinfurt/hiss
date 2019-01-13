@@ -37,14 +37,16 @@
     "build": "parcel build ./src/index.html --out-dir ./public --public-url ./",
     "update": "yarn upgrade-interactive",
     "lint:css": "stylelint src/**/*.{css,vue}",
+    "lint:js": "eslint --ext .js,.vue src",
+    "lint": "yarn lint:css && yarn lint:js",
     "fix:css": "stylelint src/**/*.{css,vue} --fix",
-    "lint": "eslint --ext .js,.vue src",
-    "lint-fix": "eslint --ext .js,.vue src --fix",
-    "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "fix:js": "eslint --ext .js,.vue src --fix",
+    "fix": "yarn fix:css && yarn fix:js",
+    "check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-check && yarn lint"
+      "pre-commit": "yarn check && yarn lint"
     }
   },
   "marked": {

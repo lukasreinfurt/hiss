@@ -1,6 +1,52 @@
-@import './normalize.css';
-@import './variables.css';
-@import './test.css';
+/*
+    From SMACSS (https://smacss.com/book/categorizing)
+
+    Base: Default single element styles. No ids or classes. Includes CSS reset.
+
+        html, body, a
+        html {}
+        body {}
+        a {}
+
+    Layout: Divide the page into sections and combines several modules. Elements or ids.
+
+        heady, footer, main
+        #wrapper
+        .l-layoutName
+
+    Module: The reusable, modular parts of the design.
+
+        .moduleName
+
+    State: How modules or layouts look when in a particular state
+
+        .is-stateName
+
+    Theme: Defines the colors and images of the whole site/app
+
+    From BEM (http://getbem.com/naming/)
+
+    Blocks: A standalone entity that is meaningful on its own.
+
+        class="blockName"
+        .blockName {}
+
+    Elements: Parts of a block that have no standalone meaning.
+
+        class="blockName_elementName"
+        .blockName__elementName {}
+
+    Modifiers: Flags on blocks or elements that change appearance, behaviour or state
+
+        class="blockName__elementName -is-modifierName"
+        .blockName__elementName.-is-modifierName {}
+
+
+*/
+
+@import "normalize.css";
+@import "./variables.css";
+@import "./test.css";
 
 *,
 *::before,

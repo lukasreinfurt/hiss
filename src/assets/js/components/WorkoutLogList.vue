@@ -14,8 +14,16 @@
           :key="workoutLog.id"
           :workout-log="workoutLog"
         ></WorkoutLogListItem>
-        <div v-if="Object.keys(workoutLogs).length === 0">
-          No Log entries yet!
+        <div v-if="Object.keys(workoutLogs).length === 0" class="emptyState">
+          <img
+            class="illustration"
+            src="/assets/images/illustrations/log.png"
+          />
+          <p>
+            Seems like you haven't logged any workouts yet.<br />
+            Go on, add your first log now!
+          </p>
+          <button class="primary" @click="addNewWorkoutLog()">Add Log</button>
         </div>
       </main>
     </div>

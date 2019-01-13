@@ -14,7 +14,17 @@
           :key="workout.id"
           :workout="workout"
         ></WorkoutListItem>
-        <div v-if="Object.keys(workouts).length === 0">No Workouts yet!</div>
+        <div v-if="Object.keys(workouts).length === 0" class="emptyState">
+          <img
+            class="illustration"
+            src="/assets/images/illustrations/workouts.png"
+          />
+          <p>
+            Seems like you haven't added any workouts yet.<br />
+            Go on, add your first workout now!
+          </p>
+          <button class="primary" @click="addNewWorkout()">Add Workout</button>
+        </div>
       </main>
     </div>
   </div>

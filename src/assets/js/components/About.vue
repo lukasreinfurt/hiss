@@ -3,6 +3,10 @@
     <header><NavBar :title="title" hamburger></NavBar></header>
     <div id="mainWrapper" class="flex-container">
       <main class="flex-container">
+        <img
+          class="illustration"
+          src="/assets/images/illustrations/about.png"
+        />
         <h1>HISS</h1>
         <section>
           Currently running {{ version }} (see

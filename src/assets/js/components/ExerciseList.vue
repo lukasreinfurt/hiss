@@ -22,8 +22,21 @@
             :exercise="exercise"
           ></ExerciseListItem>
         </div>
-        <div v-if="Object.keys(exercisesByEquipment).length === 0">
-          No Exercises yet!
+        <div
+          v-if="Object.keys(exercisesByEquipment).length === 0"
+          class="emptyState"
+        >
+          <img
+            class="illustration"
+            src="/assets/images/illustrations/exercises.png"
+          />
+          <p>
+            Seems like you haven't added any exercises yet.<br />
+            Go on, add your first exercise now!
+          </p>
+          <button class="primary" @click="addNewExercise()">
+            Add Exercise
+          </button>
         </div>
       </main>
     </div>

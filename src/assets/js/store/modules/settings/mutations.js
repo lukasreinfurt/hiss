@@ -1,5 +1,5 @@
 export default {
-  toggleMenuActive(state) {
-    state.menuActive = !state.menuActive;
-  }
+	toggleMenuActive(state) {
+		state.menuActive = !state.menuActive;
+	}
 };

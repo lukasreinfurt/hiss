@@ -2,277 +2,277 @@
    ==========================================================================*/
 
 .color {
-    border-radius: 32px;
-    height: 64px;
-    margin: 10px;
-    width: 64px;
+	border-radius: 32px;
+	height: 64px;
+	margin: 10px;
+	width: 64px;
 }
 
 .shadow {
-    height: 64px;
-    margin: var(--margin);
-    width: 64px;
+	height: 64px;
+	margin: var(--margin);
+	width: 64px;
 }
 
 .shadow.elevation1 {
-    box-shadow: var(--box-shadow-1);
+	box-shadow: var(--box-shadow-1);
 }
 
 .shadow.elevation2 {
-    box-shadow: var(--box-shadow-2);
+	box-shadow: var(--box-shadow-2);
 }
 
 .shadow.elevation3 {
-    box-shadow: var(--box-shadow-3);
+	box-shadow: var(--box-shadow-3);
 }
 
 .shadow.elevation4 {
-    box-shadow: var(--box-shadow-4);
+	box-shadow: var(--box-shadow-4);
 }
 
 .shadow.elevation5 {
-    box-shadow: var(--box-shadow-5);
+	box-shadow: var(--box-shadow-5);
 }
 
 button.primary {
-    background-color: var(--primary-5);
-    color: var(--primary-9);
+	background-color: var(--primary-5);
+	color: var(--primary-9);
 }
 
 button.neutral {
-    background-color: var(--neutral-5);
-    color: var(--neutral-9);
+	background-color: var(--neutral-5);
+	color: var(--neutral-9);
 }
 
 button.accent-red {
-    background-color: var(--accent-red-5);
-    color: var(--accent-red-9);
+	background-color: var(--accent-red-5);
+	color: var(--accent-red-9);
 }
 
 button.accent-yellow {
-    background-color: var(--accent-yellow-5);
-    color: var(--accent-yellow-9);
+	background-color: var(--accent-yellow-5);
+	color: var(--accent-yellow-9);
 }
 
 button.accent-green {
-    background-color: var(--accent-green-5);
-    color: var(--accent-green-9);
+	background-color: var(--accent-green-5);
+	color: var(--accent-green-9);
 }
 
 .info {
-  border-radius: 8px;
-  border-style: solid;
-  border-width: 2px;
-  padding: 10px;
-  width: 100%;
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+	width: 100%;
 }
 
 .primary {
-  background-color: var(--primary-9);
-  border-color: var(--primary-7);
-  color: var(--primary-1);
+	background-color: var(--primary-9);
+	border-color: var(--primary-7);
+	color: var(--primary-1);
 }
 
 .primary-1 {
-    background-color: var(--primary-1);
+	background-color: var(--primary-1);
 }
 
 .primary-2 {
-    background-color: var(--primary-2);
+	background-color: var(--primary-2);
 }
 
 .primary-3 {
-    background-color: var(--primary-3);
+	background-color: var(--primary-3);
 }
 
 .primary-4 {
-    background-color: var(--primary-4);
+	background-color: var(--primary-4);
 }
 
 .primary-5 {
-    background-color: var(--primary-5);
+	background-color: var(--primary-5);
 }
 
 .primary-6 {
-    background-color: var(--primary-6);
+	background-color: var(--primary-6);
 }
 
 .primary-7 {
-    background-color: var(--primary-7);
+	background-color: var(--primary-7);
 }
 
 .primary-8 {
-    background-color: var(--primary-8);
+	background-color: var(--primary-8);
 }
 
 .primary-9 {
-    background-color: var(--primary-9);
+	background-color: var(--primary-9);
 }
 
 .neutral {
-    background-color: var(--neutral-9);
-    border-color: var(--neutral-7);
-    color: var(--neutral-1);
+	background-color: var(--neutral-9);
+	border-color: var(--neutral-7);
+	color: var(--neutral-1);
 }
 
 .neutral-1 {
-    background-color: var(--neutral-1);
+	background-color: var(--neutral-1);
 }
 
 .neutral-2 {
-    background-color: var(--neutral-2);
+	background-color: var(--neutral-2);
 }
 
 .neutral-3 {
-    background-color: var(--neutral-3);
+	background-color: var(--neutral-3);
 }
 
 .neutral-4 {
-    background-color: var(--neutral-4);
+	background-color: var(--neutral-4);
 }
 
 .neutral-5 {
-    background-color: var(--neutral-5);
+	background-color: var(--neutral-5);
 }
 
 .neutral-6 {
-    background-color: var(--neutral-6);
+	background-color: var(--neutral-6);
 }
 
 .neutral-7 {
-    background-color: var(--neutral-7);
+	background-color: var(--neutral-7);
 }
 
 .neutral-8 {
-    background-color: var(--neutral-8);
+	background-color: var(--neutral-8);
 }
 
 .neutral-9 {
-    background-color: var(--neutral-9);
+	background-color: var(--neutral-9);
 }
 
 .accent-red {
-    background-color: var(--accent-red-9);
-    border-color: var(--accent-red-7);
-    color: var(--accent-red-1);
+	background-color: var(--accent-red-9);
+	border-color: var(--accent-red-7);
+	color: var(--accent-red-1);
 }
 
 .accent-red-1 {
-    background-color: var(--accent-red-1);
+	background-color: var(--accent-red-1);
 }
 
 .accent-red-2 {
-    background-color: var(--accent-red-2);
+	background-color: var(--accent-red-2);
 }
 
 .accent-red-3 {
-    background-color: var(--accent-red-3);
+	background-color: var(--accent-red-3);
 }
 
 .accent-red-4 {
-    background-color: var(--accent-red-4);
+	background-color: var(--accent-red-4);
 }
 
 .accent-red-5 {
-    background-color: var(--accent-red-5);
+	background-color: var(--accent-red-5);
 }
 
 .accent-red-6 {
-    background-color: var(--accent-red-6);
+	background-color: var(--accent-red-6);
 }
 
 .accent-red-7 {
-    background-color: var(--accent-red-7);
+	background-color: var(--accent-red-7);
 }
 
 .accent-red-8 {
-    background-color: var(--accent-red-8);
+	background-color: var(--accent-red-8);
 }
 
 .accent-red-9 {
-    background-color: var(--accent-red-9);
+	background-color: var(--accent-red-9);
 }
 
 .accent-yellow {
-    background-color: var(--accent-yellow-9);
-    border-color: var(--accent-yellow-7);
-    color: var(--accent-yellow-1);
+	background-color: var(--accent-yellow-9);
+	border-color: var(--accent-yellow-7);
+	color: var(--accent-yellow-1);
 }
 
 .accent-yellow-1 {
-    background-color: var(--accent-yellow-1);
+	background-color: var(--accent-yellow-1);
 }
 
 .accent-yellow-2 {
-    background-color: var(--accent-yellow-2);
+	background-color: var(--accent-yellow-2);
 }
 
 .accent-yellow-3 {
-    background-color: var(--accent-yellow-3);
+	background-color: var(--accent-yellow-3);
 }
 
 .accent-yellow-4 {
-    background-color: var(--accent-yellow-4);
+	background-color: var(--accent-yellow-4);
 }
 
 .accent-yellow-5 {
-    background-color: var(--accent-yellow-5);
+	background-color: var(--accent-yellow-5);
 }
 
 .accent-yellow-6 {
-    background-color: var(--accent-yellow-6);
+	background-color: var(--accent-yellow-6);
 }
 
 .accent-yellow-7 {
-    background-color: var(--accent-yellow-7);
+	background-color: var(--accent-yellow-7);
 }
 
 .accent-yellow-8 {
-    background-color: var(--accent-yellow-8);
+	background-color: var(--accent-yellow-8);
 }
 
 .accent-yellow-9 {
-    background-color: var(--accent-yellow-9);
+	background-color: var(--accent-yellow-9);
 }
 
 .accent-green {
-    background-color: var(--accent-green-9);
-    border-color: var(--accent-green-7);
-    color: var(--accent-green-1);
+	background-color: var(--accent-green-9);
+	border-color: var(--accent-green-7);
+	color: var(--accent-green-1);
 }
 
 .accent-green-1 {
-    background-color: var(--accent-green-1);
+	background-color: var(--accent-green-1);
 }
 
 .accent-green-2 {
-    background-color: var(--accent-green-2);
+	background-color: var(--accent-green-2);
 }
 
 .accent-green-3 {
-    background-color: var(--accent-green-3);
+	background-color: var(--accent-green-3);
 }
 
 .accent-green-4 {
-    background-color: var(--accent-green-4);
+	background-color: var(--accent-green-4);
 }
 
 .accent-green-5 {
-    background-color: var(--accent-green-5);
+	background-color: var(--accent-green-5);
 }
 
 .accent-green-6 {
-    background-color: var(--accent-green-6);
+	background-color: var(--accent-green-6);
 }
 
 .accent-green-7 {
-    background-color: var(--accent-green-7);
+	background-color: var(--accent-green-7);
 }
 
 .accent-green-8 {
-    background-color: var(--accent-green-8);
+	background-color: var(--accent-green-8);
 }
 
 .accent-green-9 {
-    background-color: var(--accent-green-9);
+	background-color: var(--accent-green-9);
 }

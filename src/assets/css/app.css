@@ -1,46 +1,45 @@
 /*
-    From SMACSS (https://smacss.com/book/categorizing)
+	From SMACSS (https://smacss.com/book/categorizing)
 
-    Base: Default single element styles. No ids or classes. Includes CSS reset.
+	Base: Default single element styles. No ids or classes. Includes CSS reset.
 
-        html, body, a
-        html {}
-        body {}
-        a {}
+			html, body, a
+			html {}
+			body {}
+			a {}
 
-    Layout: Divide the page into sections and combines several modules. Elements or ids.
+	Layout: Divide the page into sections and combines several modules. Elements or ids.
 
-        heady, footer, main
-        #wrapper
-        .l-layoutName
+			heady, footer, main
+			#wrapper
+			.l-layoutName
 
-    Module: The reusable, modular parts of the design.
+	Module: The reusable, modular parts of the design.
 
-        .moduleName
+			.moduleName
 
-    State: How modules or layouts look when in a particular state
+	State: How modules or layouts look when in a particular state
 
-        .is-stateName
+			.is-stateName
 
-    Theme: Defines the colors and images of the whole site/app
+	Theme: Defines the colors and images of the whole site/app
 
-    From BEM (http://getbem.com/naming/)
+	From BEM (http://getbem.com/naming/)
 
-    Blocks: A standalone entity that is meaningful on its own.
+	Blocks: A standalone entity that is meaningful on its own.
 
-        class="blockName"
-        .blockName {}
+			class="blockName"
+			.blockName {}
 
-    Elements: Parts of a block that have no standalone meaning.
+	Elements: Parts of a block that have no standalone meaning.
 
-        class="blockName_elementName"
-        .blockName__elementName {}
+			class="blockName_elementName"
+			.blockName__elementName {}
 
-    Modifiers: Flags on blocks or elements that change appearance, behaviour or state
+	Modifiers: Flags on blocks or elements that change appearance, behaviour or state
 
-        class="blockName__elementName -is-modifierName"
-        .blockName__elementName.-is-modifierName {}
-
+			class="blockName__elementName -is-modifierName"
+			.blockName__elementName.-is-modifierName {}
 
 */
 

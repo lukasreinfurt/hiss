@@ -1,33 +1,33 @@
 <template>
-  <div id="contentWrapper" class="flex-container">
-    <header>
-      <NavBar :title="title" hamburger>
-        <template slot="right">
-          <button @click="addNewWorkoutLog()">＋</button>
-        </template>
-      </NavBar>
-    </header>
-    <div id="mainWrapper" class="flex-container">
-      <main class="flex-container">
-        <WorkoutLogListItem
-          v-for="workoutLog in workoutLogs"
-          :key="workoutLog.id"
-          :workout-log="workoutLog"
-        ></WorkoutLogListItem>
-        <div v-if="Object.keys(workoutLogs).length === 0" class="emptyState">
-          <img
-            class="illustration"
-            src="/assets/images/illustrations/log.png"
-          />
-          <p>
-            Seems like you haven't logged any workouts yet. <br />Go on, add
-            your first log now!
-          </p>
-          <button class="primary" @click="addNewWorkoutLog()">Add Log</button>
-        </div>
-      </main>
-    </div>
-  </div>
+	<div id="contentWrapper" class="flex-container">
+		<header>
+			<NavBar :title="title" hamburger>
+				<template slot="right">
+					<button @click="addNewWorkoutLog()">＋</button>
+				</template>
+			</NavBar>
+		</header>
+		<div id="mainWrapper" class="flex-container">
+			<main class="flex-container">
+				<WorkoutLogListItem
+					v-for="workoutLog in workoutLogs"
+					:key="workoutLog.id"
+					:workout-log="workoutLog"
+				></WorkoutLogListItem>
+				<div v-if="Object.keys(workoutLogs).length === 0" class="emptyState">
+					<img
+						class="illustration"
+						src="/assets/images/illustrations/log.png"
+					/>
+					<p>
+						Seems like you haven't logged any workouts yet. <br />Go on, add
+						your first log now!
+					</p>
+					<button class="primary" @click="addNewWorkoutLog()">Add Log</button>
+				</div>
+			</main>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -38,27 +38,27 @@ import { createNamespacedHelpers } from "vuex";
 const { mapState, mapActions } = createNamespacedHelpers("workoutLogs");
 
 export default {
-  name: "WorkoutLogList",
-  components: {
-    WorkoutLogListItem,
-    NavBar
-  },
-  data: function() {
-    return {
-      title: "Log"
-    };
-  },
-  computed: {
-    ...mapState(["workoutLogs"])
-  },
-  methods: {
-    ...mapActions(["addWorkoutLog"]),
-    addNewWorkoutLog: function() {
-      var router = this.$router;
-      this.addWorkoutLog().then(function(id) {
-        router.push({ path: "/log/" + id });
-      });
-    }
-  }
+	name: "WorkoutLogList",
+	components: {
+		WorkoutLogListItem,
+		NavBar
+	},
+	data: function() {
+		return {
+			title: "Log"
+		};
+	},
+	computed: {
+		...mapState(["workoutLogs"])
+	},
+	methods: {
+		...mapActions(["addWorkoutLog"]),
+		addNewWorkoutLog: function() {
+			var router = this.$router;
+			this.addWorkoutLog().then(function(id) {
+				router.push({ path: "/log/" + id });
+			});
+		}
+	}
 };
 </script>

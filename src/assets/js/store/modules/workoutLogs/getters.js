@@ -1,5 +1,5 @@
 export default {
-  count(state) {
-    return state.workoutLogList.length;
-  }
+	count(state) {
+		return state.workoutLogList.length;
+	}
 };

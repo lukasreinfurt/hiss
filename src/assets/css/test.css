@@ -2,16 +2,16 @@
    ==========================================================================*/
 
 .color {
-    width: 64px;
-    height: 64px;
     border-radius: 32px;
+    height: 64px;
     margin: 10px;
+    width: 64px;
 }
 
 .shadow {
-    width: 64px;
     height: 64px;
     margin: var(--margin);
+    width: 64px;
 }
 
 .shadow.elevation1 {
@@ -60,17 +60,17 @@ button.accent-green {
 }
 
 .info {
-  width: 100%;
-  padding: 10px;
   border-radius: 8px;
-  border-width: 2px;
   border-style: solid;
+  border-width: 2px;
+  padding: 10px;
+  width: 100%;
 }
 
 .primary {
   background-color: var(--primary-9);
-  color: var(--primary-1);
   border-color: var(--primary-7);
+  color: var(--primary-1);
 }
 
 .primary-1 {
@@ -111,8 +111,8 @@ button.accent-green {
 
 .neutral {
     background-color: var(--neutral-9);
-    color: var(--neutral-1);
     border-color: var(--neutral-7);
+    color: var(--neutral-1);
 }
 
 .neutral-1 {
@@ -153,8 +153,8 @@ button.accent-green {
 
 .accent-red {
     background-color: var(--accent-red-9);
-    color: var(--accent-red-1);
     border-color: var(--accent-red-7);
+    color: var(--accent-red-1);
 }
 
 .accent-red-1 {
@@ -195,8 +195,8 @@ button.accent-green {
 
 .accent-yellow {
     background-color: var(--accent-yellow-9);
-    color: var(--accent-yellow-1);
     border-color: var(--accent-yellow-7);
+    color: var(--accent-yellow-1);
 }
 
 .accent-yellow-1 {
@@ -237,8 +237,8 @@ button.accent-green {
 
 .accent-green {
     background-color: var(--accent-green-9);
-    color: var(--accent-green-1);
     border-color: var(--accent-green-7);
+    color: var(--accent-green-1);
 }
 
 .accent-green-1 {

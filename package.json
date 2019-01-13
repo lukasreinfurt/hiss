@@ -28,6 +28,7 @@
     "prettier": "^1.15.3",
     "stylelint": "^9.9.0",
     "stylelint-config-recommended": "2.1.0",
+    "stylelint-order": "2.0.0",
     "vue-hot-reload-api": "^2.3.1",
     "vue-template-compiler": "^2.5.17"
   },
@@ -35,6 +36,8 @@
     "serve": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html --out-dir ./public --public-url ./",
     "update": "yarn upgrade-interactive",
+    "lint:css": "stylelint src/**/*.{css,vue}",
+    "fix:css": "stylelint src/**/*.{css,vue} --fix",
     "lint": "eslint --ext .js,.vue src",
     "lint-fix": "eslint --ext .js,.vue src --fix",
     "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"

@@ -72,15 +72,6 @@ h6 {
   font-weight: 400;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:visited {
-    color: inherit;
-}
-
 p {
     margin-top: var(--margin);
     margin-bottom: var(--margin);
@@ -98,6 +89,28 @@ li {
     margin-bottom: var(--size-1);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main a {
+    color: var(--primary-6);
+    font-weight: 600;
+}
+
+nav ul li {
+    padding: var(--padding);
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
 input,
 select {
     overflow: hidden;
@@ -109,6 +122,12 @@ select {
     width: 100%;
     margin: var(--margin);
     padding: var(--padding);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input:hover,
@@ -129,12 +148,6 @@ input[type=number] {
 
 input[type='number'] {
     -moz-appearance:textfield;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
 
 #inputs {
@@ -230,6 +243,12 @@ aside.active {
     box-shadow: var(--box-shadow-2);
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 #main-nav ul {
     border-top: 2px solid var(--neutral-1);
     color: var(--neutral-6);
@@ -246,12 +265,13 @@ aside.active {
     color: var(--neutral-9);
 }
 
-#main-nav ul li .icon {
-    margin-right: var(--margin);
-}
-
 .icon {
     width: 32px;
+}
+
+
+#main-nav ul li .icon {
+    margin-right: var(--margin);
 }
 
 #navBarWrapper {
@@ -306,10 +326,7 @@ main {
     padding: var(--size-4);
 }
 
-main a {
-    color: var(--primary-6);
-    font-weight: 600;
-}
+
 
 main a:hover {
     border-bottom: 2px solid var(--primary-6);
@@ -317,20 +334,6 @@ main a:hover {
 
 main a:visited {
     color:var(--primary-6);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    padding: var(--padding);
-}
-
-nav a {
-    text-decoration: none;
 }
 
 nav a.router-link-exact-active {

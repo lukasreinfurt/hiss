@@ -1,6 +1,6 @@
 <template>
 	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title" hamburger></NavBar></header>
+		<header><NavBar :title="title" menu-button></NavBar></header>
 		<div id="mainWrapper" class="flex-container">
 			<main class="flex-container">
 				<div>

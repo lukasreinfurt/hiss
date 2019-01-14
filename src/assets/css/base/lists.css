@@ -1,0 +1,10 @@
+ul,
+ol {
+	margin-bottom: var(--margin);
+	margin-top: var(--margin);
+	padding-left: var(--size-4);
+}
+
+li {
+	margin-bottom: var(--size-1);
+}

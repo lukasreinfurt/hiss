@@ -1,7 +1,7 @@
 <template>
 	<div id="contentWrapper" class="flex-container">
 		<header>
-			<NavBar :title="title" hamburger>
+			<NavBar :title="title" menu-button>
 				<template slot="right">
 					<button @click="addNewExercise()">＋</button>
 				</template>

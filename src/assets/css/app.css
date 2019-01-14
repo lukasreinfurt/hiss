@@ -1,142 +1,118 @@
 /*
-	From SMACSS (https://smacss.com/book/categorizing)
+	From ITCSS (https://medium.freecodecamp.org/managing-large-s-css-projects-using-the-inverted-triangle-architecture-3c03e4b1e6df)
+	and SMACSS (https://smacss.com/book/categorizing)
+
+	Layer styles from:
+		- generic to explicit
+		- low to high specificity
+		- far-reaching to localiced
+
+	Settings:
+		Variables, Themes etc.
+
+	Tools:
+		Mixins, functions, ...
+
+	Generic:
+		Normalize, reset, box-sizing, ...
 
 	Base: Default single element styles. No ids or classes. Includes CSS reset.
 
-			html, body, a
-			html {}
-			body {}
-			a {}
+		html, body, a
+		html {}
+		body {}
+		a {}
 
 	Layout: Divide the page into sections and combines several modules. Elements or ids.
 
-			heady, footer, main
-			#wrapper
-			.l-layoutName
+		heady, footer, main
+		#containerId
+		#wrapperId
+		.l-layoutName
 
-	Module: The reusable, modular parts of the design.
+	Components: The reusable, modular parts of the design.
 
-			.moduleName
+		From BEM (http://getbem.com/naming/)
+
+		Blocks: A standalone entity that is meaningful on its own.
+
+				class="blockName"
+				.blockName {}
+
+		Elements: Parts of a block that have no standalone meaning.
+
+				class="blockName_elementName"
+				.blockName__elementName {}
+
+		Modifiers: Flags on blocks or elements that change appearance, behaviour or state
+
+				class="blockName__elementName -is-modifierName"
+				.blockName__elementName.-is-modifierName {}
 
 	State: How modules or layouts look when in a particular state
 
-			.is-stateName
-
-	Theme: Defines the colors and images of the whole site/app
-
-	From BEM (http://getbem.com/naming/)
-
-	Blocks: A standalone entity that is meaningful on its own.
-
-			class="blockName"
-			.blockName {}
-
-	Elements: Parts of a block that have no standalone meaning.
-
-			class="blockName_elementName"
-			.blockName__elementName {}
-
-	Modifiers: Flags on blocks or elements that change appearance, behaviour or state
-
-			class="blockName__elementName -is-modifierName"
-			.blockName__elementName.-is-modifierName {}
+		.is-stateName
+		!important
 
 */
 
+/* Settings */
+
+@import "./settings/variables.css";
+
+/* Tools */
+
+/* Generic */
+
 @import "normalize.css";
-@import "./variables.css";
+@import "./generic/generic.css";
+
+/* Base */
+
+@import "./base/headers.css";
+@import "./base/links.css";
+@import "./base/lists.css";
+@import "./base/input.css";
+
+/* Layout */
+
+/* Components */
+
+@import "./components/about.css";
+@import "./components/exercise.css";
+@import "./components/exerciseList.css";
+@import "./components/exerciseLogList.css";
+@import "./components/navBar.css";
+@import "./components/releaseNotes.css";
+@import "./components/workout.css";
+@import "./components/workoutList.css";
+@import "./components/workoutLog.css";
+@import "./components/workoutLogList.css";
+
+/* State */
+
 @import "./test.css";
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  flex: 0 1 auto;
-  min-height: auto;
-  min-width: auto;
-}
-
 html {
-  box-sizing: border-box;
-  color: var(--neutral-1);
-  font-family: var(--main-font);
-  font-size: calc(var(--min-font-size) * 1px);
-  height: 100vh;
-  line-height: var(--line-height);
-  min-width: calc(var(--min-width) * 1px);
-  width: 100vw;
+	box-sizing: border-box;
+	color: var(--neutral-1);
+	font-family: var(--main-font);
+	font-size: calc(var(--min-font-size) * 1px);
+	height: 100vh;
+	line-height: var(--line-height);
+	min-width: calc(var(--min-width) * 1px);
+	width: 100vw;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-}
-
-/*******************************************************************************
-* HEADERS                                                                      *
-*******************************************************************************/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: normal;
-	margin-bottom: var(--margin);
-	margin-top: var(--size-4);
-}
-
-h1 {
-	font-size: 2.441em;
-	font-weight: 200;
-}
-
-h2 {
-	font-size: 1.953em;
-	font-weight: 200;
-}
-
-h3 {
-	font-size: 1.563em;
-	font-weight: 200;
-}
-
-h4 {
-	font-size: 1.25em;
-	font-weight: 300;
-}
-
-h5 {
-	font-size: 1em;
-	font-weight: 400;
-}
-
-h6 {
-	font-size: 1em;
-	font-weight: 400;
+	height: 100vh;
+	width: 100vw;
 }
 
 p {
 	margin-bottom: var(--margin);
 	margin-top: var(--margin);
 	max-width: var(--max-text-width);
-}
-
-ul,
-ol {
-	margin-bottom: var(--margin);
-	margin-top: var(--margin);
-	padding-left: var(--size-4);
-}
-
-li {
-	margin-bottom: var(--size-1);
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
 }
 
 main a {
@@ -152,46 +128,6 @@ nav a {
 	text-decoration: none;
 }
 
-a:visited {
-	color: inherit;
-}
-
-input,
-select {
-	background-color: transparent;
-	border: 0;
-	border-bottom: 1px solid var(--neutral-8);
-	color: inherit;
-	font-weight: 600;
-	margin: var(--margin);
-	overflow: hidden;
-	padding: var(--padding);
-	width: 100%;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-input:hover,
-select:hover {
-	border-color: var(--neutral-6);
-}
-
-input:focus,
-select:focus {
-	border-color: var(--neutral-6);
-}
-
-input[type="number"] {
-	-moz-appearance: textfield;
-	padding: 0;
-	text-align: right;
-	width: 2em;
-}
-
 #inputs {
 	justify-content: space-around;
 }
@@ -201,34 +137,10 @@ input[type="number"] {
 	vertical-align: baseline;
 }
 
-label {
-	color: var(--neutral-5);
-	font-size: 0.8em;
-	letter-spacing: 0.05em;
-	margin: var(--margin);
-	text-transform: uppercase;
-}
-
 .unit {
 	font-size: 0.5em;
 	font-weight: 600;
 	text-transform: uppercase;
-}
-
-button {
-	background-color: transparent;
-	border: 0;
-	border-radius: var(--border-radius);
-	color: var(--primary-5);
-	font-weight: 600;
-	min-height: 48px;
-	min-width: 48px;
-	padding: var(--padding);
-	width: auto;
-}
-
-button:hover {
-	cursor: pointer;
 }
 
 button.primary {
@@ -313,30 +225,6 @@ nav ul {
 
 #main-nav ul li .icon {
 	margin-right: var(--margin);
-}
-
-#navBarWrapper {
-	width: 100%;
-}
-
-#secondary-nav {
-	font-size: 18px;
-	justify-content: space-between;
-	width: 100%;
-}
-
-#secondary-nav section {
-	align-items: center;
-	min-height: 48px;
-	width: 33%;
-}
-
-#secondary-nav section:first-child {
-	justify-content: flex-start;
-}
-
-#secondary-nav section:last-child {
-	justify-content: flex-end;
 }
 
 #contentWrapper {
@@ -436,10 +324,6 @@ nav a.router-link-exact-active {
 	#main-nav {
 		box-shadow: none;
 		width: 100%;
-	}
-
-	#hamburger-menu {
-		display: none;
 	}
 
 	#contentWrapper {

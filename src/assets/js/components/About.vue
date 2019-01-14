@@ -1,10 +1,10 @@
 <template>
 	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title" hamburger></NavBar></header>
+		<header><NavBar :title="title" menu-button></NavBar></header>
 		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container">
+			<main class="about flex-container">
 				<img
-					class="illustration"
+					class="about__illustration"
 					src="/assets/images/illustrations/about.png"
 				/>
 				<h1>HISS</h1>

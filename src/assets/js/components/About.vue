@@ -1,30 +1,36 @@
 <template>
-	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title" menu-button></NavBar></header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="about flex-container">
-				<img
-					class="about__illustration"
-					src="/assets/images/illustrations/about.png"
-				/>
-				<h1>HISS</h1>
-				<section>
-					Currently running {{ version }} (see
-					<router-link to="/about/releasenotes">release notes</router-link>)
-				</section>
-				<section>Made with ❤️ in 🇩🇪</section>
-			</main>
-		</div>
-	</div>
+	<BaseLayout>
+		<template slot="header">
+			<NavBar :title="title" menu-button></NavBar>
+		</template>
+		<template slot="main">
+			<div class="about">
+				<div class="about__container flex-container">
+					<img
+						class="about__illustration"
+						src="/assets/images/illustrations/about.png"
+					/>
+					<h1>HISS</h1>
+					<section>
+						Currently running {{ version }} (see
+						<router-link to="/about/releasenotes">release notes</router-link>)
+					</section>
+					<section>Made with ❤️ in 🇩🇪</section>
+				</div>
+			</div>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
+import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import { version } from "../../../../package.json";
 
 export default {
 	name: "About",
 	components: {
+		BaseLayout,
 		NavBar
 	},
 	data: function() {

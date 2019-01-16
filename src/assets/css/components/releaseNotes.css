@@ -1,1 +1,14 @@
 /* ReleaseNotes */
+
+.releaseNotes {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.releaseNotes__container {
+	background-color: white;
+	max-width: var(--max-text-width);
+	padding: var(--size-4);
+	width: 100%;
+}

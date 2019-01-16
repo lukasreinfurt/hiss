@@ -1,19 +1,28 @@
 <template>
-	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title"></NavBar></header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container"><div v-html="changelog"></div></main>
-		</div>
-	</div>
+	<BaseLayout>
+		<template slot="header">
+			<NavBar :title="title"></NavBar>
+		</template>
+		<template slot="main">
+			<div class="releaseNotes">
+				<div
+					class="releaseNotes__container flex-container"
+					v-html="changelog"
+				></div>
+			</div>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
+import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import changelog from "../../../../CHANGELOG.md";
 
 export default {
 	name: "ReleaseNotes",
 	components: {
+		BaseLayout,
 		NavBar
 	},
 	data: function() {

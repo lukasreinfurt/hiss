@@ -79,6 +79,7 @@
 /* Components */
 
 @import "./components/about.css";
+@import "./components/baseLayout.css";
 @import "./components/exercise.css";
 @import "./components/exerciseList.css";
 @import "./components/exerciseLogList.css";

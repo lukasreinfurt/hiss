@@ -1,0 +1,23 @@
+.baseLayout {
+	height: 100%;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.baseLayout__header {
+	box-shadow: var(--box-shadow-1);
+	position: relative;
+}
+
+.baseLayout__main {
+	align-items: center;
+	background-color: var(--neutral-9);
+	flex-grow: 1;
+	justify-content: flex-start;
+	overflow: auto;
+	width: 100%;
+}
+
+.baseLayout__footer {
+	/* TODO */
+}

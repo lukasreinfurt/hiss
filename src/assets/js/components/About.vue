@@ -1,7 +1,7 @@
 <template>
 	<BaseLayout>
 		<template slot="header">
-			<NavBar :title="title" menu-button></NavBar>
+			<NavBar :title="title" class="about__navBar" menu-button></NavBar>
 		</template>
 		<template slot="main">
 			<div class="about contentWrapper">

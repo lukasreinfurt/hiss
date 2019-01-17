@@ -1,4 +1,5 @@
 .navBar {
+	background-color: var(--neutral-9);
 	font-size: 18px;
 	justify-content: space-between;
 	width: 100%;

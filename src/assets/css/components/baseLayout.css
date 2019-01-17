@@ -5,13 +5,12 @@
 }
 
 .baseLayout__header {
-	box-shadow: var(--box-shadow-1);
 	position: relative;
+	z-index: 100;
 }
 
 .baseLayout__main {
 	align-items: center;
-	background-color: var(--neutral-9);
 	flex-grow: 1;
 	justify-content: flex-start;
 	overflow: auto;

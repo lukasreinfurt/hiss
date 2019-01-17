@@ -1,8 +1,15 @@
+.headerContainer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
 .contentContainer {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	padding: var(--size-4);
+	margin: var(--margin);
+	padding: var(--padding-large);
 	width: var(--max-text-width);
 }
 

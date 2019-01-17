@@ -59,57 +59,13 @@
 			</ParallaxContainer>
 		</template>
 	</BaseLayout>
-	<!--
-	<div id="contentWrapper" class="flex-container">
-		<header>
-			<NavBar :title="title" menu-button>
-				<template slot="right">
-					<button @click="addNewExercise()">＋</button>
-				</template>
-			</NavBar>
-		</header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container">
-				<div
-					v-for="(exercises, equipment) in exercisesByEquipment"
-					:key="equipment"
-					class="flex-container"
-				>
-					<span v-if="equipment">{{ equipment }}</span>
-					<span v-else>Uncategorized</span>
-					<ExerciseListItem
-						v-for="exercise in exercises"
-						:key="exercise.id"
-						:exercise="exercise"
-					></ExerciseListItem>
-				</div>
-				<div
-					v-if="Object.keys(exercisesByEquipment).length === 0"
-					class="emptyState"
-				>
-					<img
-						class="illustration"
-						src="/assets/images/illustrations/exercises.png"
-					/>
-					<p>
-						Seems like you haven't added any exercises yet. <br />Go on, add
-						your first exercise now!
-					</p>
-					<button class="primary" @click="addNewExercise()">
-						Add Exercise
-					</button>
-				</div>
-			</main>
-		</div>
-	</div>
-  -->
 </template>
 
 <script>
 import BaseLayout from "./BaseLayout";
+import ExerciseListItem from "./ExerciseListItem";
 import NavBar from "./NavBar";
 import ParallaxContainer from "./ParallaxContainer";
-import ExerciseListItem from "./ExerciseListItem";
 import { createNamespacedHelpers } from "vuex";
 
 const { mapState, mapGetters, mapActions } = createNamespacedHelpers(

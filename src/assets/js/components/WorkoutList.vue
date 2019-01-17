@@ -8,15 +8,15 @@
 			</NavBar>
 		</template>
 		<template slot="main">
-			<div class="workoutList">
-				<div v-if="count > 0" class="workoutList__container">
+			<div class="workoutList contentWrapper">
+				<div v-if="count > 0" class="workoutList__container contentContainer">
 					<WorkoutListItem
 						v-for="workout in workouts"
 						:key="workout.id"
 						:workout="workout"
 					></WorkoutListItem>
 				</div>
-				<div v-else class="workoutList__container -isEmpty">
+				<div v-else class="workoutList__container contentContainer -isEmpty">
 					<img
 						class="workoutList__illustration"
 						src="/assets/images/illustrations/workouts.png"

@@ -1,0 +1,11 @@
+.contentContainer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: var(--size-4);
+	width: var(--max-text-width);
+}
+
+.contentContainer.-isEmpty {
+	justify-content: center;
+}

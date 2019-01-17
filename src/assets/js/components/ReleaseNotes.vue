@@ -4,9 +4,9 @@
 			<NavBar :title="title"></NavBar>
 		</template>
 		<template slot="main">
-			<div class="releaseNotes">
+			<div class="releaseNotes contentWrapper">
 				<div
-					class="releaseNotes__container flex-container"
+					class="releaseNotes__container contentContainer"
 					v-html="changelog"
 				></div>
 			</div>

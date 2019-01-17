@@ -4,8 +4,8 @@
 			<NavBar :title="title" menu-button></NavBar>
 		</template>
 		<template slot="main">
-			<div class="about">
-				<div class="about__container flex-container">
+			<div class="about contentWrapper">
+				<div class="about__container contentContainer">
 					<img
 						class="about__illustration"
 						src="/assets/images/illustrations/about.png"

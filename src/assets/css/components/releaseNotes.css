@@ -2,14 +2,9 @@
 
 .releaseNotes {
 	background-color: white;
-	display: flex;
-	justify-content: center;
-	min-height: 100%;
 }
 
 .releaseNotes__container {
+	align-items: flex-start;
 	background-color: white;
-	display: flex;
-	max-width: var(--max-text-width);
-	padding: var(--size-4);
 }

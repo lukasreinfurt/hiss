@@ -76,6 +76,9 @@
 
 /* Layout */
 
+@import "./layout/container.css";
+@import "./layout/wrapper.css";
+
 /* Components */
 
 @import "./components/about.css";

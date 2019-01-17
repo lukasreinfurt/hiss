@@ -2,17 +2,11 @@
 
 .about {
 	background-color: white;
-	display: flex;
-	justify-content: center;
-	min-height: 100%;
 }
 
 .about__container {
-	align-items: center;
 	background-color: white;
-	display: flex;
-	max-width: var(--max-text-width);
-	padding: var(--size-4);
+	justify-content: center;
 }
 
 .about__illustration {

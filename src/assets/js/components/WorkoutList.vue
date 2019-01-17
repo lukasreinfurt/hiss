@@ -1,22 +1,24 @@
 <template>
-	<div id="contentWrapper" class="flex-container">
-		<header>
+	<BaseLayout>
+		<template slot="header">
 			<NavBar :title="title" menu-button>
 				<template slot="right">
 					<button @click="addNewWorkout()">＋</button>
 				</template>
 			</NavBar>
-		</header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container">
-				<WorkoutListItem
-					v-for="workout in workouts"
-					:key="workout.id"
-					:workout="workout"
-				></WorkoutListItem>
-				<div v-if="Object.keys(workouts).length === 0" class="emptyState">
+		</template>
+		<template slot="main">
+			<div class="workoutList">
+				<div v-if="count > 0" class="workoutList__container">
+					<WorkoutListItem
+						v-for="workout in workouts"
+						:key="workout.id"
+						:workout="workout"
+					></WorkoutListItem>
+				</div>
+				<div v-else class="workoutList__container -isEmpty">
 					<img
-						class="illustration"
+						class="workoutList__illustration"
 						src="/assets/images/illustrations/workouts.png"
 					/>
 					<p>
@@ -25,12 +27,13 @@
 					</p>
 					<button class="primary" @click="addNewWorkout()">Add Workout</button>
 				</div>
-			</main>
-		</div>
-	</div>
+			</div>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
+import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import WorkoutListItem from "./WorkoutListItem";
 import { createNamespacedHelpers } from "vuex";
@@ -42,8 +45,9 @@ const { mapState, mapGetters, mapActions } = createNamespacedHelpers(
 export default {
 	name: "WorkoutList",
 	components: {
-		WorkoutListItem,
-		NavBar
+		BaseLayout,
+		NavBar,
+		WorkoutListItem
 	},
 	data: function() {
 		return {

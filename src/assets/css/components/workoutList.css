@@ -1,1 +1,25 @@
 /* WorkoutList */
+
+.workoutList {
+	display: flex;
+	justify-content: center;
+	min-height: 100%;
+}
+
+.workoutList__container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: var(--size-4);
+	width: var(--max-text-width);
+}
+
+.workoutList__container.-isEmpty {
+	color: var(--neutral-5);
+	justify-content: center;
+}
+
+.workoutList__illustration {
+	max-height: 256px;
+	max-width: 256px;
+}

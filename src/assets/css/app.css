@@ -242,23 +242,12 @@ nav ul {
 	z-index: 0;
 }
 
-header {
-	box-shadow: var(--box-shadow-1);
-	position: relative;
-}
-
 #mainWrapper {
 	align-items: center;
 	background-color: var(--neutral-9);
 	flex-grow: 1;
 	justify-content: flex-start;
 	overflow: auto;
-	width: 100%;
-}
-
-main {
-	max-width: calc(var(--max-width) * 1px);
-	padding: var(--size-4);
 	width: 100%;
 }
 

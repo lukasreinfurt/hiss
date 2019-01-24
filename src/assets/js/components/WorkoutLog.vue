@@ -1,35 +1,41 @@
 <template>
-	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title"></NavBar></header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container">
-				<select v-model="workoutType" @change="workoutChange">
-					<option
-						v-for="availableWorkout in availableWorkouts"
-						:key="availableWorkout.id"
-						:value="availableWorkout.id"
-						>{{ availableWorkout.name }}</option
-					>
-				</select>
-				{{ prettyDate(workoutLog.date) }}
-				<ExerciseLogList
-					:exercise-logs="exerciseLogs"
-					:workout-log="workoutLog"
-				></ExerciseLogList>
-			</main>
-		</div>
-	</div>
+	<BaseLayout class="workoutLog">
+		<template slot="header">
+			<NavBar :title="title"></NavBar>
+		</template>
+		<template slot="main">
+			<div class="workoutLog__contentWrapper contentWrapper">
+				<div class="workoutLog__contentContainer contentContainer">
+					<select v-model="workoutType" @change="workoutChange">
+						<option
+							v-for="availableWorkout in availableWorkouts"
+							:key="availableWorkout.id"
+							:value="availableWorkout.id"
+							>{{ availableWorkout.name }}</option
+						>
+					</select>
+					{{ prettyDate(workoutLog.date) }}
+					<ExerciseLogList
+						:exercise-logs="exerciseLogs"
+						:workout-log="workoutLog"
+					></ExerciseLogList>
+				</div>
+			</div>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
-import NavBar from "./NavBar";
+import BaseLayout from "./BaseLayout";
 import ExerciseLogList from "./ExerciseLogList";
+import NavBar from "./NavBar";
 import { prettyDate } from "../mixins/prettyDate";
 import { mapGetters, mapState } from "vuex";
 
 export default {
 	name: "WorkoutLog",
 	components: {
+		BaseLayout,
 		ExerciseLogList,
 		NavBar
 	},
@@ -73,8 +79,8 @@ export default {
 	},
 	methods: {
 		workoutChange: function() {
-			// delete exerciseLogs with this.id
-			// add exerciseLogs
+			// TODO: delete exerciseLogs with this.id
+			// TODO: add exerciseLogs
 			console.log(this.availableWorkouts[this.workoutType].exercises);
 		}
 	}

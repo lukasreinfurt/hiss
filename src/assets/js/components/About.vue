@@ -1,11 +1,11 @@
 <template>
-	<BaseLayout>
+	<BaseLayout class="about">
 		<template slot="header">
 			<NavBar :title="title" class="about__navBar" menu-button></NavBar>
 		</template>
 		<template slot="main">
-			<div class="about contentWrapper">
-				<div class="about__container contentContainer">
+			<div class="about__contentWrapper contentWrapper">
+				<div class="about__contentContainer contentContainer">
 					<img
 						class="about__illustration"
 						src="/assets/images/illustrations/about.png"

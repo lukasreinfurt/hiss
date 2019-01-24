@@ -1,12 +1,16 @@
 .about {
-	background-color: white;
+
 }
 
 .about__navBar {
 	background-color: white;
 }
 
-.about__container {
+.about__contentWrapper {
+	background-color: white;
+}
+
+.about__contentContainer {
 	background-color: white;
 	justify-content: center;
 }

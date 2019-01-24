@@ -1,25 +1,31 @@
 <template>
-	<div id="contentWrapper" class="flex-container">
-		<header><NavBar :title="title"></NavBar></header>
-		<div id="mainWrapper" class="flex-container">
-			<main class="flex-container">
-				<input v-model="name" placeholder="Exercise Name" />
-				<select v-model="equipment">
-					<option>machine</option>
-					<option>free-weight</option>
-					<option>bodyweight</option>
-				</select>
-			</main>
-		</div>
-	</div>
+	<BaseLayout class="exercise">
+		<template slot="header">
+			<NavBar :title="title"></NavBar>
+		</template>
+		<template slot="main">
+			<div class="exercise__contentWrapper contentWrapper">
+				<div class="exercise__contentContainer contentContainer">
+					<input v-model="name" placeholder="Exercise Name" />
+					<select v-model="equipment">
+						<option>machine</option>
+						<option>free-weight</option>
+						<option>bodyweight</option>
+					</select>
+				</div>
+			</div>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
+import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 
 export default {
 	name: "Exercise",
 	components: {
+		BaseLayout,
 		NavBar
 	},
 	props: {

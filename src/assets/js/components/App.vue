@@ -1,36 +1,41 @@
 <template>
-	<div id="app" class="flex-container horizontal">
+	<div class="app flex-container horizontal">
 		<aside
-			:class="{ active: menuActive }"
-			class="flex-container"
+			:class="{ '-isActive': menuActive }"
+			class="app__menu flex-container"
 			@click="toggleMenu"
 		>
-			<nav id="main-nav">
-				<ul class="flex-container">
+			<nav class="nav">
+				<ul class="nav__list flex-container">
 					<router-link to="/log">
-						<li><img class="icon" src="/assets/images/icons/log.svg" />Log</li>
+						<li class="nav__listItem">
+							<img class="nav__icon" src="/assets/images/icons/log.svg" />Log
+						</li>
 					</router-link>
 					<router-link to="/exercises">
-						<li>
+						<li class="nav__listItem">
 							<img
-								class="icon"
+								class="nav__icon"
 								src="/assets/images/icons/exercises.svg"
 							/>Exercises
 						</li>
 					</router-link>
 					<router-link to="/workouts">
-						<li>
+						<li class="nav__listItem">
 							<img
-								class="icon"
+								class="nav__icon"
 								src="/assets/images/icons/workouts.svg"
 							/>Workouts
 						</li>
 					</router-link>
 				</ul>
-				<ul class="flex-container">
+				<ul class="nav__list flex-container">
 					<router-link to="/about">
-						<li>
-							<img class="icon" src="/assets/images/icons/about.svg" />About
+						<li class="nav__listItem">
+							<img
+								class="nav__icon"
+								src="/assets/images/icons/about.svg"
+							/>About
 						</li>
 					</router-link>
 				</ul>

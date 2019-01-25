@@ -54,6 +54,17 @@ button {
 	width: auto;
 }
 
+button.-isPrimary {
+	background-color: var(--primary-5);
+	color: var(--primary-9);
+	padding: var(--padding);
+}
+
+button.-isSecondary {
+	border: 1px solid var(--primary-5);
+	padding: var(--padding) var(--size-4);
+}
+
 button:hover {
 	cursor: pointer;
 }

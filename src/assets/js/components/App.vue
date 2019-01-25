@@ -7,12 +7,12 @@
 		>
 			<nav class="nav">
 				<ul class="nav__list flex-container">
-					<router-link to="/log">
+					<router-link class="nav__link" to="/log">
 						<li class="nav__listItem">
 							<img class="nav__icon" src="/assets/images/icons/log.svg" />Log
 						</li>
 					</router-link>
-					<router-link to="/exercises">
+					<router-link class="nav__link" to="/exercises">
 						<li class="nav__listItem">
 							<img
 								class="nav__icon"
@@ -20,7 +20,7 @@
 							/>Exercises
 						</li>
 					</router-link>
-					<router-link to="/workouts">
+					<router-link class="nav__link" to="/workouts">
 						<li class="nav__listItem">
 							<img
 								class="nav__icon"
@@ -30,7 +30,7 @@
 					</router-link>
 				</ul>
 				<ul class="nav__list flex-container">
-					<router-link to="/about">
+					<router-link class="nav__link" to="/about">
 						<li class="nav__listItem">
 							<img
 								class="nav__icon"

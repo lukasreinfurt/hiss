@@ -51,9 +51,27 @@
 	align-items: center;
 	display: flex;
 	margin: 0;
+	padding: var(--padding);
 }
 
 .nav__listItem:hover {
+	color: var(--neutral-9);
+}
+
+.nav__link {
+	color: inherit;
+}
+
+.nav__link:visited {
+	color: inherit;
+}
+
+.nav__link:hover {
+	border-bottom: none;
+}
+
+.nav__link.-isActive {
+	background-color: var(--neutral-1);
 	color: var(--neutral-9);
 }
 

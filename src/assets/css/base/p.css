@@ -1,0 +1,5 @@
+p {
+	margin-bottom: var(--margin);
+	margin-top: var(--margin);
+	max-width: var(--max-text-width);
+}

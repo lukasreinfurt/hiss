@@ -42,7 +42,7 @@
 								Seems like you haven't added any workouts yet. <br />Go on, add
 								your first workout now!
 							</p>
-							<button class="primary" @click="addNewWorkout()">
+							<button class="-isPrimary" @click="addNewWorkout()">
 								Add Workout
 							</button>
 						</div>

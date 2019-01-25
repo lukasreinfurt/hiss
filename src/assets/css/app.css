@@ -68,7 +68,9 @@
 @import "./generic/generic.css";
 
 /* Base */
-
+@import "./base/html.css";
+@import "./base/body.css";
+@import "./base/p.css";
 @import "./base/headers.css";
 @import "./base/links.css";
 @import "./base/lists.css";
@@ -97,43 +99,6 @@
 
 /* State */
 
-@import "./test.css";
-
-html {
-	box-sizing: border-box;
-	color: var(--neutral-1);
-	font-family: var(--main-font);
-	font-size: calc(var(--min-font-size) * 1px);
-	height: 100vh;
-	line-height: var(--line-height);
-	min-width: calc(var(--min-width) * 1px);
-	width: 100vw;
-}
-
-body {
-	height: 100vh;
-	width: 100vw;
-}
-
-p {
-	margin-bottom: var(--margin);
-	margin-top: var(--margin);
-	max-width: var(--max-text-width);
-}
-
-main a {
-	color: var(--primary-6);
-	font-weight: 600;
-}
-
-nav ul li {
-	padding: var(--padding);
-}
-
-nav a {
-	text-decoration: none;
-}
-
 #inputs {
 	justify-content: space-around;
 }
@@ -147,17 +112,6 @@ nav a {
 	font-size: 0.5em;
 	font-weight: 600;
 	text-transform: uppercase;
-}
-
-button.primary {
-	background-color: var(--primary-5);
-	color: var(--primary-9);
-	padding: var(--padding);
-}
-
-button.secondary {
-	border: 1px solid var(--primary-5);
-	padding: var(--padding) var(--size-4);
 }
 
 .flex-container {
@@ -174,19 +128,6 @@ button.secondary {
 	flex-wrap: wrap;
 }
 
-main a:hover {
-	border-bottom: 2px solid var(--primary-6);
-}
-
-main a:visited {
-	color: var(--primary-6);
-}
-
-nav a.router-link-exact-active {
-	background-color: var(--neutral-1);
-	color: var(--neutral-9);
-}
-
 .card {
 	background-color: white;
 	border-bottom: 2px solid var(--neutral-7);
@@ -199,23 +140,4 @@ nav a.router-link-exact-active {
 .card.transition {
 	background-color: transparent;
 	border: 2px dashed var(--neutral-7);
-}
-
-@media all and (min-width: 280px) {
-	/* Fix: Once env variables are supported, use them here */
-
-	html {
-		font-size: calc(
-			calc(var(--min-font-size) * 1px) + var(--delta-font-size) *
-				((100vw - calc(var(--min-width) * 1px)) / var(--delta-width))
-		);
-	}
-}
-
-@media all and (min-width: 1200px) {
-	/* Fix: Once env variables are supported, use them here */
-
-	html {
-		font-size: calc(var(--max-font-size) * 1px);
-	}
 }

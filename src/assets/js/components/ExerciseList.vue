@@ -50,7 +50,7 @@
 								Seems like you haven't added any exercises yet. <br />Go on, add
 								your first exercise now!
 							</p>
-							<button class="primary" @click="addNewExercise()">
+							<button class="-isPrimary" @click="addNewExercise()">
 								Add Exercise
 							</button>
 						</div>

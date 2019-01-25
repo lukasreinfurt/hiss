@@ -13,6 +13,7 @@ import Test from "../components/Test";
 Vue.use(Router);
 
 export default new Router({
+	linkExactActiveClass: "-isActive",
 	routes: [
 		{
 			path: "/",

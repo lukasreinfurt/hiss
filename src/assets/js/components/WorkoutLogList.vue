@@ -42,7 +42,7 @@
 								Seems like you haven't logged any workouts yet. <br />Go on, add
 								your first log now!
 							</p>
-							<button class="primary" @click="addNewWorkoutLog()">
+							<button class="-isPrimary" @click="addNewWorkoutLog()">
 								Add Log
 							</button>
 						</div>

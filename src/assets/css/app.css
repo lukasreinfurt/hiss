@@ -174,23 +174,6 @@ button.secondary {
 	flex-wrap: wrap;
 }
 
-#contentWrapper {
-	box-shadow: none;
-	height: 100%;
-	justify-content: flex-start;
-	width: 100%;
-	z-index: 0;
-}
-
-#mainWrapper {
-	align-items: center;
-	background-color: var(--neutral-9);
-	flex-grow: 1;
-	justify-content: flex-start;
-	overflow: auto;
-	width: 100%;
-}
-
 main a:hover {
 	border-bottom: 2px solid var(--primary-6);
 }
@@ -202,26 +185,6 @@ main a:visited {
 nav a.router-link-exact-active {
 	background-color: var(--neutral-1);
 	color: var(--neutral-9);
-}
-
-.emptyState {
-	align-items: center;
-	color: var(--neutral-5);
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: center;
-	text-align: center;
-}
-
-.illustration {
-	margin: var(--size-5);
-	max-height: 256px;
-	max-width: 256px;
-}
-
-.emptyState p {
-	margin: var(--size-3);
 }
 
 .card {
@@ -246,13 +209,6 @@ nav a.router-link-exact-active {
 			calc(var(--min-font-size) * 1px) + var(--delta-font-size) *
 				((100vw - calc(var(--min-width) * 1px)) / var(--delta-width))
 		);
-	}
-}
-
-@media all and (min-width: 800px) {
-	#contentWrapper {
-		box-shadow: var(--box-shadow-2);
-		z-index: 100;
 	}
 }
 

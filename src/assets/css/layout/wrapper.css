@@ -3,3 +3,10 @@
 	justify-content: center;
 	min-height: 100%;
 }
+
+@media all and (min-width: 800px) {
+	.contentWrapper {
+		box-shadow: var(--box-shadow-2);
+		z-index: 100;
+	}
+}

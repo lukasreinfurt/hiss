@@ -15,19 +15,19 @@ import actions from "./actions";
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  plugins: [generateId],
-  modules: {
-    settings,
-    exercises,
-    exerciseLogs,
-    workouts,
-    workoutLogs
-  },
-  state,
-  getters,
-  mutations,
-  actions,
-  strict: process.env.NODE_ENV !== "production"
+	plugins: [generateId],
+	modules: {
+		settings,
+		exercises,
+		exerciseLogs,
+		workouts,
+		workoutLogs
+	},
+	state,
+	getters,
+	mutations,
+	actions,
+	strict: process.env.NODE_ENV !== "production"
 });
 
 export default store;

@@ -1,0 +1,20 @@
+.about {
+}
+
+.about__navBar {
+	background-color: white;
+}
+
+.about__contentWrapper {
+	background-color: white;
+}
+
+.about__contentContainer {
+	background-color: white;
+	justify-content: center;
+}
+
+.about__illustration {
+	max-height: 256px;
+	max-width: 256px;
+}

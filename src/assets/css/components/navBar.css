@@ -1,0 +1,38 @@
+.navBar {
+	background-color: var(--neutral-9);
+	font-size: 18px;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navBar__section {
+	align-items: center;
+	min-height: 48px;
+	width: 33%;
+}
+
+.navBar__section:first-child {
+	justify-content: flex-start;
+}
+
+.navBar__section:last-child {
+	justify-content: flex-end;
+}
+
+.navBar__menuButton {
+	/* empty */
+}
+
+.navBar__backButton {
+	/* empty */
+}
+
+.navBar__title {
+	font-weight: 600;
+}
+
+@media all and (min-width: 800px) {
+	.navBar__menuButton {
+		display: none;
+	}
+}

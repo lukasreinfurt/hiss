@@ -1,280 +1,102 @@
-:root {
-    --max-text-width: 60ch;
-    --line-height: 1.8rem;
-    --min-font-size: 16;
-    --max-font-size: 18;
-    --delta-font-size: calc(var(--max-font-size) - var(--min-font-size));
-    --min-width: 280;
-    --max-width: 1200;
-    --delta-width: calc(var(--max-width) - var(--min-width));
-    --padding: 5%;
-  }
+/*
+	From ITCSS (https://medium.freecodecamp.org/managing-large-s-css-projects-using-the-inverted-triangle-architecture-3c03e4b1e6df)
+	and SMACSS (https://smacss.com/book/categorizing)
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  flex: 0 1 auto;
-  min-width: auto;
-  min-height: auto;
-}
+	Layer styles from:
+		- generic to explicit
+		- low to high specificity
+		- far-reaching to localiced
 
-html {
-    box-sizing: border-box;
-    min-width: calc(var(--min-width) * 1px);
-    height: 100vh;
-    width: 100vw;
-    font-size: calc(var(--min-font-size) * 1px);
-    line-height: var(--line-height);
-    color: #111;
-    font-family: 'Rubik', sans-serif;
-}
+	Settings:
+		Variables, Themes etc.
 
-body {
-    height: 100vh;
-    width: 100vw;
-}
+	Tools:
+		Mixins, functions, ...
 
-/*******************************************************************************
-* HEADERS                                                                      *
-*******************************************************************************/
+	Generic:
+		Normalize, reset, box-sizing, ...
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: normal;
-}
+	Base: Default single element styles. No ids or classes. Includes CSS reset.
 
-h1 {
-  font-size: 2.441em;
-  font-weight: 200;
-}
+		html, body, a
+		html {}
+		body {}
+		a {}
 
-h2 {
-  font-size: 1.953em;
-  font-weight: 200;
-}
+	Layout: Divide the page into sections and combines several modules. Elements or ids.
 
-h3 {
-  font-size: 1.563em;
-  font-weight: 200;
-}
+		heady, footer, main
+		#containerId
+		#wrapperId
+		.l-layoutName
 
-h4 {
-  font-size: 1.25em;
-  font-weight: 300;
-}
+	Components: The reusable, modular parts of the design.
 
-h5 {
-  font-size: 1em;
-  font-weight: 400;
-}
+		From BEM (http://getbem.com/naming/)
 
-h6 {
-  font-size: 1em;
-  font-weight: 400;
-}
+		Blocks: A standalone entity that is meaningful on its own.
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+				class="blockName"
+				.blockName {}
 
-a:visited {
-    color: inherit;
-}
+		Elements: Parts of a block that have no standalone meaning.
 
-input,
-select {
-    overflow: hidden;
-    width: 100%;
-}
+				class="blockName_elementName"
+				.blockName__elementName {}
 
-button {
-    border: none;
-    background-color: transparent;
-    min-width: 48px;
-    min-height: 48px;
-}
+		Modifiers: Flags on blocks or elements that change appearance, behaviour or state
 
-button:hover {
-    cursor: pointer;
-}
+				class="blockName__elementName -is-modifierName"
+				.blockName__elementName.-is-modifierName {}
 
-#app {
-    align-items: stretch;
-    justify-content: flex-start;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
+	State: How modules or layouts look when in a particular state
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+		.is-stateName
+		!important
 
-.flex-container.horizontal {
-    flex-direction: row;
-}
+*/
 
-aside {
-    position: absolute;
-    transform: translatex(-100%);
-    width: 100vw;
-    height: 100vh;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    transition: transform 0.2s ease-out;
-    z-index: 1;
-}
+/* Settings */
 
-aside.active {
-    transform: translatex(0);
-}
+@import "./settings/variables.css";
 
-#main-nav {
-    height: 100%;
-    width: 62%;
-    background-color: hsl(0, 0%, 25%);
-}
+/* Tools */
 
-#main-nav ul {
-    border-top: 2px solid hsl(0, 0%, 20%);
-    color: white;
-    justify-content: flex-start;
-}
+/* Generic */
 
-#main-nav ul li {
-    display: flex;
-    align-items: center;
-}
+@import "normalize.css";
+@import "./generic/generic.css";
 
-#main-nav ul li .icon {
-    margin-right: 8px;
-}
+/* Base */
+@import "./base/html.css";
+@import "./base/body.css";
+@import "./base/p.css";
+@import "./base/headers.css";
+@import "./base/links.css";
+@import "./base/lists.css";
+@import "./base/input.css";
 
-.icon {
-    width: 32px;
-}
+/* Layout */
 
-#navBarWrapper {
-    width: 100%;
-}
+@import "./layout/container.css";
+@import "./layout/wrapper.css";
 
-#secondary-nav {
-    width: 100%;
-    justify-content: space-between;
-}
+/* Components */
+@import "./components/app.css";
+@import "./components/baseLayout.css";
+@import "./components/parallaxContainer.css";
+@import "./components/navBar.css";
+@import "./components/card.css";
 
-#secondary-nav section {
-    width: 33%;
-    align-items: center;
-    min-height: 48px;
-}
+@import "./components/about.css";
+@import "./components/exercise.css";
+@import "./components/exerciseList.css";
+@import "./components/exerciseLogList.css";
+@import "./components/exerciseLogListItem.css";
+@import "./components/releaseNotes.css";
+@import "./components/workout.css";
+@import "./components/workoutList.css";
+@import "./components/workoutLog.css";
+@import "./components/workoutLogList.css";
 
-#secondary-nav section:first-child {
-    justify-content: flex-start;
-}
-
-#secondary-nav section:last-child {
-    justify-content: flex-end;
-}
-
-#contentWrapper {
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-}
-
-header {
-    box-shadow: 0px 0px 5px black;
-    position: relative;
-}
-
-#mainWrapper {
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: auto;
-    flex-grow: 1;
-}
-
-main {
-    width: 100%;
-    max-width: calc(var(--max-width) * 1px);
-    padding: var(--padding);
-}
-
-main a {
-    color: blue;
-}
-
-main a:visited {
-    color: blue;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    padding: 1em;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav a.router-link-exact-active {
-    color: white;
-    background-color: #111;
-}
-
-.card {
-    background-color: rgb(250, 250, 250);
-    border: 1px solid rgb(202, 202, 202);
-    border-radius: 5px;
-    margin-bottom: 1em;
-    padding: 2em;
-}
-
-@media all and (min-width: 280px) { /* Fix: Once env variables are supported, use them here */
-
-    html {
-      font-size: calc(calc(var(--min-font-size) * 1px) + var(--delta-font-size) * ((100vw - calc(var(--min-width) * 1px)) / var(--delta-width)));
-    }
-
-}
-
-@media all and (min-width: 500px) {
-
-    aside {
-        position: relative;
-        transform: translatex(0);
-        width: 200px;
-        flex-shrink: 0;
-    }
-
-    #main-nav {
-        width: 100%;
-    }
-
-    #hamburger-menu {
-        display: none;
-    }
-
-  }
-
-  @media all and (min-width: 1200px) { /* Fix: Once env variables are supported, use them here */
-
-    html {
-      font-size: calc(var(--max-font-size) * 1px);
-    }
-
-  }
+/* State */

@@ -1,0 +1,70 @@
+input,
+select {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--neutral-8);
+	color: inherit;
+	font-weight: 600;
+	margin: var(--margin);
+	overflow: hidden;
+	padding: var(--padding);
+	width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input:hover,
+select:hover {
+	border-color: var(--neutral-6);
+}
+
+input:focus,
+select:focus {
+	border-color: var(--neutral-6);
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	padding: 0;
+	text-align: right;
+	width: 2em;
+}
+
+label {
+	color: var(--neutral-5);
+	font-size: 0.8em;
+	letter-spacing: 0.05em;
+	margin: var(--margin);
+	text-transform: uppercase;
+}
+
+button {
+	background-color: transparent;
+	border: 0;
+	border-radius: var(--border-radius);
+	color: var(--primary-5);
+	font-weight: 600;
+	min-height: 48px;
+	min-width: 48px;
+	padding: var(--padding);
+	width: auto;
+}
+
+button.-isPrimary {
+	background-color: var(--primary-5);
+	color: var(--primary-9);
+	padding: var(--padding);
+}
+
+button.-isSecondary {
+	border: 1px solid var(--primary-5);
+	padding: var(--padding) var(--size-4);
+}
+
+button:hover {
+	cursor: pointer;
+}

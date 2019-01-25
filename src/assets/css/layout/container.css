@@ -1,0 +1,32 @@
+.headerContainer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.contentContainer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: var(--margin);
+	padding: var(--padding-large);
+	width: var(--max-text-width);
+}
+
+.contentContainer.-isEmpty {
+	justify-content: center;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.flex-container.horizontal {
+	flex-direction: row;
+}
+
+.flex-container.wrap {
+	flex-wrap: wrap;
+}

@@ -1,0 +1,28 @@
+.parallaxContainer {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 1px;
+	perspective-origin: 100%;
+}
+
+.parallaxContainer__layer {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform-origin: 100%;
+}
+
+.parallaxContainer__layer.-isFront {
+	transform: translateZ(0);
+}
+
+.parallaxContainer__layer.-isBack {
+	transform: translateZ(-1px) scale(2);
+}
+
+.parallaxContainer__layer.-isDeep {
+	transform: translateZ(-2px) scale(3);
+}

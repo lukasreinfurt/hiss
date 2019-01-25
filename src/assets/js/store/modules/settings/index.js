@@ -6,9 +6,9 @@ import actions from "./actions";
 const namespaced = true;
 
 export default {
-  namespaced,
-  state,
-  getters,
-  mutations,
-  actions
+	namespaced,
+	state,
+	getters,
+	mutations,
+	actions
 };

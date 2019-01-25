@@ -1,0 +1,29 @@
+html {
+	box-sizing: border-box;
+	color: var(--neutral-1);
+	font-family: var(--main-font);
+	font-size: calc(var(--min-font-size) * 1px);
+	height: 100vh;
+	line-height: var(--line-height);
+	min-width: calc(var(--min-width) * 1px);
+	width: 100vw;
+}
+
+@media all and (min-width: 280px) {
+	/* Fix: Once env variables are supported, use them here */
+
+	html {
+		font-size: calc(
+			calc(var(--min-font-size) * 1px) + var(--delta-font-size) *
+				((100vw - calc(var(--min-width) * 1px)) / var(--delta-width))
+		);
+	}
+}
+
+@media all and (min-width: 1200px) {
+	/* Fix: Once env variables are supported, use them here */
+
+	html {
+		font-size: calc(var(--max-font-size) * 1px);
+	}
+}

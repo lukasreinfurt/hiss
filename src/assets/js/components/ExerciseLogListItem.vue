@@ -9,10 +9,12 @@
 					>{{ availableExercise.name }}</option
 				>
 			</select>
-			<div id="inputs" class="flex-container horizontal wrap">
+			<div
+				class="exerciseLogListItem__inputContainer flex-container horizontal wrap"
+			>
 				<div class="flex-container">
 					<label>Repetitions</label>
-					<div class="inputWrapper">
+					<div class="exerciseLogListItem__inputWrapper">
 						<input
 							v-model.number="repetitions"
 							type="number"
@@ -24,7 +26,7 @@
 				</div>
 				<div class="flex-container">
 					<label>Weight</label>
-					<div class="inputWrapper">
+					<div class="exerciseLogListItem__inputWrapper">
 						<input
 							v-model.number="weight"
 							type="number"
@@ -33,12 +35,12 @@
 							max="999"
 							placeholder="0"
 						/>
-						<span class="unit">kg</span>
+						<span class="exerciseLogListItem__unit">kg</span>
 					</div>
 				</div>
 				<div class="flex-container">
 					<label>Duration</label>
-					<div class="inputWrapper">
+					<div class="exerciseLogListItem__inputWrapper">
 						<input
 							v-model.number="duration"
 							type="number"
@@ -46,13 +48,16 @@
 							max="999"
 							placeholder="0"
 						/>
-						<span class="unit">s</span>
+						<span class="exerciseLogListItem__unit">s</span>
 					</div>
 				</div>
 			</div>
 			<button @click="$emit('remove', exerciseLog)">✕</button>
 		</div>
-		<div v-else-if="exerciseLog.type === 'transition'" class="card transition">
+		<div
+			v-else-if="exerciseLog.type === 'transition'"
+			class="card -isTransition"
+		>
 			Transition for <input v-model.number="duration" type="number" /> seconds.
 		</div>
 		<div v-else>Something went wrong {{ exerciseLog.type === "exercise" }}</div>

@@ -1,0 +1,17 @@
+.exerciseLogListItem {
+}
+
+.exerciseLogListItem__inputContainer {
+	justify-content: space-around;
+}
+
+.exerciseLogListItem__inputWrapper {
+	font-size: 2em;
+	vertical-align: baseline;
+}
+
+.exerciseLogListItem__unit {
+	font-size: 0.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+}

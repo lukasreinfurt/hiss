@@ -1,7 +1,7 @@
 <template>
-	<div class="flex-container">
+	<div class="exerciseLogList flex-container">
 		Exercises
-		<div class="flex-container">
+		<div class="exerciseLogList__container flex-container">
 			<ExerciseLogListItem
 				v-for="exerciseLog in exerciseLogs"
 				:key="exerciseLog.id"

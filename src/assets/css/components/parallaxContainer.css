@@ -3,7 +3,6 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	perspective: 1px;
-	perspective-origin: 100%;
 }
 
 .parallaxContainer__layer {
@@ -12,7 +11,6 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	transform-origin: 100%;
 }
 
 .parallaxContainer__layer.-isFront {

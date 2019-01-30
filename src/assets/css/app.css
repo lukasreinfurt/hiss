@@ -59,6 +59,9 @@
 /* Settings */
 
 @import "./settings/variables.css";
+@import "./settings/themes/default.css";
+@import "./settings/themes/light.css";
+@import "./settings/themes/dark.css";
 
 /* Tools */
 

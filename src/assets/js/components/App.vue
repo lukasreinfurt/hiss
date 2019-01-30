@@ -30,6 +30,14 @@
 					</router-link>
 				</ul>
 				<ul class="nav__list flex-container">
+					<router-link class="nav__link" to="/settings">
+						<li class="nav__listItem">
+							<img
+								class="nav__icon"
+								src="/assets/images/icons/settings.svg"
+							/>Settings
+						</li>
+					</router-link>
 					<router-link class="nav__link" to="/about">
 						<li class="nav__listItem">
 							<img
@@ -51,11 +59,22 @@ import { mapState } from "vuex";
 export default {
 	name: "App",
 	computed: {
-		...mapState("settings", ["menuActive"])
+		...mapState("settings", ["menuActive", "theme"])
+	},
+	watch: {
+		theme() {
+			this.activateTheme();
+		}
+	},
+	mounted() {
+		this.activateTheme();
 	},
 	methods: {
 		toggleMenu: function() {
 			this.$store.commit("settings/toggleMenuActive");
+		},
+		activateTheme: function() {
+			document.documentElement.className = this.theme;
 		}
 	}
 };

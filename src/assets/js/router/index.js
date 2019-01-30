@@ -9,6 +9,7 @@ import WorkoutLog from "../components/WorkoutLog";
 import About from "../components/About";
 import ReleaseNotes from "../components/ReleaseNotes";
 import Test from "../components/Test";
+import Settings from "../components/Settings";
 
 Vue.use(Router);
 
@@ -100,6 +101,15 @@ export default new Router({
 			path: "/test",
 			components: {
 				content: Test
+			},
+			props: {
+				content: false
+			}
+		},
+		{
+			path: "/settings",
+			components: {
+				content: Settings
 			},
 			props: {
 				content: false

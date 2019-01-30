@@ -1,3 +1,4 @@
 export default {
-	menuActive: false
+	menuActive: false,
+	theme: "default"
 };

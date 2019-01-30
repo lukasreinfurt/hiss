@@ -1,11 +1,11 @@
 <template>
-	<BaseLayout class="about">
+	<BaseLayout class="settings">
 		<template slot="header">
-			<NavBar :title="title" class="about__navBar" menu-button></NavBar>
+			<NavBar :title="title" class="settings__navBar" menu-button></NavBar>
 		</template>
 		<template slot="main">
-			<div class="about__contentWrapper contentWrapper">
-				<div class="about__contentContainer contentContainer">
+			<div class="settings__contentWrapper contentWrapper">
+				<div class="settings__contentContainer contentContainer">
 					<select v-model="theme">
 						<option>default</option>
 						<option>light</option>

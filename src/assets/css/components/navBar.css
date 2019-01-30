@@ -1,5 +1,5 @@
 .navBar {
-	background-color: var(--neutral-9);
+	background-color: var(--navBar-background-color);
 	font-size: 18px;
 	justify-content: space-between;
 	width: 100%;

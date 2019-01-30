@@ -1,6 +1,6 @@
 .card {
-	background-color: white;
-	border-bottom: 2px solid var(--neutral-7);
+	background-color: var(--card-background-color);
+	border-bottom: 2px solid var(--card-border-color);
 	border-radius: var(--border-radius);
 	margin-bottom: var(--margin);
 	padding: var(--padding);
@@ -8,6 +8,6 @@
 }
 
 .card.-isTransition {
-	background-color: transparent;
-	border: 2px dashed var(--neutral-7);
+	background-color: var(--card-background-color--isTransition);
+	border: 2px dashed var(--card-border-color--isTransition);
 }

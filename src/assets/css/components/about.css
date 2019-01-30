@@ -2,15 +2,15 @@
 }
 
 .about__navBar {
-	background-color: white;
+	background-color: var(--about__navBar-background-color);
 }
 
 .about__contentWrapper {
-	background-color: white;
+	background-color: var(--about__contentWrapper-background-color);
 }
 
 .about__contentContainer {
-	background-color: white;
+	background-color: var(--about__contentContainer-background-color);
 	justify-content: center;
 }
 

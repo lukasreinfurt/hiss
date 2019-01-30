@@ -1,3 +1,63 @@
 :root {
-	color: red;
+	--text-color: var(--neutral-1);
+
+	--input-background-color: transparent;
+	--input-text-color: inherit;
+	--input-border-color--hover: var(--neutral-6);
+	--input-border-color--focus: var(--neutral-6);
+
+	--label-text-color: var(--neutral-5);
+
+	--button-background-color: transparent;
+	--button-text-color: var(--primary-5);
+	--button-background-color--isPrimary: var(--primary-5);
+	--button-text-color--isPrimary: var(--primary-9);
+	--button-border-color--isSecondary: var(--primary-5);
+
+	--a-text-color: var(--primary-6);
+	--a-border-color: var(--primary-6);
+	--a-text-color--visited: var(--primary-6);
+
+	--about__navBar-background-color: white;
+	--about__contentWrapper-background-color: white;
+	--about__contentContainer-background-color: white;
+
+	--app-background-color: var(--neutral-9);
+	--app__menu-background-color: hsla(0, 0%, 0%, 0.5);
+
+	--nav-background-color: var(--neutral-2);
+	--nav__list-border-color: var(--neutral-1);
+	--nav__list-text-color: var(--neutral-6);
+	--nav__listItem-text-color--hover: var(--neutral-9);
+	--nav__link-text-color: inherit;
+	--nav__link-text-color--visited: inherit;
+	--nav__link-background-color--isActive: var(--neutral-1);
+	--nav__link-text-color--isActive: var(--neutral-9);
+
+	--card-background-color: white;
+	--card-border-color: var(--neutral-7);
+	--card-background-color--isTransition: transparent;
+	--card-border-color--isTransition: var(--neutral-7);
+
+	--exercise__contentContainer-background-color: white;
+
+	--exerciseList__contentContainer-background-color: var(--neutral-9);
+	--exerciseList__contentContainer-background-color--isEmpty: transparent;
+	--exerciseList__contentContainer-text-color--isEmpty: var(--neutral-5);
+
+	--navBar-background-color: var(--neutral-9);
+
+	--releaseNotes__contentContainer-background-color: white;
+
+	--workout__contentContainer-background-color: white;
+
+	--workoutList__contentContainer-background-color: var(--neutral-9);
+	--workoutList__contentContainer-background-color--isEmpty: transparent;
+	--workoutList__contentContainer-text-color--isEmpty: var(--neutral-5);
+
+	--workoutLog__contentContainer-background-color: white;
+
+	--workoutLogList__contentContainer-background-color: var(--neutral-9);
+	--workoutLogList__contentContainer-background-color--isEmpty: transparent;
+	--workoutLogList__contentContainer-text-color--isEmpty: var(--neutral-5);
 }

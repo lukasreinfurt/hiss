@@ -14,16 +14,17 @@
 }
 
 .exerciseList__contentContainer {
-	background-color: var(--neutral-9);
+	background-color: var(--exerciseList__contentContainer-background-color);
 	margin: 300px 0 0 0;
 	padding-top: 0px;
 }
 
 .exerciseList__contentContainer.-isEmpty {
-	background-color: transparent;
-	color: var(--neutral-5);
+	background-color: var(
+		--exerciseList__contentContainer-background-color--isEmpty
+	);
+	color: var(--exerciseList__contentContainer-text-color--isEmpty);
 }
-
 .exerciseList__group {
 	width: 100%;
 }

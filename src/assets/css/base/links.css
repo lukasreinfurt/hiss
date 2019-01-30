@@ -1,13 +1,13 @@
 a {
-	color: var(--primary-6);
+	color: var(--a-text-color);
 	font-weight: 600;
 	text-decoration: none;
 }
 
 a:hover {
-	border-bottom: 2px solid var(--primary-6);
+	border-bottom: 2px solid var(--a-border-color);
 }
 
 a:visited {
-	color: var(--primary-6);
+	color: var(--a-text-color--visited);
 }

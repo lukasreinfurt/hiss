@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	color: var(--neutral-1);
+	color: var(--text-color);
 	font-family: var(--main-font);
 	font-size: calc(var(--min-font-size) * 1px);
 	height: 100vh;

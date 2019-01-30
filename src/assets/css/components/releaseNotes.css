@@ -12,7 +12,7 @@
 
 .releaseNotes__contentContainer {
 	align-items: flex-start;
-	background-color: white;
+	background-color: var(--releaseNotes__contentContainer-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow-3);
 	margin-top: 300px;

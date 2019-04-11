@@ -1,14 +1,19 @@
 input,
 select {
-	background-color: transparent;
+	background-color: var(--input-background-color);
 	border: 0;
 	border-bottom: 1px solid var(--neutral-8);
-	color: inherit;
+	color: var(--input-text-color);
 	font-weight: 600;
 	margin: var(--margin);
 	overflow: hidden;
 	padding: var(--padding);
 	width: 100%;
+}
+
+select option {
+	background-color: var(--background-color);
+	color: var(--input-text-color);
 }
 
 input::-webkit-outer-spin-button,
@@ -19,12 +24,12 @@ input::-webkit-inner-spin-button {
 
 input:hover,
 select:hover {
-	border-color: var(--neutral-6);
+	border-color: var(--input-border-color--hover);
 }
 
 input:focus,
 select:focus {
-	border-color: var(--neutral-6);
+	border-color: var(--input-border-color--focus);
 }
 
 input[type="number"] {
@@ -35,7 +40,7 @@ input[type="number"] {
 }
 
 label {
-	color: var(--neutral-5);
+	color: var(--label-text-color);
 	font-size: 0.8em;
 	letter-spacing: 0.05em;
 	margin: var(--margin);
@@ -43,10 +48,10 @@ label {
 }
 
 button {
-	background-color: transparent;
+	background-color: var(--button-background-color);
 	border: 0;
 	border-radius: var(--border-radius);
-	color: var(--primary-5);
+	color: var(--button-text-color);
 	font-weight: 600;
 	min-height: 48px;
 	min-width: 48px;
@@ -55,13 +60,13 @@ button {
 }
 
 button.-isPrimary {
-	background-color: var(--primary-5);
-	color: var(--primary-9);
+	background-color: var(--button-background-color--isPrimary);
+	color: var(--button-text-color--isPrimary);
 	padding: var(--padding);
 }
 
 button.-isSecondary {
-	border: 1px solid var(--primary-5);
+	border: 1px solid var(--button-border-color--isSecondary);
 	padding: var(--padding) var(--size-4);
 }
 

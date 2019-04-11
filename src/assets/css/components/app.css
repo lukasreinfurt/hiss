@@ -1,6 +1,6 @@
 .app {
 	align-items: stretch;
-	background-color: var(--neutral-9);
+	background-color: var(--app-background-color);
 	height: 100vh;
 	justify-content: flex-start;
 	overflow: hidden;
@@ -8,7 +8,7 @@
 }
 
 .app__menu {
-	background-color: hsla(0, 0%, 0%, 0.5);
+	background-color: var(--app__menu-background-color);
 	height: 100vh;
 	position: absolute;
 	transform: translatex(-100%);
@@ -32,15 +32,15 @@
 
 /* @define nav */
 .nav {
-	background-color: var(--neutral-2);
+	background-color: var(--nav-background-color);
 	box-shadow: var(--box-shadow-2);
 	height: 100%;
 	width: 62%;
 }
 
 .nav__list {
-	border-top: 2px solid var(--neutral-1);
-	color: var(--neutral-6);
+	border-top: 2px solid var(--nav__list-border-color);
+	color: var(--nav__list-text-color);
 	justify-content: flex-start;
 	list-style-type: none;
 	margin: 0;
@@ -55,15 +55,15 @@
 }
 
 .nav__listItem:hover {
-	color: var(--neutral-9);
+	color: var(--nav__listItem-text-color--hover);
 }
 
 .nav__link {
-	color: inherit;
+	color: var(--nav__link-text-color);
 }
 
 .nav__link:visited {
-	color: inherit;
+	color: var(--nav__link-text-color--visited);
 }
 
 .nav__link:hover {
@@ -71,8 +71,8 @@
 }
 
 .nav__link.-isActive {
-	background-color: var(--neutral-1);
-	color: var(--neutral-9);
+	background-color: var(--nav__link-background-color--isActive);
+	color: var(--nav__link-text-color--isActive);
 }
 
 .nav__icon {

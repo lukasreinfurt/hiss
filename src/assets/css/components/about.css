@@ -2,19 +2,18 @@
 }
 
 .about__navBar {
-	background-color: white;
+	background-color: var(--about__navBar-background-color);
 }
 
 .about__contentWrapper {
-	background-color: white;
+	background-color: var(--about__contentWrapper-background-color);
 }
 
 .about__contentContainer {
-	background-color: white;
+	background-color: var(--about__contentContainer-background-color);
 	justify-content: center;
 }
 
-.about__illustration {
-	max-height: 256px;
-	max-width: 256px;
+.about__illustrationWrapper {
+	max-height: 300px;
 }

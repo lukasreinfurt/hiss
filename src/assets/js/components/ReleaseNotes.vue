@@ -7,10 +7,9 @@
 			<ParallaxContainer>
 				<template slot="deep">
 					<div class="releaseNotes__headerContainer headerContainer">
-						<img
-							class="releaseNotes__illustration"
-							src="/assets/images/illustrations/release-notes.png"
-						/>
+						<ReleaseNotesIllustration
+							class="releaseNotes__illustrationWrapper illustrationWrapper"
+						></ReleaseNotesIllustration>
 					</div>
 				</template>
 				<template slot="back">
@@ -35,6 +34,7 @@
 import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import ParallaxContainer from "./ParallaxContainer";
+import ReleaseNotesIllustration from "./ReleaseNotesIllustration";
 import changelog from "../../../../CHANGELOG.md";
 
 export default {
@@ -42,7 +42,8 @@ export default {
 	components: {
 		BaseLayout,
 		NavBar,
-		ParallaxContainer
+		ParallaxContainer,
+		ReleaseNotesIllustration
 	},
 	data: function() {
 		return {

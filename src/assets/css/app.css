@@ -59,6 +59,9 @@
 /* Settings */
 
 @import "./settings/variables.css";
+@import "./settings/themes/default.css";
+@import "./settings/themes/light.css";
+@import "./settings/themes/dark.css";
 
 /* Tools */
 
@@ -75,6 +78,7 @@
 @import "./base/links.css";
 @import "./base/lists.css";
 @import "./base/input.css";
+@import "./base/svg.css";
 
 /* Layout */
 
@@ -87,6 +91,8 @@
 @import "./components/parallaxContainer.css";
 @import "./components/navBar.css";
 @import "./components/card.css";
+@import "./components/icon.css";
+@import "./components/illustration.css";
 
 @import "./components/about.css";
 @import "./components/exercise.css";

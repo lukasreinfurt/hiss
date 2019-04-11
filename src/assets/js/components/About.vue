@@ -6,10 +6,9 @@
 		<template slot="main">
 			<div class="about__contentWrapper contentWrapper">
 				<div class="about__contentContainer contentContainer">
-					<img
-						class="about__illustration"
-						src="/assets/images/illustrations/about.png"
-					/>
+					<AboutIllustration
+						class="about__illustrationWrapper illustrationWrapper"
+					></AboutIllustration>
 					<h1>HISS</h1>
 					<section>
 						Currently running {{ version }} (see
@@ -23,6 +22,7 @@
 </template>
 
 <script>
+import AboutIllustration from "./AboutIllustration";
 import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import { version } from "../../../../package.json";
@@ -30,6 +30,7 @@ import { version } from "../../../../package.json";
 export default {
 	name: "About",
 	components: {
+		AboutIllustration,
 		BaseLayout,
 		NavBar
 	},

@@ -11,10 +11,9 @@
 			<ParallaxContainer>
 				<template slot="deep">
 					<div class="workoutList__headerContainer headerContainer">
-						<img
-							class="workoutList__illustration"
-							src="/assets/images/illustrations/workouts.png"
-						/>
+						<WorkoutListIllustration
+							class="workoutList__illustrationWrapper illustrationWrapper"
+						></WorkoutListIllustration>
 					</div>
 				</template>
 				<template slot="back">
@@ -57,6 +56,7 @@
 import BaseLayout from "./BaseLayout";
 import NavBar from "./NavBar";
 import ParallaxContainer from "./ParallaxContainer";
+import WorkoutListIllustration from "./WorkoutListIllustration";
 import WorkoutListItem from "./WorkoutListItem";
 import { createNamespacedHelpers } from "vuex";
 
@@ -70,6 +70,7 @@ export default {
 		BaseLayout,
 		NavBar,
 		ParallaxContainer,
+		WorkoutListIllustration,
 		WorkoutListItem
 	},
 	data: function() {

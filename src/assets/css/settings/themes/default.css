@@ -1,5 +1,26 @@
 :root {
 	--text-color: var(--neutral-1);
+	--background-color: var(--app-background-color);
+
+	--icon-background-color: transparent;
+	--icon-border-color: var(--text-color);
+	--icon-border-width: 1;
+	--icon-primary-color: var(--primary-5);
+	--icon-primary-color-active: var(--primary-5);
+	--icon-primary-color-hover: var(--primary-5);
+	--icon-accent-color: transparent;
+	--icon-accent-color-active: transparent;
+	--icon-accent-color-hover: transparent;
+	--icon-neutral-color: var(--neutral-6);
+	--icon-neutral-color-active: var(--neutral-9);
+	--icon-neutral-color-hover: var(--neutral-9);
+
+	--illustration-background-color: transparent;
+	--illustration-border-color: var(--text-color);
+	--illustration-border-width: 1;
+	--illustration-primary-color: var(--primary-5);
+	--illustration-accent-color: transparent;
+	--illustration-neutral-color: var(--icon-neutral-5);
 
 	--input-background-color: transparent;
 	--input-text-color: inherit;

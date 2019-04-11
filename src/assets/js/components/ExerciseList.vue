@@ -11,10 +11,9 @@
 			<ParallaxContainer>
 				<template slot="deep">
 					<div class="exerciseList__headerContainer headerContainer">
-						<img
-							class="exerciseList__illustration"
-							src="/assets/images/illustrations/exercises.png"
-						/>
+						<ExerciseListIllustration
+							class="exerciseList__illustrationWrapper illustrationWrapper"
+						></ExerciseListIllustration>
 					</div>
 				</template>
 				<template slot="back">
@@ -63,6 +62,7 @@
 
 <script>
 import BaseLayout from "./BaseLayout";
+import ExerciseListIllustration from "./ExerciseListIllustration";
 import ExerciseListItem from "./ExerciseListItem";
 import NavBar from "./NavBar";
 import ParallaxContainer from "./ParallaxContainer";
@@ -76,6 +76,7 @@ export default {
 	name: "ExerciseList",
 	components: {
 		BaseLayout,
+		ExerciseListIllustration,
 		ExerciseListItem,
 		NavBar,
 		ParallaxContainer

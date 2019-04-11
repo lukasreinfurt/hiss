@@ -14,7 +14,6 @@
 	justify-content: center;
 }
 
-.about__illustration {
-	max-height: 256px;
-	max-width: 256px;
+.about__illustrationWrapper {
+	max-height: 300px;
 }

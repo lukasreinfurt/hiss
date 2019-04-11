@@ -6,6 +6,7 @@
 		<template slot="main">
 			<div class="settings__contentWrapper contentWrapper">
 				<div class="settings__contentContainer contentContainer">
+					<label>Theme</label>
 					<select v-model="theme">
 						<option>default</option>
 						<option>light</option>

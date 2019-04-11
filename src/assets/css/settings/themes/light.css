@@ -1,6 +1,10 @@
 :root.light {
 	--text-color: var(--neutral-2);
 
+	--icon-neutral-color: var(--neutral-5);
+	--icon-neutral-color-active: var(--neutral-7);
+	--icon-neutral-color-hover: var(--neutral-7);
+
 	--input-border-color--hover: var(--neutral-7);
 	--input-border-color--focus: var(--neutral-7);
 

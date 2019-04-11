@@ -1,0 +1,25 @@
+/* postcss-bem-linter: ignore */
+.illustrationWrapper {
+	height: 100%;
+	max-height: 300px;
+	width: 100%;
+}
+
+.illustration {
+	fill: var(--illustration-background-color);
+	stroke: var(--illustration-border-color);
+	stroke-miterlimit: 10;
+	stroke-width: var(--illustration-border-width);
+}
+
+.illustration__primary {
+	fill: var(--illustration-primary-color);
+}
+
+.illustration__accent {
+	fill: var(--illustration-accent-color);
+}
+
+.illustration__neutral {
+	fill: var(--illustration-neutral-color);
+}

@@ -1,6 +1,7 @@
 # HISS
 
-High Intensity Super Slow App
+This is a very early prototype of a training log app for High Intensity Super Slow training.
+The master branch is life at <https://decouplr-hiss.netlify.app>
 
 ## Setup
 

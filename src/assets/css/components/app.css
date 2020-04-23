@@ -1,0 +1,88 @@
+.app {
+	align-items: stretch;
+	background-color: var(--app-background-color);
+	height: 100vh;
+	justify-content: flex-start;
+	overflow: hidden;
+	width: 100vw;
+}
+
+.app__menu {
+	background-color: var(--app__menu-background-color);
+	height: 100vh;
+	position: absolute;
+	transform: translatex(-100%);
+	transition: transform 0.2s ease-out;
+	width: 100vw;
+	z-index: 999;
+}
+
+.app__menu.-isActive {
+	transform: translatex(0);
+}
+
+@media all and (min-width: 800px) {
+	.app__menu {
+		flex-shrink: 0;
+		position: relative;
+		transform: translatex(0);
+		width: 200px;
+	}
+}
+
+/* @define nav */
+.nav {
+	background-color: var(--nav-background-color);
+	box-shadow: var(--box-shadow-2);
+	height: 100%;
+	width: 62%;
+}
+
+.nav__list {
+	border-top: 2px solid var(--nav__list-border-color);
+	color: var(--nav__list-text-color);
+	justify-content: flex-start;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__listItem {
+	align-items: center;
+	display: flex;
+	margin: 0;
+	padding: var(--padding);
+}
+
+.nav__listItem:hover {
+	color: var(--nav__listItem-text-color--hover);
+}
+
+.nav__link {
+	color: var(--nav__link-text-color);
+}
+
+.nav__link:visited {
+	color: var(--nav__link-text-color--visited);
+}
+
+.nav__link:hover {
+	border-bottom: none;
+}
+
+.nav__link.-isActive {
+	background-color: var(--nav__link-background-color--isActive);
+	color: var(--nav__link-text-color--isActive);
+}
+
+.nav__icon {
+	margin-right: var(--margin);
+	width: 32px;
+}
+
+@media all and (min-width: 800px) {
+	.nav {
+		box-shadow: none;
+		width: 100%;
+	}
+}

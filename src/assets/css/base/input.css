@@ -1,0 +1,75 @@
+input,
+select {
+	background-color: var(--input-background-color);
+	border: 0;
+	border-bottom: 1px solid var(--neutral-8);
+	color: var(--input-text-color);
+	font-weight: 600;
+	margin: var(--margin);
+	overflow: hidden;
+	padding: var(--padding);
+	width: 100%;
+}
+
+select option {
+	background-color: var(--background-color);
+	color: var(--input-text-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input:hover,
+select:hover {
+	border-color: var(--input-border-color--hover);
+}
+
+input:focus,
+select:focus {
+	border-color: var(--input-border-color--focus);
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	padding: 0;
+	text-align: right;
+	width: 2em;
+}
+
+label {
+	color: var(--label-text-color);
+	font-size: 0.8em;
+	letter-spacing: 0.05em;
+	margin: var(--margin);
+	text-transform: uppercase;
+}
+
+button {
+	background-color: var(--button-background-color);
+	border: 0;
+	border-radius: var(--border-radius);
+	color: var(--button-text-color);
+	font-weight: 600;
+	min-height: 48px;
+	min-width: 48px;
+	padding: var(--padding);
+	width: auto;
+}
+
+button.-isPrimary {
+	background-color: var(--button-background-color--isPrimary);
+	color: var(--button-text-color--isPrimary);
+	padding: var(--padding);
+}
+
+button.-isSecondary {
+	border: 1px solid var(--button-border-color--isSecondary);
+	padding: var(--padding) var(--size-4);
+}
+
+button:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,55 @@
+/* postcss-bem-linter: ignore */
+.iconWrapper {
+	height: 32px;
+	position: relative;
+	width: 32px;
+}
+
+.icon {
+	fill: var(--icon-background-color);
+	stroke: var(--icon-border-color);
+	stroke-miterlimit: 10;
+	stroke-width: var(--icon-border-width);
+}
+
+.icon__primary {
+	fill: var(--icon-primary-color);
+}
+
+.icon__accent {
+	fill: var(--icon-accent-color);
+}
+
+.icon__neutral {
+	fill: var(--icon-neutral-color);
+}
+
+/* postcss-bem-linter: ignore */
+a.-isActive .icon__primary {
+	fill: var(--icon-primary-color-active);
+}
+
+/* postcss-bem-linter: ignore */
+a.-isActive .icon__accent {
+	fill: var(--icon-accent-color-active);
+}
+
+/* postcss-bem-linter: ignore */
+a.-isActive .icon__neutral {
+	fill: var(--icon-neutral-color-active);
+}
+
+/* postcss-bem-linter: ignore */
+a:hover .icon__primary {
+	fill: var(--icon-primary-color-hover);
+}
+
+/* postcss-bem-linter: ignore */
+a:hover .icon__accent {
+	fill: var(--icon-accent-color-hover);
+}
+
+/* postcss-bem-linter: ignore */
+a:hover .icon__neutral {
+	fill: var(--icon-neutral-color-hover);
+}

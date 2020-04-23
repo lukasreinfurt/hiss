@@ -1,0 +1,27 @@
+.workoutList {
+}
+
+.workoutList__illustration {
+	max-height: 512px;
+	max-width: 512px;
+}
+
+.workoutList__title {
+	font-size: 3em;
+	position: absolute;
+	text-shadow: 0px 0px 5px var(--neutral-9);
+	top: 100px;
+}
+
+.workoutList__contentContainer {
+	background-color: var(--workoutList__contentContainer-background-color);
+	margin: 300px 0 0 0;
+	padding-top: 0px;
+}
+
+.workoutList__contentContainer.-isEmpty {
+	background-color: var(
+		--workoutList__contentContainer-background-color--isEmpty
+	);
+	color: var(--workoutList__contentContainer-text-color--isEmpty);
+}

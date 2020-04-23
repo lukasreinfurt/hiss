@@ -1,0 +1,19 @@
+.releaseNotes__title {
+	font-size: 3em;
+	position: absolute;
+	text-shadow: 0px 0px 5px var(--neutral-9);
+	top: 100px;
+}
+
+.releaseNotes__illustration {
+	max-height: 512px;
+	max-width: 512px;
+}
+
+.releaseNotes__contentContainer {
+	align-items: flex-start;
+	background-color: var(--releaseNotes__contentContainer-background-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow-3);
+	margin-top: 300px;
+}

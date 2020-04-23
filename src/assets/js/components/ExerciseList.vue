@@ -1,58 +1,113 @@
 <template>
-  <div class="container">
-    <h1>Exercises</h1>
-    <button @click="addNewExercise()">+</button>
-    <div
-      v-for="(exercises, equipment) in exercisesByEquipment"
-      :key="equipment"
-      class="flex-container"
-    >
-      <h3 v-if="equipment">{{ equipment }}</h3>
-      <h3 v-else>Uncategorized</h3>
-      <ExerciseListItem
-        v-for="exercise in exercises"
-        :key="exercise.id"
-        :exercise="exercise"
-      />
-    </div>
-    <div v-if="Object.keys(exercisesByEquipment).length === 0">
-      No Exercises yet!
-    </div>
-  </div>
+	<BaseLayout class="exerciseList">
+		<template slot="header">
+			<NavBar :title="title" menu-button>
+				<template slot="right">
+					<button @click="addNewExercise()">＋</button>
+				</template>
+			</NavBar>
+		</template>
+		<template slot="main">
+			<ParallaxContainer>
+				<template slot="deep">
+					<div class="exerciseList__headerContainer headerContainer">
+						<ExerciseListIllustration
+							class="exerciseList__illustrationWrapper illustrationWrapper"
+						></ExerciseListIllustration>
+					</div>
+				</template>
+				<template slot="back">
+					<div class="exerciseList__headerContainer headerContainer">
+						<h1 class="exerciseList__title">{{ title }}</h1>
+					</div>
+				</template>
+				<template slot="front">
+					<div class="exerciseList__contentWrapper contentWrapper">
+						<div
+							v-if="count > 0"
+							class="exerciseList__contentContainer contentContainer"
+						>
+							<div
+								v-for="(exercises, equipment) in exercisesByEquipment"
+								:key="equipment"
+								class="exerciseList__group"
+							>
+								<span v-if="equipment">{{ equipment }}</span>
+								<span v-else>Uncategorized</span>
+								<ExerciseListItem
+									v-for="exercise in exercises"
+									:key="exercise.id"
+									:exercise="exercise"
+								></ExerciseListItem>
+							</div>
+						</div>
+						<div
+							v-else
+							class="exerciseList__contentContainer contentContainer -isEmpty"
+						>
+							<p>
+								Seems like you haven't added any exercises yet. <br />Go on, add
+								your first exercise now!
+							</p>
+							<button class="-isPrimary" @click="addNewExercise()">
+								Add Exercise
+							</button>
+						</div>
+					</div>
+				</template>
+			</ParallaxContainer>
+		</template>
+	</BaseLayout>
 </template>
 
 <script>
+import BaseLayout from "./BaseLayout";
+import ExerciseListIllustration from "./ExerciseListIllustration";
 import ExerciseListItem from "./ExerciseListItem";
+import NavBar from "./NavBar";
+import ParallaxContainer from "./ParallaxContainer";
 import { createNamespacedHelpers } from "vuex";
 
-const { mapState, mapActions } = createNamespacedHelpers("exercises");
+const { mapState, mapGetters, mapActions } = createNamespacedHelpers(
+	"exercises"
+);
 
 export default {
-  name: "ExerciseList",
-  components: {
-    ExerciseListItem
-  },
-  computed: {
-    ...mapState({ defaultExercises: "exercises" }),
-    exercisesByEquipment() {
-      let result = {};
-      Object.entries(this.defaultExercises).forEach(function([id, exercise]) {
-        if (!result[exercise.equipment]) {
-          result[exercise.equipment] = [];
-        }
-        result[exercise.equipment].push(exercise);
-      });
-      return result;
-    }
-  },
-  methods: {
-    ...mapActions(["addExercise"]),
-    addNewExercise: function() {
-      var router = this.$router;
-      this.addExercise().then(function(id) {
-        router.push({ path: "/exercises/" + id });
-      });
-    }
-  }
+	name: "ExerciseList",
+	components: {
+		BaseLayout,
+		ExerciseListIllustration,
+		ExerciseListItem,
+		NavBar,
+		ParallaxContainer
+	},
+	data: function() {
+		return {
+			title: "Exercises"
+		};
+	},
+	computed: {
+		...mapGetters(["count"]),
+		...mapState({ defaultExercises: "exercises" }),
+		exercisesByEquipment() {
+			let result = {};
+			Object.entries(this.defaultExercises).forEach(function([id, exercise]) {
+				if (!result[exercise.equipment]) {
+					result[exercise.equipment] = [];
+				}
+				result[exercise.equipment].push(exercise);
+			});
+			return result;
+		}
+	},
+	methods: {
+		...mapActions(["addExercise"]),
+		addNewExercise: function() {
+			var router = this.$router;
+			this.addExercise().then(function(id) {
+				router.push({ path: "/exercises/" + id });
+			});
+		}
+	}
 };
 </script>

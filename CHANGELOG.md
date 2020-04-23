@@ -5,11 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.2] - 2020-04-2623
+
+### Added
+
+- Back button to navigate back from detail views
+- Title is shown in navigation bar
+- Icons in side bar
+
+### Changed
+
+- Top navigation moved to side bar that responsively turns into hamburger menu on small screens
+- Text size automatically adjusts to screen size
+- Version moved to about tab
+- Changelog moved to release notes page
+
+### Fixed
+
+- Layout and design issues
+
 ## [0.2.1] - 2018-12-26
 
 ### Added
 
-- Transition durations in logs are now editable
+- Transition duration in logs are now editable
 
 ## [0.2.0] - 2018-12-25
 
@@ -28,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Exercises view tab shows available exercises
 - Workouts tab that shows available workouts and the exercises belonging to them
 
-[Unreleased]: https://gitlab.com/decouplr-side/hiss/compare/0.2.1...develop
+[Unreleased]: https://gitlab.com/decouplr-side/hiss/compare/0.2.2...develop
+[0.2.2]: https://gitlab.com/decouplr-side/hiss/compare/0.2.1...0.2.2
 [0.2.1]: https://gitlab.com/decouplr-side/hiss/compare/0.2.0...0.2.1
 [0.2.0]: https://gitlab.com/decouplr-side/hiss/compare/0.1.0...0.2.0

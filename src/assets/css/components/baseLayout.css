@@ -1,0 +1,22 @@
+.baseLayout {
+	height: 100%;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.baseLayout__header {
+	position: relative;
+	z-index: 100;
+}
+
+.baseLayout__main {
+	align-items: center;
+	flex-grow: 1;
+	height: 100%;
+	justify-content: flex-start;
+	overflow: auto;
+	width: 100%;
+}
+
+.baseLayout__footer {
+}

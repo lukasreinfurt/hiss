@@ -1,63 +1,108 @@
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  flex: 0 1 auto;
-  min-width: 0;
-  min-height: 0;
-}
+/*
+	From ITCSS (https://medium.freecodecamp.org/managing-large-s-css-projects-using-the-inverted-triangle-architecture-3c03e4b1e6df)
+	and SMACSS (https://smacss.com/book/categorizing)
 
-body {
-    color: #111;
-    font-family: 'Rubik', sans-serif;
-}
+	Layer styles from:
+		- generic to explicit
+		- low to high specificity
+		- far-reaching to localiced
 
-a {
-    text-decoration: none;
-    color: #111;
-}
+	Settings:
+		Variables, Themes etc.
 
-a:visited {
-    color: #111;
-}
+	Tools:
+		Mixins, functions, ...
 
-#app {
-    padding: 0 1em;
-}
+	Generic:
+		Normalize, reset, box-sizing, ...
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+	Base: Default single element styles. No ids or classes. Includes CSS reset.
 
-.flex-container.horizontal {
-    flex-direction: row;
-}
+		html, body, a
+		html {}
+		body {}
+		a {}
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+	Layout: Divide the page into sections and combines several modules. Elements or ids.
 
-nav ul li {
-    padding: 1em;
-}
+		heady, footer, main
+		#containerId
+		#wrapperId
+		.l-layoutName
 
-nav a {
-    text-decoration: none;
-}
+	Components: The reusable, modular parts of the design.
 
-nav a.router-link-exact-active {
-    color: white;
-    background-color: #111;
-}
+		From BEM (http://getbem.com/naming/)
 
-.card {
-    background-color: rgb(250, 250, 250);
-    border: 1px solid rgb(202, 202, 202);
-    border-radius: 5px;
-    margin-bottom: 1em;
-    padding: 2em;
-}
+		Blocks: A standalone entity that is meaningful on its own.
+
+				class="blockName"
+				.blockName {}
+
+		Elements: Parts of a block that have no standalone meaning.
+
+				class="blockName_elementName"
+				.blockName__elementName {}
+
+		Modifiers: Flags on blocks or elements that change appearance, behaviour or state
+
+				class="blockName__elementName -is-modifierName"
+				.blockName__elementName.-is-modifierName {}
+
+	State: How modules or layouts look when in a particular state
+
+		.is-stateName
+		!important
+
+*/
+
+/* Settings */
+
+@import "./settings/variables.css";
+@import "./settings/themes/default.css";
+@import "./settings/themes/light.css";
+@import "./settings/themes/dark.css";
+
+/* Tools */
+
+/* Generic */
+
+@import "normalize.css";
+@import "./generic/generic.css";
+
+/* Base */
+@import "./base/html.css";
+@import "./base/body.css";
+@import "./base/p.css";
+@import "./base/headers.css";
+@import "./base/links.css";
+@import "./base/lists.css";
+@import "./base/input.css";
+@import "./base/svg.css";
+
+/* Layout */
+
+@import "./layout/container.css";
+@import "./layout/wrapper.css";
+
+/* Components */
+@import "./components/app.css";
+@import "./components/baseLayout.css";
+@import "./components/parallaxContainer.css";
+@import "./components/navBar.css";
+@import "./components/card.css";
+@import "./components/icon.css";
+@import "./components/illustration.css";
+
+@import "./components/about.css";
+@import "./components/exercise.css";
+@import "./components/exerciseList.css";
+@import "./components/exerciseLogList.css";
+@import "./components/exerciseLogListItem.css";
+@import "./components/releaseNotes.css";
+@import "./components/workout.css";
+@import "./components/workoutList.css";
+@import "./components/workoutLog.css";
+@import "./components/workoutLogList.css";
+
+/* State */
